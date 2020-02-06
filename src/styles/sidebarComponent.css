@@ -1,0 +1,40 @@
+
+/******* Certification Component Style *******/
+.certificate-bg {
+    padding-bottom: 400px;
+}
+
+.certificate-card-1 a {
+    text-transform: uppercase;
+    text-decoration: none!important;
+}
+
+/*******************************************/
+
+/******* Contact Component Style *******/
+
+.contact-logo {
+    padding-bottom: 200px;
+}
+
+.contact-logo a {
+    padding-bottom: 5px;
+    color: #D2691E;
+}
+
+.contact-logo a:hover {
+    color: #D2691E;
+}
+
+.contact-info {
+    padding-left: 30px!important;
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
+}
+
+.customize {
+    padding-left: 3px;
+}
+
+/*******************************************/
