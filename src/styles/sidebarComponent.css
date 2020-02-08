@@ -34,7 +34,7 @@
     text-transform: uppercase;
 }
 
-.skills-navbar ul a:active,
+.skills-navbar ul a.active,
 .skills-navbar ul a:hover {
     background-color: #008080;
     color: white!important;

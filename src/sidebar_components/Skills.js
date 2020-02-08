@@ -79,7 +79,6 @@ class Skills extends React.Component {
 
         for (const [key, value] of CARD_LIST.entries()) {
             if(this.state.activeNavId === value) {
-                console.log("getCardList = " + key);
                 return new Map([
                     [key, value]]);
             }
@@ -89,16 +88,26 @@ class Skills extends React.Component {
     handleMouseEnter = (e) => {
         const href = e.target.href;
         const id = href.substring(href.indexOf('#') + 1);
-
-        this.setState({
-            activeNavId: id
-        })
+        if (id !== null && id !== this.state.activeNavId) {
+            this.getNavLinkElement(id).classList.add('active');
+            this.getNavLinkElement(this.state.activeNavId).classList.remove('active');
+            this.setState({
+                activeNavId: id
+            })
+        }
     };
+
+    componentDidMount() {
+        this.getNavLinkElement('all').classList.add('active');
+    }
+
+    getNavLinkElement(sectionID) {
+        return document.querySelector(`a[href='#${sectionID}']`);
+    }
 
     render() {
         function renderSkills(skills_map) {
             const skills = [];
-            console.log("In renderSkills: skills_map = " + skills_map);
             for (const [key, value] of skills_map.entries()) {
                 skills.push(<div className="col col-sm-4 col-md-2">
                     <img src={value} className="responsive-img" alt=""/>{key}
@@ -109,9 +118,7 @@ class Skills extends React.Component {
 
         function renderCardSkeletons(card_list) {
             var cards = [];
-            console.log("renderCardSkeletons: card_list = " + card_list);
             for (const [key, value] of card_list.entries()) {
-                console.log("In renderCardSkeleton: key = " + key + ", value = " + value);
                 cards.push(
                     <div id={value} className="card skills-card">
                         <div className="card-content">

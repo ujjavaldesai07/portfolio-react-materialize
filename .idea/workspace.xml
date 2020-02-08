@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96a7ae14-7573-47a9-a29e-07d94d972dbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/certificate.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/certificate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/dot-grid.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/background/dot-grid.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/education.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/education.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/email.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/email.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/gmail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/gmail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/project.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/project.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/resume.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/resume.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/skills.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/skills.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/trend.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/trend.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/navbar/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Certification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Certification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Education.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sidebar_components/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/componentHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/componentHeader.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/sidebarComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/sidebarComponent.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +85,7 @@
       <updated>1580519036381</updated>
       <workItem from="1580519037649" duration="101567000" />
       <workItem from="1580929119717" duration="44850000" />
-      <workItem from="1581145252813" duration="104000" />
+      <workItem from="1581145252813" duration="1226000" />
     </task>
     <servers />
   </component>
