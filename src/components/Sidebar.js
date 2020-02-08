@@ -1,14 +1,14 @@
 import React from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
 import '../styles/sidebar.css'
-import userImage from '../images/user.png';
-import trendImage from '../images/trend.png';
-import projectImage from '../images/project.png';
-import skillsImage from '../images/skills.png';
-import educationImage from '../images/education.png';
-import certificateImage from '../images/certificate.png';
-import contactImage from '../images/email.png';
-import resumeImage from '../images/resume.png';
+import userImage from '../images/navbar/user.png';
+import trendImage from '../images/navbar/trend.png';
+import projectImage from '../images/navbar/project.png';
+import skillsImage from '../images/navbar/skills.png';
+import educationImage from '../images/navbar/education.png';
+import certificateImage from '../images/navbar/certificate.png';
+import contactImage from '../images/navbar/email.png';
+import resumeImage from '../images/navbar/resume.png';
 import ScrollSpyNav from "./ScrollSpyNav";
 import NavbarCollapseButton from "./NavbarCollapseButton";
 

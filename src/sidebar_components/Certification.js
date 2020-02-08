@@ -21,22 +21,26 @@ class Certification extends React.Component {
                     <div className="row">
                         <div className="col-6">
                             <div className="card darken-1">
-                                <div className="card-content certificate-card-1">
+                                <div className="card-content certificate-card">
                                     <a href="https://www.coursera.org/account/accomplishments/certificate/ZL8C2MUN7NWC"
                                        className="tooltipped" data-position="top" data-tooltip="Look at the Certificate">
                                         <span className="card-title teal-text">Online Machine Learning Course</span></a>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
+                                        <span className="brown-text">February 2017</span>
+                                    <p>Studied various concepts of machine learning such as linear regression,
+                                    logistic regression, neural networks etc.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-6">
-                            <div className="card blue-grey darken-1">
-                                <div className="card-content white-text">
-                                    <span className="card-title">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
+                            <div className="card darken-1">
+                                <div className="card-content certificate-card">
+                                    <a href="http://www.vectorindia.org/"
+                                       className="tooltipped" data-position="top" data-tooltip="Look at the institute website">
+                                        <span className="card-title teal-text">Advanced Certified Course in Embedded Systems</span></a>
+                                    <span className="brown-text">Apr. 2014 - Sep. 2014</span>
+                                    <p>Learned wide array of concepts such as C, C++, Linux internals,
+                                        TCP/IP and socket programming.</p>
                                 </div>
                             </div>
                         </div>

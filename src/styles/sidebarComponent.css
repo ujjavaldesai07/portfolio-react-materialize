@@ -1,12 +1,116 @@
+/******* Skills Component Style *******/
+
+.skills-card {
+    margin-bottom: 50px;
+}
+
+.skills-card h4 {
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px!important;
+    padding-bottom: 20px;
+    margin-top: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px!important;
+    font-weight: 600!important;
+    text-align: left;
+}
+
+.skills-card .col img {
+    margin: 0 auto;
+    max-height: 100px;
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.skills-navbar ul a {
+    font-size: 1.5rem;
+    text-decoration: none!important;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    text-transform: uppercase;
+}
+
+.skills-navbar ul a:active,
+.skills-navbar ul a:hover {
+    background-color: #008080;
+    color: white!important;
+}
+
+.skills-navbar .col-10 {
+    padding-left: 33px;
+    margin-left: 80px!important;
+    padding-bottom: 40px;
+}
+
+.skills-navbar {
+
+}
+
+/*******************************************/
+
+/******* Education Component Style *******/
+
+.education-card a {
+    text-transform: uppercase;
+    text-decoration: none!important;
+}
+
+.education-card .card-title {
+    margin-bottom: 0!important;
+}
+
+.education-card .brown-text {
+    font-size: 1.2rem;
+}
+
+.education-card .date {
+    float: right!important;
+}
+
+.education-card p {
+    font-size: 1.3rem;
+}
+
+.education-card li {
+    font-size: 1.1rem;
+    list-style-type: disc!important;
+    padding: 20px 0 10px 10px;
+    font-weight: 500;
+}
+
+.education-card li span {
+    float: right;
+    font-weight: 500;
+}
+
+/*******************************************/
 
 /******* Certification Component Style *******/
 .certificate-bg {
     padding-bottom: 400px;
 }
 
-.certificate-card-1 a {
+.certificate-card a {
     text-transform: uppercase;
     text-decoration: none!important;
+}
+
+.certificate-card .card-title {
+    margin-bottom: 0!important;
+}
+
+.certificate-card .brown-text {
+    font-size: 1.2rem;
+}
+
+.certificate-card p {
+    padding-top: 10px;
+    text-align: justify;
+    font-size: 1.4rem;
 }
 
 /*******************************************/
