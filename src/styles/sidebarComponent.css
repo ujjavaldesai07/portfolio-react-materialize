@@ -1,3 +1,40 @@
+/******* Common Component Style *******/
+
+.common-attributes {
+    padding-bottom: 0!important;
+}
+
+.common-attributes .card-action {
+    font-size: 1.0rem!important;
+    border-top: 1px solid #ddd!important;
+    padding-left: 0!important;
+}
+
+.common-attributes .card-title {
+    margin-bottom: 0!important;
+}
+
+.common-attributes a {
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-family: sans-serif;
+}
+
+.btn-floating.btn-large {
+    padding-top: 7px!important;
+}
+
+.btn-large:hover {
+    color: white!important;
+}
+
+/*******************************************/
+
+/******* Projects Component Style *******/
+
+
+/*******************************************/
+
 /******* Skills Component Style *******/
 
 .skills-card {
@@ -12,7 +49,7 @@
     margin-top: 18px;
     font-family: 'Roboto', sans-serif;
     font-size: 34px!important;
-    font-weight: 600!important;
+    font-weight: 300;
     text-align: left;
 }
 
@@ -46,99 +83,62 @@
     padding-bottom: 40px;
 }
 
-.skills-navbar {
-
-}
-
 /*******************************************/
 
 /******* Education Component Style *******/
-
-.education-card a {
-    text-transform: uppercase;
-    text-decoration: none!important;
+.education-container {
+    padding-bottom: 85px;
 }
 
-.education-card .card-title {
-    margin-bottom: 0!important;
-}
-
-.education-card .brown-text {
-    font-size: 1.2rem;
-}
-
-.education-card .date {
-    float: right!important;
-}
-
-.education-card p {
+.education-container p {
     font-size: 1.3rem;
 }
 
-.education-card li {
+.education-container li {
     font-size: 1.1rem;
     list-style-type: disc!important;
-    padding: 20px 0 10px 10px;
-    font-weight: 500;
+    padding: 20px 0 40px 10px;
+    font-weight: 400;
 }
 
-.education-card li span {
+.education-container li span {
     float: right;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /*******************************************/
 
 /******* Certification Component Style *******/
-.certificate-bg {
-    padding-bottom: 400px;
+.certificate-container {
+    padding-bottom: 85px!important;
 }
 
-.certificate-card a {
-    text-transform: uppercase;
-    text-decoration: none!important;
-}
-
-.certificate-card .card-title {
-    margin-bottom: 0!important;
-}
-
-.certificate-card .brown-text {
-    font-size: 1.2rem;
-}
-
-.certificate-card p {
+.certificate-container p {
     padding-top: 10px;
     text-align: justify;
     font-size: 1.4rem;
+    padding-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
 }
 
 /*******************************************/
 
 /******* Contact Component Style *******/
 
-.contact-logo {
-    padding-bottom: 200px;
+.contact-info div {
+    width:70%;
+    display: inline-block;
+    padding-bottom: 20px;
 }
 
-.contact-logo a {
-    padding-bottom: 5px;
-    color: #D2691E;
-}
-
-.contact-logo a:hover {
-    color: #D2691E;
-}
-
-.contact-info {
-    padding-left: 30px!important;
-    font-size: 20px;
-    position: relative;
-    bottom: 10px;
-}
-
-.customize {
-    padding-left: 3px;
+.contact-info .teal-text {
+    padding-left: 20px!important;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    vertical-align:middle;
+    text-align:center;
 }
 
 /*******************************************/

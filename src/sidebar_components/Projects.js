@@ -2,6 +2,11 @@ import React from 'react';
 import 'materialize-css/dist/js/materialize.min.js';
 import ComponentHeader from "../components/ComponentHeader";
 import M from "materialize-css/dist/js/materialize.min";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+
+
+
 
 class Projects extends React.Component {
     componentDidMount() {
@@ -17,26 +22,65 @@ class Projects extends React.Component {
         return (
             <div>
                 <ComponentHeader heading={"Projects"}/>
-                <div className="container flow-text certificate-bg">
-                    <div className="row">
-                        <div className="col-6">
+                <div className="container flow-text">
+                    <div className="row justify-content-center">
+                        <div className="col-5">
                             <div className="card darken-1">
-                                <div className="card-content certificate-card-1">
-                                    <a href="https://www.coursera.org/account/accomplishments/certificate/ZL8C2MUN7NWC"
-                                       className="tooltipped" data-position="top" data-tooltip="Look at the Certificate">
-                                        <span className="card-title teal-text">Online Machine Learning Course</span></a>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
+                                <div className="card-content common-attributes">
+                                    <a href="https://www.uhcl.edu"
+                                       className="tooltipped" data-position="top" data-tooltip="Look at the university website">
+                                        <span className="card-title teal-text">University of Houston - Clear Lake</span></a>
+                                    <li>M.S. in Computer Science <span>GPA: 3.92/4.0</span></li>
+                                    <div className="btn-floating btn-large waves-effect waves-light brown">
+                                        <FontAwesomeIcon icon={faExternalLinkAlt} size="lg"/>
+                                    </div>
+                                    <div className="btn-floating btn-large waves-effect waves-light brown">
+                                        <FontAwesomeIcon icon={['fab', "github"]} size="lg"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-6">
-                            <div className="card blue-grey darken-1">
-                                <div className="card-content white-text">
-                                    <span className="card-title">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
+                        <div className="col-5">
+                            <div className="card darken-1">
+                                <div className="card-content common-attributes">
+                                    <a href="https://www.uhcl.edu"
+                                       className="tooltipped" data-position="top" data-tooltip="Look at the university website">
+                                        <span className="card-title teal-text">University of Houston - Clear Lake</span></a>
+                                    <li>M.S. in Computer Science <span>GPA: 3.92/4.0</span></li>
+                                    <div className="card-action brown-text">
+                                        <span>Jan 2019 - Dec 2020 | Houston, TX</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row justify-content-center">
+
+                        <div className="col-5">
+                            <div className="card darken-1">
+                                <div className="card-content common-attributes">
+                                    <a href="https://www.gtu.ac.in/"
+                                       className="tooltipped" data-position="top" data-tooltip="Look at the university website">
+                                        <span className="card-title teal-text">Gujarat Technological University</span></a>
+                                    <li>B.E. in Electronics & Communication<span>GPA: 7.9/10</span></li>
+                                    <div className="card-action brown-text">
+                                        <span>Jun 2009 - Jun 2013 | Gujarat, INDIA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-5">
+                            <div className="card darken-1">
+                                <div className="card-content common-attributes">
+                                    <a href="https://www.uhcl.edu"
+                                       className="tooltipped" data-position="top" data-tooltip="Look at the university website">
+                                        <span className="card-title teal-text">University of Houston - Clear Lake</span></a>
+                                    <li>M.S. in Computer Science <span>GPA: 3.92/4.0</span></li>
+                                    <div className="card-action brown-text">
+                                        <span>Jan 2019 - Dec 2020 | Houston, TX</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

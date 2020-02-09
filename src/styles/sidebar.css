@@ -6,11 +6,12 @@
      text-decoration: none!important;
      border: 0!important;
      text-align: center!important;
-     font-family: sans-serif;
 }
 
 .logo-name h1 {
      font-weight: lighter!important;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 0;
 }
 
 .logo-name-desc {
@@ -18,11 +19,11 @@
      text-decoration: none!important;
      border: 0!important;
      text-align: center!important;
-     font-weight: bolder;
+     font-weight: normal!important;
+     font-family: 'Roboto', sans-serif;
 }
 
 .section {
-     padding-bottom: 30px;
      padding-top: 0;
      position: fixed;
 }
@@ -36,7 +37,6 @@ ul.sidenav-fixed li.logo {
      border-bottom: 1px solid #ddd;
      box-sizing: content-box;
      min-height: 90px;
-     padding: 30px 0px 10px;
      text-align: center;
 }
 
@@ -55,6 +55,7 @@ ul.sidenav-fixed li.logo {
      font-weight: 300!important;
      word-spacing: 20px;
      padding-right: 10px;
+     font-family: 'Roboto', sans-serif;
 }
 
 .sidenav-fixed a.active,
@@ -68,8 +69,8 @@ ul.sidenav-fixed li.logo {
      text-decoration: none!important;
      text-align: left;
      font-family: 'Roboto', sans-serif;
-     font-size: 1.0rem!important;
      word-spacing: 10px;
+     font-size: 14px!important;
 }
 
 ul.sidenav-activate a {
@@ -77,7 +78,7 @@ ul.sidenav-activate a {
      display: block;
      line-height: 100%;
      padding: 15px 15px 5px 15px;
-     font-weight: bold!important;
+     font-weight: 400;
 }
 
 #slide-out {
@@ -113,13 +114,15 @@ nav.hide-on-large-only {
      font-size: 24px;
      display: block;
      text-decoration: none!important;
-     font-family: sans-serif;
+     font-family: 'Roboto', sans-serif;
 }
 
 .name-title span {
      display: block;
      font-size: 14px;
      padding-top: 5px;
+     font-family: 'Roboto', sans-serif;
+     font-weight: lighter;
 }
 
 .name-title {

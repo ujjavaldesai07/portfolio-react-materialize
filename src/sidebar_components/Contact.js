@@ -10,6 +10,14 @@ import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab);
 
+const CONTACT_LIST = [
+    ["mailto:ujjavaldesai1@gmail.com", "Email Ujjaval", faEnvelope, "ujjavaldesai1@gmail.com"],
+    ["https://www.linkedin.com/in/ujjavaldesai", "View Ujjaval on LinkedIn", ['fab', "linkedin"], "linkedin.com/in/ujjavaldesai"],
+    ["https://github.com/ujjavaldesai07", "View Ujjaval on GitHub", ['fab', "github"], "github.com/ujjavaldesai07"],
+    ["https://www.facebook.com/ujjavaldesai", "View Ujjaval on Facebook", ['fab', "facebook"], "facebook.com/ujjavaldesai"],
+    ["https://www.instagram.com/im_ujjval", "View Ujjaval on Instagram", ['fab', "instagram"], "instagram.com/im_ujjval"],
+];
+
 class Contact extends React.Component {
     componentDidMount() {
         var elem = document.querySelectorAll(".tooltipped");
@@ -21,41 +29,29 @@ class Contact extends React.Component {
     }
 
     render() {
-        var iconSize = "3x";
+        let renderContactInfo = () => {
+            const contacts = [];
+            for(let contact of CONTACT_LIST) {
+                contacts.push(
+                <div>
+                    <a href={contact[0]} target="_blank"
+                       className="tooltipped btn-floating btn-large waves-effect waves-light brown"
+                       data-position="top" data-tooltip={contact[1]}>
+                        <FontAwesomeIcon icon={contact[2]} size="2x"/>
+                    </a>
+                    <a href={contact[0]} target="_blank" className="teal-text">{contact[3]}</a>
+                </div>
+                )
+            }
+            return contacts;
+        };
+
+
         return (
             <div>
                 <ComponentHeader heading={"Contact"}/>
-                <div className="container contact-logo">
-                    <p>
-                        <a href="mailto:ujjavaldesai1@gmail.com"
-                           className="tooltipped" data-position="top" data-tooltip="Email Ujjaval">
-                        <FontAwesomeIcon icon={faEnvelope} size={iconSize}/></a>
-                        <a href="mailto:ujjavaldesai1@gmail.com" className="teal-text contact-info">ujjavaldesai1@gmail.com</a>
-                    </p>
-                    <p className="customize">
-                        <a href="https://www.linkedin.com/in/ujjavaldesai/" target="_blank"
-                           className="tooltipped" data-position="top" data-tooltip="View Ujjaval on LinkedIn">
-                        <FontAwesomeIcon icon={['fab', "linkedin"]}size={iconSize}/></a>
-                        <a href="https://www.linkedin.com/in/ujjavaldesai/" className="teal-text contact-info"> linkedin.com/in/ujjavaldesai</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/ujjavaldesai07" target="_blank"
-                           className="tooltipped" data-position="top" data-tooltip="View Ujjaval on GitHub">
-                        <FontAwesomeIcon icon={['fab', "github"]} size={iconSize}/></a>
-                        <a href="https://github.com/ujjavaldesai07" className="teal-text contact-info">github.com/ujjavaldesai07</a>
-                    </p>
-                    <p>
-                        <a href="https://www.facebook.com/ujjavaldesai" target="_blank"
-                           className="tooltipped" data-position="top" data-tooltip="Message Ujjaval on Facebook">
-                        <FontAwesomeIcon icon={['fab', "facebook"]} size={iconSize}/></a>
-                        <a href="https://www.facebook.com/ujjavaldesai" className="teal-text contact-info">facebook.com/ujjavaldesai</a>
-                    </p>
-                    <p className="customize">
-                        <a href="https://www.instagram.com/im_ujjval/" target="_blank"
-                           className="tooltipped" data-position="top" data-tooltip="Message Ujjaval on Instagram">
-                        <FontAwesomeIcon icon={['fab', "instagram"]} size={iconSize}/></a>
-                        <a href="https://www.instagram.com/im_ujjval/" className="teal-text contact-info"> instagram.com/im_ujjval</a>
-                    </p>
+                <div className="container contact-info">
+                    {renderContactInfo()}
                 </div>
             </div>
         )

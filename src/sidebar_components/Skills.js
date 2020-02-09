@@ -135,9 +135,9 @@ class Skills extends React.Component {
         const navbarItems = [];
         const NAVBAR_ITEMS = ['all', 'languages', 'front-end', 'back-end', 'build-tools', 'other-tools'];
 
-        for (const [, value] of NAVBAR_ITEMS.entries()) {
+        for (const item of NAVBAR_ITEMS) {
             navbarItems.push(<span>
-                <a href={'#' + value} onMouseEnter={this.handleMouseEnter} className="waves-green black-text">{value}
+                <a href={'#' + item} onMouseEnter={this.handleMouseEnter} className="waves-green black-text">{item}
                 </a>
             </span>)
         }
