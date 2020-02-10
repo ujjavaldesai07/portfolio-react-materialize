@@ -12,7 +12,6 @@ import ScrollSpyNav from "./ScrollSpyNav";
 import NavbarCollapseButton from "./NavbarCollapseButton";
 import Resume from "../sidebar_components/Resume";
 
-
 const MENU_LIST = [
     ['About', userImage, "teal-text"], ['Experience', trendImage, "indigo-text"],
     ['Projects', projectImage, "purple-text"], ['Skills', skillsImage, "orange-text"],
