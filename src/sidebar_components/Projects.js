@@ -5,7 +5,32 @@ import M from "materialize-css/dist/js/materialize.min";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
 
-
+const ProjectData =  [
+    [
+        "Uflix App",
+        "YouTube video search application built using YouTube rest api, Javascript, jQuery, Nodejs and deployed on Heroku cloud application platform.",
+        "https://uflix-app.herokuapp.com",
+        "https://github.com/ujjavaldesai07/uflix-app"
+    ],
+    [
+        "Weather App",
+        "Weather application built using React JS, Webpack & Node JS.",
+        "http://getweather-app.herokuapp.com",
+        "https://github.com/ujjavaldesai07/react-weather-app"
+    ],
+    [
+        "ExpenseTracker App",
+        "Expense tracker application using Spring boot, JPA, AOP with containerization using Docker.",
+        "http://Expense-tracker-3.herokuapp.com",
+        "https://github.com/ujjavaldesai07/springboot-JPA-AOP-expense-tracker-app"
+    ],
+    [
+        "UnitConversion App",
+        "Unit Conversion App built using SpringBoot and SpringMVC.",
+        "https://unit-conversion-application.herokuapp.com",
+        "https://github.com/ujjavaldesai07/springboot-mvc-docker-unitconversion-app"
+    ]
+];
 
 
 class Projects extends React.Component {
@@ -19,71 +44,43 @@ class Projects extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <ComponentHeader heading={"Projects"}/>
-                <div className="container flow-text">
-                    <div className="row justify-content-center">
-                        <div className="col-5">
-                            <div className="card darken-1">
-                                <div className="card-content common-attributes">
-                                    <a href="https://www.uhcl.edu"
-                                       className="tooltipped" data-position="top" data-tooltip="Look at the university website">
-                                        <span className="card-title teal-text">University of Houston - Clear Lake</span></a>
-                                    <li>M.S. in Computer Science <span>GPA: 3.92/4.0</span></li>
-                                    <div className="btn-floating btn-large waves-effect waves-light brown">
-                                        <FontAwesomeIcon icon={faExternalLinkAlt} size="lg"/>
-                                    </div>
-                                    <div className="btn-floating btn-large waves-effect waves-light brown">
-                                        <FontAwesomeIcon icon={['fab', "github"]} size="lg"/>
-                                    </div>
-                                </div>
+        function  renderCards(data) {
+            return (
+                <div className="col-5">
+                    <div className="card darken-1">
+                        <div className="card-content">
+                            <span className="card-title teal-text">{data[0]}</span>
+                            <div className="card-data">
+                                <p className="brown-text">{data[1]}</p>
                             </div>
-                        </div>
-
-                        <div className="col-5">
-                            <div className="card darken-1">
-                                <div className="card-content common-attributes">
-                                    <a href="https://www.uhcl.edu"
-                                       className="tooltipped" data-position="top" data-tooltip="Look at the university website">
-                                        <span className="card-title teal-text">University of Houston - Clear Lake</span></a>
-                                    <li>M.S. in Computer Science <span>GPA: 3.92/4.0</span></li>
-                                    <div className="card-action brown-text">
-                                        <span>Jan 2019 - Dec 2020 | Houston, TX</span>
-                                    </div>
-                                </div>
+                            <div className="card-action">
+                                <a href={data[2]} target="_blank" className="tooltipped btn-floating btn-large waves-effect waves-light brown"
+                                   data-position="top" data-tooltip="View Demo">
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} size="lg"/>
+                                </a>
+                                <a href={data[3]} target="_blank" className="tooltipped btn-floating btn-large waves-effect waves-light brown"
+                                   data-position="top" data-tooltip="View Source">
+                                    <FontAwesomeIcon icon={['fab', "github"]} size="lg"/>
+                                </a>
                             </div>
                         </div>
                     </div>
-
+                </div>
+            )
+        }
+        return (
+            <div>
+                <ComponentHeader heading={"Projects"}/>
+                <div className="container flow-text project-container">
                     <div className="row justify-content-center">
-
-                        <div className="col-5">
-                            <div className="card darken-1">
-                                <div className="card-content common-attributes">
-                                    <a href="https://www.gtu.ac.in/"
-                                       className="tooltipped" data-position="top" data-tooltip="Look at the university website">
-                                        <span className="card-title teal-text">Gujarat Technological University</span></a>
-                                    <li>B.E. in Electronics & Communication<span>GPA: 7.9/10</span></li>
-                                    <div className="card-action brown-text">
-                                        <span>Jun 2009 - Jun 2013 | Gujarat, INDIA</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-5">
-                            <div className="card darken-1">
-                                <div className="card-content common-attributes">
-                                    <a href="https://www.uhcl.edu"
-                                       className="tooltipped" data-position="top" data-tooltip="Look at the university website">
-                                        <span className="card-title teal-text">University of Houston - Clear Lake</span></a>
-                                    <li>M.S. in Computer Science <span>GPA: 3.92/4.0</span></li>
-                                    <div className="card-action brown-text">
-                                        <span>Jan 2019 - Dec 2020 | Houston, TX</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {renderCards(ProjectData[0])}
+                        {renderCards(ProjectData[1])}
+                    </div>
+                </div>
+                <div className="container flow-text project-container">
+                    <div className="row justify-content-center">
+                        {renderCards(ProjectData[2])}
+                        {renderCards(ProjectData[3])}
                     </div>
                 </div>
             </div>

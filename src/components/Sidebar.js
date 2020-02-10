@@ -8,23 +8,24 @@ import skillsImage from '../images/navbar/skills.png';
 import educationImage from '../images/navbar/education.png';
 import certificateImage from '../images/navbar/certificate.png';
 import contactImage from '../images/navbar/email.png';
-import resumeImage from '../images/navbar/resume.png';
 import ScrollSpyNav from "./ScrollSpyNav";
 import NavbarCollapseButton from "./NavbarCollapseButton";
+import Resume from "../sidebar_components/Resume";
 
-const MENU_ITEMS_MAP = new Map([
-    ['About', userImage], ['Experience', trendImage],
-    ['Projects', projectImage], ['Skills', skillsImage],
-    ['Education', educationImage], ['Certification', certificateImage],
-    ['Contact', contactImage], ['Resume', resumeImage]
-]);
+
+const MENU_LIST = [
+    ['About', userImage, "teal-text"], ['Experience', trendImage, "indigo-text"],
+    ['Projects', projectImage, "purple-text"], ['Skills', skillsImage, "orange-text"],
+    ['Education', educationImage, "cyan-text"], ['Certification', certificateImage, "red-text"],
+    ['Contact', contactImage, "yellow-text"]
+];
 
 class Sidebar extends React.Component {
     getMenuItems = () => {
         var menuItems = [];
         menuItems.push("Introduction");
-        for (const [key,] of MENU_ITEMS_MAP.entries()) {
-            menuItems.push(key);
+        for (const item of MENU_LIST) {
+            menuItems.push(item[0]);
         }
         return menuItems;
     };
@@ -40,19 +41,19 @@ class Sidebar extends React.Component {
     render() {
         const fixedSidebarItems = [];
 
-        for (const [key, value] of MENU_ITEMS_MAP.entries()) {
+        for (const item of MENU_LIST) {
             fixedSidebarItems.push(<li>
-                <a href={'#' + key} className="waves-effect waves-green menu-item black-text">
-                    <img src={value} className="images" width="30" height="30" alt={value}/> {key}</a>
+                <a href={'#' + item[0]} className={item[2] + " waves-effect waves-green menu-item"}>
+                    <img src={item[1]} width="30" height="30" alt="icon"/><span>{item[0]}</span></a>
             </li>)
         }
 
         const collapseSidebarItems = [];
 
-        for (const [key, value] of MENU_ITEMS_MAP.entries()) {
+        for (const item of MENU_LIST) {
             collapseSidebarItems.push(<li>
-                <a href={'#' + key} className="waves-effect waves-green toggle-menu-item black-text">
-                    <img src={value} className="images" width="30" height="30" alt={value}/> {key}</a>
+                <a href={'#' + item[0]} className="waves-effect waves-green toggle-menu-item black-text">
+                    <img src={item[1]} width="30" height="30" alt="icon"/><span>{item[0]}</span></a>
             </li>)
         }
 
@@ -71,15 +72,17 @@ class Sidebar extends React.Component {
                         <ul className="sidenav sidenav-fixed section table-of-contents">
                             <li className="logo user-view">
                                     <a href="#Introduction" className="logo-name teal-text"><h1>Ujjaval Desai</h1></a>
-                                    <a href="#Introduction" className="logo-name-desc"><span className="brown-text">Full Stack Developer</span></a>
+                                    <a href="#Introduction" className="logo-name-desc brown-text">Software Developer</a>
                             </li>
                             {fixedSidebarItems}
+                        <Resume menu_class={"menu-item"}/>
                         </ul>
                     </nav>
 
                     <nav className="hide-on-large-only disable-navbar">
                         <ul id="slide-out" className="sidenav sidenav-activate">
                             {collapseSidebarItems}
+                            <Resume menu_class={"toggle-menu-item"}/>
                         </ul>
                     </nav>
                 </ScrollSpyNav>

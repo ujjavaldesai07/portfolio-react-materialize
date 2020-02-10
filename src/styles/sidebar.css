@@ -1,5 +1,32 @@
+/************ Fixed Sidenav Bar Style ****************/
 .sidenav {
      width: 200px!important;
+}
+
+ul.sidenav li {
+     padding: 0;
+}
+
+.section {
+     padding-top: 0;
+     position: fixed;
+}
+
+ul.sidenav-fixed li.logo {
+     background-color: #fafafa;
+     border-bottom: 1px solid #ddd;
+     box-sizing: content-box;
+     min-height: 90px;
+     text-align: center;
+}
+
+.sidenav .user-view {
+     margin-bottom: 0!important;
+}
+
+.sidenav li>a {
+     padding-right: 10px!important;
+
 }
 
 .logo-name {
@@ -23,39 +50,21 @@
      font-family: 'Roboto', sans-serif;
 }
 
-.section {
-     padding-top: 0;
-     position: fixed;
-}
-
-ul.sidenav li {
-     padding: 0;
-}
-
-ul.sidenav-fixed li.logo {
-     background-color: #fafafa;
-     border-bottom: 1px solid #ddd;
-     box-sizing: content-box;
-     min-height: 90px;
-     text-align: center;
-}
-
-.sidenav .user-view {
-     margin-bottom: 0!important;
-}
-
-.sidenav li>a {
-     padding-right: 10px!important;
-}
-
 .menu-item {
      text-decoration: none!important;
-     text-align: left;
      font-size: 1.0rem!important;
      font-weight: 300!important;
-     word-spacing: 20px;
-     padding-right: 10px;
      font-family: 'Roboto', sans-serif;
+}
+
+.menu-item img, .toggle-menu-item img {
+     display: inline-block;
+     margin: 2px 2px;
+}
+
+.sidenav-fixed a span {
+     padding-left: 20px;
+     color: black!important;
 }
 
 .sidenav-fixed a.active,
@@ -65,35 +74,31 @@ ul.sidenav-fixed li.logo {
      font-weight: 500!important;
 }
 
-.toggle-menu-item {
-     text-decoration: none!important;
-     text-align: left;
-     font-family: 'Roboto', sans-serif;
-     word-spacing: 10px;
-     font-size: 14px!important;
+nav.hide-on-small-only, nav.disable-navbar {
+     background: white!important;
+     box-shadow: none!important;
+     height: 0!important;
 }
 
-ul.sidenav-activate a {
-     box-sizing: content-box;
-     display: block;
-     line-height: 100%;
-     padding: 15px 15px 5px 15px;
-     font-weight: 400;
-}
+/********************************************************/
+
+/************ Collapse Sidenav Bar Style ****************/
 
 #slide-out {
      margin-top:0;
 }
 
-.images {
-     display: inline-block;
-     margin: 2px 2px;
+#slide-out a {
+     box-sizing: content-box;
+     display: block;
+     line-height: 100%;
+     padding: 20px 15px 10px 30px;
+     font-weight: 400;
 }
 
-nav.hide-on-small-only, nav.disable-navbar {
-     background: white!important;
-     box-shadow: none!important;
-     height: 0!important;
+#slide-out span {
+     padding-left: 20px;
+     font-size: 16px;
 }
 
 nav.hide-on-large-only {
@@ -109,6 +114,13 @@ nav.hide-on-large-only {
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-36 { font-size: 36px; }
 
+.name-title {
+     padding-right: 80px;
+     display: block;
+     position: relative;
+     line-height: 20px;
+}
+
 .name-title a {
      padding-top: 15px;
      font-size: 24px;
@@ -122,15 +134,18 @@ nav.hide-on-large-only {
      font-size: 14px;
      padding-top: 5px;
      font-family: 'Roboto', sans-serif;
-     font-weight: lighter;
+     font-weight: normal;
 }
 
-.name-title {
-     padding-right: 80px;
-     display: block;
-     position: relative;
-     line-height: 20px;
+.toggle-menu-item {
+     text-decoration: none!important;
+     text-align: left;
+     font-family: 'Roboto', sans-serif;
+     word-spacing: 10px;
+     font-size: 14px!important;
 }
+
+/********************************************************/
 
 @media (min-width: 993px) {
      .navbar-fixed {

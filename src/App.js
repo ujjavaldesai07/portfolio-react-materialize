@@ -11,7 +11,6 @@ import Skills from "./sidebar_components/Skills";
 import Education from "./sidebar_components/Education";
 import Certification from "./sidebar_components/Certification"
 import Contact from "./sidebar_components/Contact";
-import Resume from "./sidebar_components/Resume";
 
 function App() {
     return (
@@ -25,7 +24,6 @@ function App() {
             <Education/>
             <Certification/>
             <Contact/>
-            <Resume/>
         </div>
     );
 }

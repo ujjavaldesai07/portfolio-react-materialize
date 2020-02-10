@@ -17,30 +17,23 @@ class About extends React.Component {
         return (
             <div>
                 <ComponentHeader heading={"About"}/>
-                <div className="container flow-text certificate-bg">
-                    <div className="row">
-                        <div className="col-6">
-                            <div className="card darken-1">
-                                <div className="card-content certificate-card-1">
-                                    <a href="https://www.coursera.org/account/accomplishments/certificate/ZL8C2MUN7NWC"
-                                       className="tooltipped" data-position="top" data-tooltip="Look at the Certificate">
-                                        <span className="card-title teal-text">Online Machine Learning Course</span></a>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-6">
-                            <div className="card blue-grey darken-1">
-                                <div className="card-content white-text">
-                                    <span className="card-title">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div className="container flow-text about-container">
+                    <blockquote className="brown-text">
+                        <h2>
+                            Passionate software developer wants to work
+                            in a team and solve the real world customer problems.
+                        </h2>
+                    </blockquote>
+                    <p>
+                        I have over 4 years of experience as a software engineer working in Deep Packet Inspection
+                        technologies of the networking domain. Currently, I am pursuing my master's in computer science
+                        and I will be graduating in December 2020. I like to build scalable and user-friendly
+                        applications using the latest tools and technologies. Apart from building applications,
+                        I am always curious and fascinated about problems faced by the application and debugging them
+                        in different ways. I am seeking the opportunity to solve challenging tasks and be a
+                        part of the team which will improve my knowledge and that will help me in personal
+                        and professional growth.
+                    </p>
                 </div>
             </div>
         )

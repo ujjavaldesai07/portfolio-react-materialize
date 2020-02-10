@@ -20,18 +20,119 @@
     font-family: sans-serif;
 }
 
-.btn-floating.btn-large {
-    padding-top: 7px!important;
-}
-
 .btn-large:hover {
     color: white!important;
+}
+
+/*****************************************/
+
+/******* Introduction Component Style *******/
+
+#Introduction {
+    background: url("../images/introduction/nature.jpg");
+    width: 1240px;
+    height: 720px;
+}
+
+#Introduction h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    width:70%;
+    display: inline-block;
+    padding-left: 50px;
+    padding-top: 40px;
+    text-align: justify;
+}
+
+/*****************************************/
+
+/******* About Component Style *******/
+
+.about-container {
+    padding-bottom: 210px;
+}
+
+.about-container p {
+    text-align: justify;
+}
+
+/*****************************************/
+
+/******* Experience Component Style *******/
+
+.experience-container li {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: disc!important;
+    margin-left: 30px;
+    padding-bottom: 8px;
+    text-align: justify;
+}
+
+.experience-container ul {
+    padding-top: 20px;
+}
+
+.experience-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.experience-header span {
+    display: inline-block!important;
+    font-weight: normal!important;
+    font-size: 20px!important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.experience-header .card-title {
+    float: right!important;
+    line-height: 60px!important;
+}
+
+.experience-header .align-header {
+    line-height: 45px!important;
 }
 
 /*******************************************/
 
 /******* Projects Component Style *******/
 
+.project-container .card-action {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 20px;
+}
+
+.project-container .card-content {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.project-container .btn-floating {
+    margin-right: 20px!important;
+}
+
+.project-container .card-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.project-container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.project-container .card-data {
+    height: 150px;
+}
 
 /*******************************************/
 
@@ -125,6 +226,9 @@
 /*******************************************/
 
 /******* Contact Component Style *******/
+.contact-info {
+    padding-bottom: 230px;
+}
 
 .contact-info div {
     width:70%;
@@ -139,6 +243,10 @@
     font-weight: 400;
     vertical-align:middle;
     text-align:center;
+}
+
+.contact-info .btn-floating.btn-large {
+    padding-top: 7px!important;
 }
 
 /*******************************************/

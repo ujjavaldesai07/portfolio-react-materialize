@@ -43,7 +43,7 @@ class Education extends React.Component {
                                         <span className="card-title teal-text">Gujarat Technological University</span></a>
                                     <li>B.E. in Electronics & Communication<span>GPA: 7.9/10</span></li>
                                     <div className="card-action brown-text">
-                                        <span>Jun 2009 - Jun 2013 | Gujarat, INDIA</span>
+                                        <span>Jun 2009 - Jun 2013 | Gujarat, India</span>
                                     </div>
                                 </div>
                             </div>

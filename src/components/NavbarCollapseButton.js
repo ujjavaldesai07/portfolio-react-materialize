@@ -13,7 +13,7 @@ class NavbarCollapseButton extends React.Component {
 
                         <div className="name-title text-center">
                             <a href="#" className="teal-text">Ujjaval Desai
-                                <span className="brown-text">Full Stack Developer</span>
+                                <span className="brown-text">Software Developer</span>
                             </a>
                         </div>
                     </div>
