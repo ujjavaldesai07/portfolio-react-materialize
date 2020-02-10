@@ -4,23 +4,8 @@
     <list default="true" id="96a7ae14-7573-47a9-a29e-07d94d972dbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavbarCollapseButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavbarCollapseButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sidebar_components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Education.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Experience.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Introduction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Resume.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/sidebarComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/sidebarComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Resume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Resume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +87,8 @@
       <updated>1580519036381</updated>
       <workItem from="1580519037649" duration="101567000" />
       <workItem from="1580929119717" duration="44850000" />
-      <workItem from="1581145252813" duration="46343000" />
+      <workItem from="1581145252813" duration="46462000" />
+      <workItem from="1581371669852" duration="883000" />
     </task>
     <servers />
   </component>
@@ -118,26 +104,26 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.797@0.23.1440.797" timestamp="1581236606796" />
-    <state width="821" height="242" key="GridCell.Tab.0.bottom" timestamp="1581308092783">
+    <state width="821" height="242" key="GridCell.Tab.0.bottom" timestamp="1581318364807">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580778792834" />
-    <state width="821" height="242" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1581308092783" />
-    <state width="821" height="242" key="GridCell.Tab.0.center" timestamp="1581308092781">
+    <state width="821" height="242" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1581318364807" />
+    <state width="821" height="242" key="GridCell.Tab.0.center" timestamp="1581318364806">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580778792833" />
-    <state width="821" height="242" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1581308092781" />
-    <state width="821" height="242" key="GridCell.Tab.0.left" timestamp="1581308092780">
+    <state width="821" height="242" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1581318364806" />
+    <state width="821" height="242" key="GridCell.Tab.0.left" timestamp="1581318364806">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580778792832" />
-    <state width="821" height="242" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1581308092780" />
-    <state width="821" height="242" key="GridCell.Tab.0.right" timestamp="1581308092782">
+    <state width="821" height="242" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1581318364806" />
+    <state width="821" height="242" key="GridCell.Tab.0.right" timestamp="1581318364807">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580778792834" />
-    <state width="821" height="242" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1581308092782" />
+    <state width="821" height="242" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1581318364807" />
     <state x="641" y="197" width="670" height="599" key="search.everywhere.popup" timestamp="1581212153907">
       <screen x="0" y="23" width="1440" height="797" />
     </state>

@@ -1,8 +1,6 @@
 import React from 'react';
 import 'materialize-css/dist/js/materialize.min.js';
 import resumeImage from '../images/navbar/resume.png';
-import axios from 'axios';
-const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';
 const RESUME_URL = 'https://drive.google.com/file/d/1rcCJ3qzJIEyq_Wqkxu_E7Hs2m9IMg1c8/view?usp=sharing';
 
 class Resume extends React.Component {
