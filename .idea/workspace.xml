@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96a7ae14-7573-47a9-a29e-07d94d972dbf" name="Default Changelist" comment="" />
+    <list default="true" id="96a7ae14-7573-47a9-a29e-07d94d972dbf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,19 +43,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/images/skills/frontend" />
+      <recent name="$PROJECT_DIR$/src/images/skills/framework" />
+      <recent name="$PROJECT_DIR$/src/images/skills/buildtools" />
+      <recent name="$PROJECT_DIR$/src/images/skills/frontend/" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Resume" />
       <recent name="$PROJECT_DIR$/src/images/introduction" />
       <recent name="$PROJECT_DIR$/src/images/experience" />
       <recent name="$PROJECT_DIR$/src/images/skills/othertools" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/images/skills/frontend" />
-      <recent name="$PROJECT_DIR$/src/images/skills/framework" />
-      <recent name="$PROJECT_DIR$/src/images/skills/buildtools" />
-      <recent name="$PROJECT_DIR$/src/images/skills/frontend/" />
-      <recent name="$PROJECT_DIR$/src/images/background" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -83,7 +86,7 @@
       <workItem from="1580519037649" duration="101567000" />
       <workItem from="1580929119717" duration="44850000" />
       <workItem from="1581145252813" duration="46462000" />
-      <workItem from="1581371669852" duration="1066000" />
+      <workItem from="1581371669852" duration="2318000" />
     </task>
     <servers />
   </component>
