@@ -1,2 +1,4 @@
 [build]
   functions = "./netlify_functions"
+[build.environment]
+  RESUME_URL = ${RESUME_URL}
