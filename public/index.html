@@ -9,6 +9,28 @@
           name="ujjavaldesai"
           content="portfolio"
   />
+
+  <title>Ujjaval Desai | Software Developer</title>
+  <!-- Open Graph-->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta
+          property="og:title"
+          content="Ujjaval Desai | Software Developer"
+  />
+  <meta
+          property="og:description"
+          content="I love coding, designing and tackling complex bugs
+          in the application."
+  />
+  <meta property="og:url" content="ujjavaldesai.netlify.com" />
+  <meta
+          property="og:site_name"
+          content="Ujjaval Desai | Software Developer"
+  />
+  <meta property="article:publisher" content="ujjavaldesai.netlify.com" />
+  <meta property="og:image" content="" />
+
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
     manifest.json provides metadata used when your web app is installed on a
@@ -29,17 +51,6 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Ujjaval Desai | Software Developer</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158179574-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-158179574-1');
-  </script>
   </head>
   <body>
     <div id="root"></div>
@@ -53,5 +64,60 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      let analyticsId;
+
+      // If analytics id has been manually defined
+      if (analyticsId) {
+        // Initialize GA with local var
+        initGoogleAnalytics(analyticsId)
+      } else {
+        // Initialize GA with Netlify env var available via lamba function
+        fetch("./env_vars")
+                .then(getEnvVar)
+                .then(initGoogleAnalytics)
+                .catch(handleError)
+      }
+
+      // -------------------------------------------------
+      // Helper Functions
+      // --------------------------------------------------
+
+      function handleError(error) {
+        console.log("error", error)
+      }
+
+      function getEnvVar(response) {
+        // If the request was successful
+        if (response.ok) {
+          // Return the response text
+          return response.text()
+        } else {
+          // Return a rejected Promise object, triggering the .catch()
+          return Promise.reject(response)
+        }
+      }
+
+      // Set Up Google Analytics
+      function initGoogleAnalytics(analyticsId) {
+        if (analyticsId) {
+          // Inject the Google Analytics Tag Manager script into the DOM
+          analyticsUrl =
+                  "https://www.googletagmanager.com/gtag/js?id=UA-" + analyticsId;
+          var ref = document.getElementsByTagName("script")[0];
+          var script = document.createElement("script");
+          script.src = analyticsUrl;
+          ref.parentNode.insertBefore(script, ref);
+
+          // Initialize Google Analytics
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments)
+          }
+          gtag("js", new Date());
+          gtag("config", "UA-" + analyticsId)
+        }
+      }
+    </script>
   </body>
 </html>

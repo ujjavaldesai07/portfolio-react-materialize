@@ -1,7 +1,7 @@
 import React from 'react';
 import 'materialize-css/dist/js/materialize.min.js';
 import resumeImage from '../images/navbar/resume.png';
-const RESUME_URL = 'https://drive.google.com/file/d/1rcCJ3qzJIEyq_Wqkxu_E7Hs2m9IMg1c8/view?usp=sharing';
+const RESUME_URL = process.env.RESUME_PATH;
 
 class Resume extends React.Component {
 

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="96a7ae14-7573-47a9-a29e-07d94d972dbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sidebar_components/Resume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Resume.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
       <workItem from="1580519037649" duration="101567000" />
       <workItem from="1580929119717" duration="44850000" />
       <workItem from="1581145252813" duration="46462000" />
-      <workItem from="1581371669852" duration="5499000" />
+      <workItem from="1581371669852" duration="6460000" />
     </task>
     <servers />
   </component>
@@ -94,10 +95,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="531" y="247" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581057703378">
+    <state x="531" y="247" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581383127235">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state x="531" y="247" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.797@0.23.1440.797" timestamp="1581057703378" />
+    <state x="531" y="247" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.797@0.23.1440.797" timestamp="1581383127235" />
     <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581236606796">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
