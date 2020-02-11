@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96a7ae14-7573-47a9-a29e-07d94d972dbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/env_vars.js" beforeDir="false" afterPath="$PROJECT_DIR$/netlify_functions/env_vars.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sidebar_components/Resume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sidebar_components/Resume.js" afterDir="false" />
     </list>
@@ -45,11 +46,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/netlify_functions" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/images/skills/frontend" />
       <recent name="$PROJECT_DIR$/src/images/skills/framework" />
       <recent name="$PROJECT_DIR$/src/images/skills/buildtools" />
-      <recent name="$PROJECT_DIR$/src/images/skills/frontend/" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -87,7 +88,7 @@
       <workItem from="1580519037649" duration="101567000" />
       <workItem from="1580929119717" duration="44850000" />
       <workItem from="1581145252813" duration="46462000" />
-      <workItem from="1581371669852" duration="6460000" />
+      <workItem from="1581371669852" duration="6904000" />
     </task>
     <servers />
   </component>

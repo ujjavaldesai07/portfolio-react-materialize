@@ -73,7 +73,7 @@
         initGoogleAnalytics(analyticsId)
       } else {
         // Initialize GA with Netlify env var available via lamba function
-        fetch("./env_vars")
+        fetch("/.netlify/functions/env_vars")
                 .then(getEnvVar)
                 .then(initGoogleAnalytics)
                 .catch(handleError)

@@ -1,7 +1,7 @@
 import React from 'react';
 import 'materialize-css/dist/js/materialize.min.js';
 import resumeImage from '../images/navbar/resume.png';
-const RESUME_URL = process.env.RESUME_PATH;
+const { RESUME_URL } = process.env;
 
 class Resume extends React.Component {
 
