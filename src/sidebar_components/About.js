@@ -15,7 +15,7 @@ class About extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="webpage-height">
                 <ComponentHeader heading={"About"}/>
                 <div className="container flow-text about-container">
                     <blockquote className="brown-text">

@@ -15,7 +15,7 @@ class Education extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="webpage-height">
                 <ComponentHeader heading={"Education"}/>
                 <div className="container flow-text education-container">
                     <div className="row justify-content-center">

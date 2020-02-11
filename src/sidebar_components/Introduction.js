@@ -5,7 +5,7 @@ class Introduction extends React.Component {
 
     render() {
         return (
-            <div id="Introduction">
+            <div id="Introduction" className="webpage-height">
                 <h1 className="white-text">I love coding, designing and tackling complex bugs
                     in the applications.</h1>
             </div>

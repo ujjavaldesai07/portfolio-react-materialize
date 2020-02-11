@@ -1,5 +1,10 @@
 /******* Common Component Style *******/
 
+.webpage-height {
+    width: 86.1vw;
+    height: 100vh;
+}
+
 .common-attributes {
     padding-bottom: 0!important;
 }
@@ -30,8 +35,6 @@
 
 #Introduction {
     background: url("../images/introduction/nature.jpg");
-    width: 1240px;
-    height: 720px;
 }
 
 #Introduction h1 {
@@ -48,10 +51,6 @@
 /*****************************************/
 
 /******* About Component Style *******/
-
-.about-container {
-    padding-bottom: 210px;
-}
 
 .about-container p {
     text-align: justify;

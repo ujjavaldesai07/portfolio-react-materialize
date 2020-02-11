@@ -15,7 +15,7 @@ class Certification extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="webpage-height">
                 <ComponentHeader heading={"Certification"}/>
                 <div className="container flow-text certificate-container">
                     <div className="row justify-content-center">

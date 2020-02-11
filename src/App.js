@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import Main from "./Main";
-import {HashRouter, Route, Link, Switch} from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Introduction from "./sidebar_components/Introduction";
 import About from "./sidebar_components/About";

@@ -68,7 +68,8 @@ class Skills extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeNavId: 'all'
+            activeNavId: 'all',
+            fullHeight: ''
         }
     }
 
@@ -92,8 +93,14 @@ class Skills extends React.Component {
             this.getNavLinkElement(id).classList.add('active');
             this.getNavLinkElement(this.state.activeNavId).classList.remove('active');
             this.setState({
-                activeNavId: id
-            })
+                activeNavId: id,
+                fullHeight: ''
+            });
+            if(id !== 'all') {
+                this.setState({
+                    fullHeight: 'webpage-height'
+                });
+            }
         }
     };
 
@@ -143,7 +150,7 @@ class Skills extends React.Component {
         }
 
         return (
-            <div>
+            <div className={this.state.fullHeight}>
                 <ComponentHeader heading={"Skills"}/>
                 <div className="container skills-navbar">
                     <div className="row">
