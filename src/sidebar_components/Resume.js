@@ -1,12 +1,12 @@
 import React from 'react';
 import 'materialize-css/dist/js/materialize.min.js';
 import resumeImage from '../images/navbar/resume.png';
-const { RESUME_URL } = process.env;
+const { GATSBY_RESUME_URL } = process.env;
 
 class Resume extends React.Component {
 
     handleDownloadFile = (e) => {
-        window.open(RESUME_URL, "_blank");
+        window.open(GATSBY_RESUME_URL, "_blank");
     };
 
     render() {
