@@ -377,6 +377,20 @@ blockquote {
         font-size: 14px!important;
     }
 
+    .skills-card {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .skills-card div {
+        flex-basis: 100px;
+        flex-shrink: 0;
+    }
+
+    .skills-card div img {
+        padding-top: 20px;
+    }
+
     .education-container .card-title, .certificate-container .card-title {
         font-size: 15px!important;
     }
