@@ -29,14 +29,6 @@ class Sidebar extends React.Component {
         return menuItems;
     };
 
-    componentDidMount() {
-        var elem = document.querySelector(".sidenav-activate");
-        M.Sidenav.init(elem, {
-            edge: "left",
-            inDuration: 250
-        });
-    }
-
     render() {
         const fixedSidebarItems = [];
 

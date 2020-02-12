@@ -1,7 +1,17 @@
 import React from 'react';
 import 'materialize-css/dist/js/materialize.min.js';
+import M from "materialize-css/dist/js/materialize.min";
 
 class NavbarCollapseButton extends React.Component {
+    componentDidMount() {
+        var elem = document.querySelector(".sidenav-activate");
+        M.Sidenav.init(elem, {
+            edge: "left",
+            inDuration: 250,
+            draggable: true
+        });
+    }
+
     render() {
         return (
             <div className="navbar-fixed">
@@ -11,7 +21,7 @@ class NavbarCollapseButton extends React.Component {
                     ></a>
 
                     <div className="name-title">
-                        <a href="#" className="teal-text">Ujjaval Desai
+                        <a href="#Introduction" className="teal-text">Ujjaval Desai
                             <span className="brown-text">Software Developer</span>
                         </a>
                     </div>

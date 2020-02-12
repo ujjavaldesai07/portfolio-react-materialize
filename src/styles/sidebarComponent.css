@@ -39,9 +39,10 @@
 /******* Introduction Component Style *******/
 
 #Introduction {
-    background: url("../images/introduction/nature.jpg") no-repeat top center/cover;
+    background: url("../images/introduction/ujjaval.jpeg") no-repeat top center/cover;
     position: relative;
     height: 100vh;
+    background-position-y: 40%;
 }
 
 #Introduction .main-container {
@@ -342,7 +343,7 @@ blockquote {
 
 @media all and (max-width: 600px) {
     #Introduction {
-        background-position-x: 30%!important;
+        background-position-x: 53%!important;
     }
 
     .about-container {

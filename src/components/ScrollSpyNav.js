@@ -73,12 +73,11 @@ class ScrollSpyNav extends Component {
     /**
      * Disable the active style of current section ID with old section ID.
      * @param {String} newSectionID
-     * @param {String} oldSectionID
      */
-    updateNavLinkActiveStyle(newSectionID, oldSectionID) {
+    updateNavLinkActiveStyle(newSectionID) {
         this.getNavLinkElement(newSectionID).classList.add(this.activeNavClass);
-        if (oldSectionID !== null) {
-            this.getNavLinkElement(oldSectionID).classList.remove(this.activeNavClass);
+        if (this.state.prevSectionID !== null) {
+            this.getNavLinkElement(this.state.prevSectionID).classList.remove(this.activeNavClass);
         }
         this.setState({
             prevSectionID: newSectionID
@@ -116,7 +115,7 @@ class ScrollSpyNav extends Component {
                 if (this.state.prevSectionID !== sectionID &&
                     (window.pageYOffset + 2*document.getElementById(sectionID).scrollHeight > scrollSectionOffsetTop))
                 {
-                    this.updateNavLinkActiveStyle(sectionID, this.state.prevSectionID);
+                    this.updateNavLinkActiveStyle(sectionID);
                 }
             });
         });

@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="96a7ae14-7573-47a9-a29e-07d94d972dbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavbarCollapseButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavbarCollapseButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ScrollSpyNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollSpyNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/sidebar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/sidebarComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/sidebarComponent.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images/introduction" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -44,10 +48,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images/introduction" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Resume" />
-      <recent name="$PROJECT_DIR$/src/images/introduction" />
       <recent name="$PROJECT_DIR$/src/images/experience" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -88,7 +92,7 @@
       <workItem from="1581145252813" duration="46462000" />
       <workItem from="1581371669852" duration="9775000" />
       <workItem from="1581394764931" duration="6266000" />
-      <workItem from="1581450987838" duration="17574000" />
+      <workItem from="1581450987838" duration="21294000" />
     </task>
     <servers />
   </component>

@@ -121,6 +121,10 @@ nav.hide-on-small-only, nav.disable-navbar {
           font-size: 37px;
      }
 
+     .sidenav-trigger {
+          text-decoration: none!important;
+     }
+
      .name-title {
           display: block;
           height: 100%;
@@ -136,7 +140,6 @@ nav.hide-on-small-only, nav.disable-navbar {
           font-size: 24px;
           display: block;
           text-decoration: none !important;
-
      }
 
      .name-title span {
