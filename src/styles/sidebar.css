@@ -83,66 +83,76 @@ nav.hide-on-small-only, nav.disable-navbar {
 /********************************************************/
 
 /************ Collapse Sidenav Bar Style ****************/
+@media (max-width: 992px) {
+     #slide-out {
+          margin-top: 0;
+     }
 
-#slide-out {
-     margin-top:0;
-}
+     #slide-out a {
+          box-sizing: content-box;
+          display: block;
+          line-height: 100%;
+          padding: 20px 15px 10px 30px;
+          font-weight: 400;
+     }
 
-#slide-out a {
-     box-sizing: content-box;
-     display: block;
-     line-height: 100%;
-     padding: 20px 15px 10px 30px;
-     font-weight: 400;
-}
+     #slide-out span {
+          padding-left: 20px;
+          font-size: 16px;
+     }
 
-#slide-out span {
-     padding-left: 20px;
-     font-size: 16px;
-}
+     nav.hide-on-large-only {
+          display: block;
+          background: white;
+          height: 64px;
+     }
 
-nav.hide-on-large-only {
-     background: white;
-     height: 64px;
-}
+     .material-icons {
+          text-decoration: none !important;
+          height: 64px !important;
+          line-height: 64px !important;
+     }
 
-.material-icons {
-     text-decoration: none!important;
-     height: 64px!important;
-     line-height: 64px!important;
-}
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-36 { font-size: 36px; }
+     .material-icons.md-dark {
+          color: rgba(0, 0, 0, 0.54);
+     }
 
-.name-title {
-     padding-right: 80px;
-     display: block;
-     position: relative;
-     line-height: 20px;
-}
+     .material-icons.md-36 {
+          font-size: 37px;
+     }
 
-.name-title a {
-     padding-top: 15px;
-     font-size: 24px;
-     display: block;
-     text-decoration: none!important;
-     font-family: 'Roboto', sans-serif;
-}
+     .name-title {
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          line-height: 20px;
+          text-align: center;
+          font-family: 'Roboto', sans-serif;
+     }
 
-.name-title span {
-     display: block;
-     font-size: 14px;
-     padding-top: 5px;
-     font-family: 'Roboto', sans-serif;
-     font-weight: normal;
-}
+     .name-title a {
+          padding-top: 15px;
+          font-size: 24px;
+          display: block;
+          text-decoration: none !important;
 
-.toggle-menu-item {
-     text-decoration: none!important;
-     text-align: left;
-     font-family: 'Roboto', sans-serif;
-     word-spacing: 10px;
-     font-size: 14px!important;
+     }
+
+     .name-title span {
+          display: block;
+          font-size: 14px;
+          padding-top: 5px;
+          font-weight: normal;
+     }
+
+     .toggle-menu-item {
+          text-decoration: none !important;
+          text-align: left;
+          font-family: 'Roboto', sans-serif;
+          word-spacing: 10px;
+          font-size: 14px !important;
+     }
 }
 
 /********************************************************/

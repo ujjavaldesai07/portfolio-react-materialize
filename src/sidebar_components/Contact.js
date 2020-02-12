@@ -48,7 +48,7 @@ class Contact extends React.Component {
 
 
         return (
-            <div className="webpage-height">
+            <div className="full-height">
                 <ComponentHeader heading={"Contact"}/>
                 <div className="container contact-info">
                     {renderContactInfo()}

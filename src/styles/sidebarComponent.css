@@ -1,7 +1,12 @@
 /******* Common Component Style *******/
 
-.webpage-height {
-    width: 86.1vw;
+.id-section {
+    padding-bottom: 30px;
+    padding-top: 0;
+    position: relative;
+}
+
+.full-height {
     height: 100vh;
 }
 
@@ -34,26 +39,64 @@
 /******* Introduction Component Style *******/
 
 #Introduction {
-    background: url("../images/introduction/nature.jpg");
+    background: url("../images/introduction/nature.jpg") no-repeat top center/cover;
+    position: relative;
+    height: 100vh;
 }
 
-#Introduction h1 {
+#Introduction .main-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#Introduction .container {
+    color: white;
+    font-weight: 200;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+#Introduction h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 50px;
-    width:70%;
+    font-size: 45px;
     display: inline-block;
     padding-left: 50px;
     padding-top: 40px;
-    text-align: justify;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#Introduction .underline {
+    border-bottom: 4px solid teal;
 }
 
 /*****************************************/
 
 /******* About Component Style *******/
 
+.about-container {
+    height: 100vh;
+}
+
 .about-container p {
     text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+}
+
+blockquote {
+    border-left: 5px solid #795548;
+}
+
+.about-container h2 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 /*****************************************/
@@ -153,6 +196,15 @@
     text-align: left;
 }
 
+.navbar-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+
 .skills-card .col img {
     margin: 0 auto;
     max-height: 100px;
@@ -166,7 +218,6 @@
     font-size: 1.5rem;
     text-decoration: none!important;
     text-align: center;
-    vertical-align: middle;
     display: table-cell;
     text-transform: uppercase;
 }
@@ -175,12 +226,6 @@
 .skills-navbar ul a:hover {
     background-color: #008080;
     color: white!important;
-}
-
-.skills-navbar .col-10 {
-    padding-left: 33px;
-    margin-left: 80px!important;
-    padding-bottom: 40px;
 }
 
 /*******************************************/
@@ -227,6 +272,7 @@
 /******* Contact Component Style *******/
 .contact-info {
     padding-bottom: 230px;
+    padding-left: 40px!important;
 }
 
 .contact-info div {
@@ -249,3 +295,126 @@
 }
 
 /*******************************************/
+
+@media all and (max-width: 1024px) {
+    #Introduction h2 {
+        font-size: 42px!important;
+    }
+
+    .skills-navbar {
+        display: none;
+    }
+
+    .skills-card .brown-text {
+        font-size: 27px!important;
+    }
+
+    .project-container .card-title {
+        font-size: 24px;
+    }
+
+    .project-container p {
+        font-size: 18px;
+    }
+
+    .project-container .card {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media all and (max-width: 993px) {
+    .container {
+        margin: 0 auto;
+    }
+
+    #Introduction h2 {
+        font-size: 38px!important;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .about-container .brown-text {
+        font-size: 25px!important;
+    }
+
+}
+
+@media all and (max-width: 600px) {
+    #Introduction {
+        background-position-x: 30%!important;
+    }
+
+    .about-container {
+        padding: 0 30px 100px 30px!important;
+
+    }
+
+    #Introduction h2 {
+        font-size: 20px!important;
+        padding-left: 0!important;
+    }
+
+    .experience-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .experience-header .card-title {
+        font-size: 18px!important;
+    }
+
+    .experience-container li {
+        font-size: 15px!important;
+    }
+
+    .education-container .card-title, .certificate-container .card-title {
+        font-size: 15px!important;
+    }
+
+    .education-container li, .education-container span, .certificate-container p  {
+        font-size: 13px!important;
+        padding-left: 0!important;
+    }
+
+    .card-action {
+        font-size: 12px!important;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding-left: 0!important;
+    }
+
+    .contact-info div {
+        flex-basis: 30%;
+    }
+
+    .contact-info .teal-text {
+        padding-left: 0!important;
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 360px) {
+    #Introduction h2 {
+        font-size: 18px!important;
+    }
+
+    .education-container .card-title {
+        font-size: 14px!important;
+    }
+
+    .education-container li, .education-container span {
+        font-size: 12px!important;
+        padding-left: 0!important;
+    }
+
+    .education-container .card-action span {
+        font-size: 11px!important;
+    }
+}

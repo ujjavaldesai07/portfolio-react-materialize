@@ -21,14 +21,14 @@ class Experience extends React.Component {
                 <ComponentHeader heading={"Experience"}/>
                 <div className="container flow-text experience-container">
                     <div className="row justify-content-center">
-                        <div className="col-8">
+                        <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
                             <div className="card darken-1">
                                 <div className="card-content common-attributes">
                                     <div className="experience-header">
                                         <span>
                                     <a href="https://uhcl.edu/"
                                        className="tooltipped" data-position="top" data-tooltip="Look at the university website">
-                                        <img src={uhclImg} className="responsive-img" width="380px" height="380px" alt=""/>
+                                        <img src={uhclImg} className="responsive-img" width="300px" height="300px" alt=""/>
                                     </a>
                                         </span>
                                         <span className="card-title brown-text align-header">Teaching Assistant</span>
@@ -46,14 +46,14 @@ class Experience extends React.Component {
                     </div>
 
                     <div className="row justify-content-center">
-                        <div className="col-8">
+                        <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
                             <div className="card darken-1">
                                 <div className="card-content common-attributes">
                                     <div className="experience-header">
                                         <span>
                                     <a href="https://www.sandvine.com"
                                        className="tooltipped" data-position="top" data-tooltip="Look at the company's website">
-                                        <img src={sandvineImg} className="responsive-img" width="200px" height="200px" alt=""/>
+                                        <img src={sandvineImg} className="responsive-img center-block" width="200px" height="200px" alt=""/>
                                     </a>
                                         </span>
                                         <span className="card-title brown-text">Senior Software Engineer</span>

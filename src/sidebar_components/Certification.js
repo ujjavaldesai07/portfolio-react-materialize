@@ -19,7 +19,7 @@ class Certification extends React.Component {
                 <ComponentHeader heading={"Certification"}/>
                 <div className="container flow-text certificate-container">
                     <div className="row justify-content-center">
-                        <div className="col-8">
+                        <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
                             <div className="card darken-1">
                                 <div className="card-content common-attributes">
                                     <a href="https://www.coursera.org/account/accomplishments/certificate/ZL8C2MUN7NWC"
@@ -36,7 +36,7 @@ class Certification extends React.Component {
                     </div>
 
                     <div className="row justify-content-center">
-                        <div className="col-8">
+                        <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
                             <div className="card darken-1">
                                 <div className="card-content common-attributes">
                                     <a href="http://www.vectorindia.org/"
@@ -45,7 +45,7 @@ class Certification extends React.Component {
                                     <p>Learned wide array of concepts such as C, C++, Linux internals,
                                         TCP/IP and socket programming.</p>
                                     <div className="card-action brown-text">
-                                        <span>Apr 2014 - Sep 2014 | Bangalore, INDIA</span>
+                                        <span>Apr 2014 - Sep 2014 | Bangalore, India</span>
                                     </div>
                                 </div>
                             </div>

@@ -1,21 +1,11 @@
 import React from 'react';
 import 'materialize-css/dist/js/materialize.min.js';
 import ComponentHeader from "../components/ComponentHeader";
-import M from "materialize-css/dist/js/materialize.min";
 
 class About extends React.Component {
-    componentDidMount() {
-        var elem = document.querySelectorAll(".tooltipped");
-        M.Tooltip.init(elem, {
-            margin: 30,
-            enterDelay: 400,
-            exitDelay: 200,
-        });
-    }
-
     render() {
         return (
-            <div className="webpage-height">
+            <div>
                 <ComponentHeader heading={"About"}/>
                 <div className="container flow-text about-container">
                     <blockquote className="brown-text">

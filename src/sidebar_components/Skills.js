@@ -98,7 +98,7 @@ class Skills extends React.Component {
             });
             if(id !== 'all') {
                 this.setState({
-                    fullHeight: 'webpage-height'
+                    fullHeight: 'full-height'
                 });
             }
         }
@@ -143,20 +143,20 @@ class Skills extends React.Component {
         const NAVBAR_ITEMS = ['all', 'languages', 'front-end', 'back-end', 'build-tools', 'other-tools'];
 
         for (const item of NAVBAR_ITEMS) {
-            navbarItems.push(<span>
+            navbarItems.push(<li className="nav-item">
                 <a href={'#' + item} onMouseEnter={this.handleMouseEnter} className="waves-green black-text">{item}
                 </a>
-            </span>)
+            </li>)
         }
 
         return (
             <div className={this.state.fullHeight}>
                 <ComponentHeader heading={"Skills"}/>
                 <div className="container skills-navbar">
-                    <div className="row">
-                        <div className="col-10">
+                    <div className="row justify-content-center">
+                        <div>
                             <nav>
-                                <div className="nav-wrapper white">
+                                <div className="white navbar-nav nav-fill">
                                     <ul>
                                         {navbarItems}
                                     </ul>

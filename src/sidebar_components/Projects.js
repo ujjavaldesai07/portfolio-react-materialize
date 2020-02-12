@@ -46,7 +46,7 @@ class Projects extends React.Component {
     render() {
         function  renderCards(data) {
             return (
-                <div className="col-5">
+                <div className="col-10 col-md-6">
                     <div className="card darken-1">
                         <div className="card-content">
                             <span className="card-title teal-text">{data[0]}</span>
