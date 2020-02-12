@@ -369,6 +369,14 @@ blockquote {
         font-size: 15px!important;
     }
 
+    .project-container .card-title {
+        font-size: 20px!important;
+    }
+
+    .project-container .card-data p {
+        font-size: 14px!important;
+    }
+
     .education-container .card-title, .certificate-container .card-title {
         font-size: 15px!important;
     }
