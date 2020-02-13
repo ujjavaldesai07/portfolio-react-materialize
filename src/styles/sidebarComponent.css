@@ -46,7 +46,7 @@
 }
 
 #Introduction .main-container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
     left: 0;
     position: absolute;
@@ -406,11 +406,13 @@ blockquote {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        padding-left: 0!important;
+        padding-left: 15px!important;
     }
 
     .contact-info div {
-        flex-basis: 30%;
+        flex-basis: 60%;
+        height: 100px!important;
+        width: 246px!important;
     }
 
     .contact-info .teal-text {

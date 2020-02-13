@@ -2,10 +2,12 @@ import React from 'react';
 import 'materialize-css/dist/js/materialize.min.js';
 import resumeImage from '../images/navbar/resume.png';
 
+const RESUME_URL = 'https://drive.google.com/file/d/1Tq-znSziLKYOhj3ve2PaWbvzzjmNMOzu/view?usp=sharing';
+
 class Resume extends React.Component {
 
     handleDownloadFile = (e) => {
-        window.open('https://drive.google.com/file/d/1rcCJ3qzJIEyq_Wqkxu_E7Hs2m9IMg1c8/view?usp=sharing', "_blank");
+        window.open(RESUME_URL, "_blank");
     };
 
     render() {
