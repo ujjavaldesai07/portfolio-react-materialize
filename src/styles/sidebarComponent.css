@@ -364,6 +364,7 @@ blockquote {
 
     .experience-container li {
         font-size: 15px!important;
+        margin-left: 13px!important;
     }
 
     .project-container .card-title {
