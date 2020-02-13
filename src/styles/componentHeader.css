@@ -8,12 +8,3 @@
     font-weight: 100;
     text-align: left;
 }
-
-@media (max-width: 600px) {
-    .styleHeader {
-        height: 50px!important;
-        font-size: 22px!important;
-        margin: 0 0 30px;
-        padding: 13px 20px;
-    }
-}
