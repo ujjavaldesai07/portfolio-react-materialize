@@ -236,12 +236,8 @@ blockquote {
     padding-bottom: 85px;
 }
 
-.education-container p {
-    font-size: 1.3rem;
-}
-
 .education-container li {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     list-style-type: disc!important;
     padding: 20px 0 40px 10px;
     font-weight: 400;
