@@ -389,17 +389,46 @@ blockquote {
         padding-top: 20px;
     }
 
+    .education-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
     .education-container .card-title, .certificate-container .card-title {
+        font-size: 18px!important;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .education-container li, .education-container span  {
         font-size: 15px!important;
-    }
-
-    .education-container li, .education-container span, .certificate-container p  {
-        font-size: 13px!important;
         padding-left: 0!important;
+        padding-top: 0!important;
+        font-family: 'Roboto', sans-serif;
+        list-style-type: none!important;
+        flex-basis: 60%;
+        height: 100px!important;
+        width: 270px!important;
+        font-weight: 400;
     }
 
-    .card-action {
+    .education-container span {
+        padding-top: 10px!important;
+        font-size: 14px!important;
+    }
+
+    .education-container .card-action {
         font-size: 12px!important;
+    }
+
+    .certificate-container p {
+        font-size: 15px!important;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .education-container .card-action {
+        padding-right: 0!important;
     }
 
     .contact-info {
