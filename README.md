@@ -1,6 +1,6 @@
 
 
-## My Portfolio for [ujjavaldesai.netlify.com](https://ujjavaldesai.netlify.com).
+## My Portfolio for [ujjavaldesai.netlify.com](https://ujjavaldesai.netlify.com)
 
 Tools and technology used to build this website.
 
