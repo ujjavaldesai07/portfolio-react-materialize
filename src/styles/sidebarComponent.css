@@ -405,6 +405,7 @@ blockquote {
         font-size: 16px!important;
         padding-left: 0!important;
         padding-top: 0!important;
+        padding-bottom: 0!important;
         font-family: 'Roboto', sans-serif;
         list-style-type: none!important;
         flex-basis: 60%;
@@ -455,18 +456,5 @@ blockquote {
 @media all and (max-width: 360px) {
     #Introduction h2 {
         font-size: 18px!important;
-    }
-
-    .education-container .card-title {
-        font-size: 14px!important;
-    }
-
-    .education-container li, .education-container span {
-        font-size: 12px!important;
-        padding-left: 0!important;
-    }
-
-    .education-container .card-action span {
-        font-size: 11px!important;
     }
 }
