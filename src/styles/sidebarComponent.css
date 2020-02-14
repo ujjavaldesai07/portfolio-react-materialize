@@ -397,12 +397,12 @@ blockquote {
     }
 
     .education-container .card-title, .certificate-container .card-title {
-        font-size: 18px!important;
+        font-size: 20px!important;
         font-family: 'Roboto', sans-serif;
     }
 
     .education-container li, .education-container span  {
-        font-size: 15px!important;
+        font-size: 16px!important;
         padding-left: 0!important;
         padding-top: 0!important;
         font-family: 'Roboto', sans-serif;
@@ -423,12 +423,13 @@ blockquote {
     }
 
     .certificate-container p {
-        font-size: 15px!important;
+        font-size: 16px!important;
         font-family: 'Roboto', sans-serif;
     }
 
     .education-container .card-action {
         padding-right: 0!important;
+        font-size: 14px!important;
     }
 
     .contact-info {
