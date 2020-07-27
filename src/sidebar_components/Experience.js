@@ -59,16 +59,13 @@ class Experience extends React.Component {
                                         <span className="card-title brown-text">Senior Software Engineer</span>
                                     </div>
                                     <ul>
-                                        <li>Proficient in internet traffic analysis for classifying network-based applications with a good understanding of
-                                            L4-L7 protocols (TCP/UDP, HTTP, SSL, QUIC).</li>
-                                        <li>Designed solutions for internet traffic identification using traffic recognition techniques such as pattern matching, behavioral flow classification etc.</li>
-                                        <li>Developed feature to expose header fields from QUIC protocol to recognize applications in real time.</li>
-                                        <li>Solved issues related to functionality breakage, concurrency, performance, memory leak, and crashes in C++.</li>
-                                        <li>Implemented solutions in C++ in the UNIX environment.</li>
-                                        <li>Individually maintain a small-scale product that includes communicating with the support team, bugs addressing, build integration and testing.</li>
-                                        <li>Worked collaboratively with the DevOps team to add a framework in Python to support non-recursive make in the build infrastructure.</li>
-                                        <li>Built an application in Java which tracks Android/iOS application updates in the App store.</li>
-                                        <li>Used Google Search Engine’s RESTful API to develop an application in the Shell script to extract the information related to latest trending iOS/Android application.</li>
+                                        <li>Knowledge of Internet traffic analysis with a good understanding of L4-L7 protocols (TCP/UDP, HTTP, SSL, QUIC).</li>
+                                        <li>Involved in the complete software development life cycle.</li>
+                                        <li>Performed code reviews to ensure the work delivered by the team is of high-quality standards.</li>
+                                        <li>Collaborated with the DevOps team to improve the build infrastructure.</li>
+                                        <li>Written Python script to generate report by fetching data from web and sending to testing team.</li>
+                                        <li>Documented and trained other team members on the usage of API, features and utilities.</li>
+                                        <li>Analyzed, debugged and/or assisted in problem solving in both development and production environment.</li>
                                     </ul>
                                     <div className="card-action brown-text">
                                         <span>Oct 2014 - Dec 2018 | Bangalore, India</span>

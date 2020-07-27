@@ -25,7 +25,7 @@ class Education extends React.Component {
                                     <a href="https://www.uhcl.edu"
                                        className="tooltipped" data-position="top" data-tooltip="Look at the university website">
                                         <span className="card-title teal-text">University of Houston - Clear Lake</span></a>
-                                    <li>M.S. in Computer Science <span>GPA: 3.92/4.0</span></li>
+                                    <li>M.S. in Computer Science <span>GPA: 3.94/4.0</span></li>
                                     <div className="card-action brown-text">
                                         <span>Jan 2019 - Dec 2020 | Houston, TX</span>
                                     </div>

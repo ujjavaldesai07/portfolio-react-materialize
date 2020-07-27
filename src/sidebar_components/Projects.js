@@ -8,25 +8,25 @@ import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
 const ProjectData =  [
     [
         "Uflix App",
-        "YouTube video search application built using YouTube rest api, Javascript, jQuery, Nodejs and deployed on Heroku cloud application platform.",
+        "YouTube video search application built using YouTube REST API, JavaScript, jQuery, Nodejs.",	
         "https://uflix-app.herokuapp.com",
         "https://github.com/ujjavaldesai07/uflix-app"
     ],
     [
         "Weather App",
-        "Weather application built using React JS, Webpack & Node JS.",
+        "Application to get weather information built using Open Weather API, React JS & Node JS.",
         "http://getweather-app.herokuapp.com",
         "https://github.com/ujjavaldesai07/react-weather-app"
     ],
     [
         "ExpenseTracker App",
-        "Expense tracker application using Spring boot, JPA, AOP with containerization using Docker.",
+        "Application to track living expenses using Spring boot, JPA, AOP, MySQL with containerization using Docker.",
         "http://Expense-tracker-3.herokuapp.com",
         "https://github.com/ujjavaldesai07/springboot-JPA-AOP-expense-tracker-app"
     ],
     [
         "UnitConversion App",
-        "Unit Conversion App built using SpringBoot and SpringMVC.",
+        "Application to convert metric units built using Spring boot and Spring MVC.",
         "https://unit-conversion-application.herokuapp.com",
         "https://github.com/ujjavaldesai07/springboot-mvc-docker-unitconversion-app"
     ]
