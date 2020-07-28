@@ -54,11 +54,13 @@ class Projects extends React.Component {
                                 <p className="brown-text">{data[1]}</p>
                             </div>
                             <div className="card-action">
-                                <a href={data[2]} target="_blank" className="tooltipped btn-floating btn-large waves-effect waves-light brown"
+                                <a href={data[2]} target="_blank" rel="noopener noreferrer"
+                                   className="tooltipped btn-floating btn-large waves-effect waves-light brown"
                                    data-position="top" data-tooltip="View Demo">
                                     <FontAwesomeIcon icon={faExternalLinkAlt} size="lg"/>
                                 </a>
-                                <a href={data[3]} target="_blank" className="tooltipped btn-floating btn-large waves-effect waves-light brown"
+                                <a href={data[3]} target="_blank" rel="noopener noreferrer"
+                                   className="tooltipped btn-floating btn-large waves-effect waves-light brown"
                                    data-position="top" data-tooltip="View Source">
                                     <FontAwesomeIcon icon={['fab', "github"]} size="lg"/>
                                 </a>

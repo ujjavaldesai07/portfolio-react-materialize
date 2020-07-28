@@ -34,12 +34,13 @@ class Contact extends React.Component {
             for(let contact of CONTACT_LIST) {
                 contacts.push(
                 <div>
-                    <a href={contact[0]} target="_blank"
+                    <a href={contact[0]} target="_blank" rel="noopener noreferrer"
                        className="tooltipped btn-floating btn-large waves-effect waves-light brown"
                        data-position="top" data-tooltip={contact[1]}>
                         <FontAwesomeIcon icon={contact[2]} size="2x"/>
                     </a>
-                    <a href={contact[0]} target="_blank" className="teal-text">{contact[3]}</a>
+                    <a href={contact[0]} target="_blank" rel="noopener noreferrer"
+                       className="teal-text">{contact[3]}</a>
                 </div>
                 )
             }

@@ -6,6 +6,8 @@
 .idea/*
 .pnp.js
 package-lock.json
+yarn.lock
+.idea/workspace.xml
 
 # testing
 /coverage

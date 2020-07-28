@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class ScrollSpyNav extends Component {
     constructor(props) {
@@ -8,10 +8,10 @@ class ScrollSpyNav extends Component {
         this.scrollTargetIds = this.props.scrollTargetIds;
         this.activeNavClass = this.props.activeNavClass;
         this.scrollDuration = Number(this.props.scrollDuration) || 1000;
-        this.headerBackground = this.props.headerBackground === "true" ? true : false;
+        this.headerBackground = this.props.headerBackground;
         this.offset = this.props.offset || 0;
 
-        if(this.props.router && this.props.router === "HashRouter") {
+        if (this.props.router && this.props.router === "HashRouter") {
             this.homeDefaultLink = "#/";
             this.hashIdentifier = "#/#";
         } else {
@@ -25,10 +25,10 @@ class ScrollSpyNav extends Component {
     }
 
     easeInOutQuad(current_time, start, change, duration) {
-        current_time /= duration/2;
-        if (current_time < 1) return change/2*current_time*current_time + start;
+        current_time /= duration / 2;
+        if (current_time < 1) return change / 2 * current_time * current_time + start;
         current_time--;
-        return -change/2 * (current_time*(current_time-2) - 1) + start;
+        return -change / 2 * (current_time * (current_time - 2) - 1) + start;
     };
 
     /**
@@ -46,7 +46,7 @@ class ScrollSpyNav extends Component {
             currentTime += increment;
             let val = this.easeInOutQuad(currentTime, start, change, duration);
             window.scrollTo(0, val);
-            if(currentTime < duration) {
+            if (currentTime < duration) {
                 setTimeout(animateScroll, increment);
             }
         };
@@ -67,7 +67,8 @@ class ScrollSpyNav extends Component {
      * @param {String} navHref
      */
     getNavToSectionID(navHref) {
-        return navHref.includes(this.hashIdentifier) ? navHref.replace(this.hashIdentifier, "") : "";
+        return navHref && navHref.includes(this.hashIdentifier) ?
+            navHref.replace(this.hashIdentifier, "") : "";
     }
 
     /**
@@ -86,35 +87,41 @@ class ScrollSpyNav extends Component {
 
     componentDidMount() {
         if (document.querySelector(`a[href='${this.homeDefaultLink}']`)) {
-            document.querySelector(`a[href='${this.homeDefaultLink}']`).addEventListener("click", (event) => {
-                event.preventDefault();
-                this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
-                window.location.hash = "";
-            });
+            document.querySelector(`a[href='${this.homeDefaultLink}']`)
+                .addEventListener("click", (event) => {
+                    event.preventDefault();
+                    this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
+                    window.location.hash = "";
+                });
         }
 
-        document.querySelector("div[data-nav='list']").querySelectorAll("a").forEach( (navLink) => {
-            navLink.addEventListener("click", (event) => {
-                event.preventDefault();
-                let sectionID = this.getNavToSectionID(navLink.getAttribute("href"));
+        document.querySelector("div[data-nav='list']").querySelectorAll("a")
+            .forEach((navLink) => {
+                navLink.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    let sectionID = this.getNavToSectionID(navLink.getAttribute("href"));
 
-                if(sectionID) {
-                    let scrollTargetPosition = document.getElementById(sectionID).offsetTop - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
-                    this.scrollTo(window.pageYOffset, scrollTargetPosition + this.offset, this.scrollDuration);
-                } else {
-                    this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
-                }
+                    if (sectionID) {
+                        let scrollTargetPosition = document.getElementById(sectionID).offsetTop
+                            - (this.headerBackground ?
+                                document.querySelector("div[data-nav='list']").scrollHeight : 0);
+                        this.scrollTo(window.pageYOffset, scrollTargetPosition + this.offset, this.scrollDuration);
+                    } else {
+                        this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
+                    }
+                });
             });
-        });
 
         window.addEventListener("scroll", () => {
             let scrollSectionOffsetTop;
-            this.scrollTargetIds.map((sectionID, index) => {
 
-                scrollSectionOffsetTop = document.getElementById(sectionID).offsetTop - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
+            // eslint-disable-next-line array-callback-return
+            this.scrollTargetIds.map((sectionID, index) => {
+                scrollSectionOffsetTop = document.getElementById(sectionID).offsetTop
+                    - (this.headerBackground ?
+                        document.querySelector("div[data-nav='list']").scrollHeight : 0);
                 if (this.state.prevSectionID !== sectionID &&
-                    (window.pageYOffset + 2*document.getElementById(sectionID).scrollHeight > scrollSectionOffsetTop))
-                {
+                    (window.pageYOffset + 2 * document.getElementById(sectionID).scrollHeight > scrollSectionOffsetTop)) {
                     this.updateNavLinkActiveStyle(sectionID);
                 }
             });
@@ -122,9 +129,9 @@ class ScrollSpyNav extends Component {
     }
 
     render() {
-        return(
+        return (
             <div data-nav="list">
-                { this.props.children }
+                {this.props.children}
             </div>
         );
     }

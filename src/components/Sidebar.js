@@ -1,5 +1,4 @@
 import React from "react";
-import M from "materialize-css/dist/js/materialize.min.js";
 import '../styles/sidebar.css'
 import userImage from '../images/navbar/user.png';
 import trendImage from '../images/navbar/trend.png';
