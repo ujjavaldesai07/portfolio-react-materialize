@@ -116,7 +116,7 @@ class Skills extends React.Component {
         function renderSkills(skills_map) {
             const skills = [];
             for (const [key, value] of skills_map.entries()) {
-                skills.push(<div className="col col-sm-4 col-md-2">
+                skills.push(<div key={key} className="col col-sm-4 col-md-2">
                     <img src={value} className="responsive-img" alt=""/>{key}
                 </div>)
             }
@@ -127,7 +127,7 @@ class Skills extends React.Component {
             var cards = [];
             for (const [key, value] of card_list.entries()) {
                 cards.push(
-                    <div id={value} className="card skills-card">
+                    <div key={`${key}-${value}`} id={value} className="card skills-card">
                         <div className="card-content">
                             <h4 className="card-title brown-text">{value}</h4>
                             <div className="row text-center">
@@ -143,7 +143,7 @@ class Skills extends React.Component {
         const NAVBAR_ITEMS = ['all', 'languages', 'front-end', 'back-end', 'build-tools', 'other-tools'];
 
         for (const item of NAVBAR_ITEMS) {
-            navbarItems.push(<li className="nav-item">
+            navbarItems.push(<li key={item} className="nav-item">
                 <a href={'#' + item} onMouseEnter={this.handleMouseEnter} className="waves-green black-text">{item}
                 </a>
             </li>)

@@ -7,7 +7,7 @@ class ScrollSpyNav extends Component {
         this.props = props;
         this.scrollTargetIds = this.props.scrollTargetIds;
         this.activeNavClass = this.props.activeNavClass;
-        this.scrollDuration = Number(this.props.scrollDuration) || 1000;
+        this.scrollDuration = this.props.scrollDuration || 1000;
         this.headerBackground = this.props.headerBackground;
         this.offset = this.props.offset || 0;
 
@@ -116,7 +116,7 @@ class ScrollSpyNav extends Component {
             let scrollSectionOffsetTop;
 
             // eslint-disable-next-line array-callback-return
-            this.scrollTargetIds.map((sectionID, index) => {
+            this.scrollTargetIds.map((sectionID) => {
                 scrollSectionOffsetTop = document.getElementById(sectionID).offsetTop
                     - (this.headerBackground ?
                         document.querySelector("div[data-nav='list']").scrollHeight : 0);

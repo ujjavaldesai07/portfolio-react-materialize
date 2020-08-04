@@ -20,7 +20,7 @@ const CONTACT_LIST = [
 
 class Contact extends React.Component {
     componentDidMount() {
-        var elem = document.querySelectorAll(".tooltipped");
+        const elem = document.querySelectorAll(".tooltipped");
         M.Tooltip.init(elem, {
             margin: 30,
             enterDelay: 400,
@@ -33,7 +33,7 @@ class Contact extends React.Component {
             const contacts = [];
             for(let contact of CONTACT_LIST) {
                 contacts.push(
-                <div>
+                <div key={contact[0]}>
                     <a href={contact[0]} target="_blank" rel="noopener noreferrer"
                        className="tooltipped btn-floating btn-large waves-effect waves-light brown"
                        data-position="top" data-tooltip={contact[1]}>

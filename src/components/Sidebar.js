@@ -32,7 +32,7 @@ class Sidebar extends React.Component {
         const fixedSidebarItems = [];
 
         for (const item of MENU_LIST) {
-            fixedSidebarItems.push(<li>
+            fixedSidebarItems.push(<li key={item[0]}>
                 <a href={'#' + item[0]} className={item[2] + " waves-effect waves-green menu-item"}>
                     <img src={item[1]} width="30" height="30" alt="icon"/><span>{item[0]}</span></a>
             </li>)
@@ -41,7 +41,7 @@ class Sidebar extends React.Component {
         const collapseSidebarItems = [];
 
         for (const item of MENU_LIST) {
-            collapseSidebarItems.push(<li>
+            collapseSidebarItems.push(<li key={item[0]}>
                 <a href={'#' + item[0]} className="waves-effect waves-green toggle-menu-item black-text">
                     <img src={item[1]} width="30" height="30" alt="icon"/><span>{item[0]}</span></a>
             </li>)
@@ -53,7 +53,7 @@ class Sidebar extends React.Component {
                     scrollTargetIds={this.getMenuItems()}
                     offset={0}
                     activeNavClass="active"
-                    scrollDuration="500"
+                    scrollDuration={500}
                     headerBackground="true">
 
                     <NavbarCollapseButton/>

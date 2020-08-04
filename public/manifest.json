@@ -9,8 +9,7 @@
     },
     {
       "src": "logo192.jpg",
-      "type": "image/jpg",
-      "sizes": "192x192"
+      "type": "image/jpg"
     },
     {
       "src": "logo512.jpg",
