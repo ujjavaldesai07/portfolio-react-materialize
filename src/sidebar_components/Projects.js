@@ -5,64 +5,68 @@ import M from "materialize-css/dist/js/materialize.min";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
 
-const ProjectData =  [
-    [
-        "Uflix App",
-        "YouTube video search application built using YouTube REST API, JavaScript, jQuery, Nodejs.",	
-        "https://uflix-app.herokuapp.com",
-        "https://github.com/ujjavaldesai07/uflix-app"
-    ],
-    [
-        "Weather App",
-        "Application to get weather information built using Open Weather API, React JS & Node JS.",
-        "http://getweather-app.herokuapp.com",
-        "https://github.com/ujjavaldesai07/react-weather-app"
-    ],
-    [
-        "ExpenseTracker App",
-        "Application to track living expenses using Spring boot, JPA, AOP, MySQL with containerization using Docker.",
-        "http://Expense-tracker-3.herokuapp.com",
-        "https://github.com/ujjavaldesai07/springboot-JPA-AOP-expense-tracker-app"
-    ],
-    [
-        "UnitConversion App",
-        "Application to convert metric units built using Spring boot and Spring MVC.",
-        "https://unit-conversion-application.herokuapp.com",
-        "https://github.com/ujjavaldesai07/springboot-mvc-docker-unitconversion-app"
-    ]
+export const ProjectData =  [
+    {
+        title: "eCommerce App",
+        description: "eCommerce application based on the microservices architecture built using Spring Boot and ReactJS.",
+        websiteLink: "https://shoppers-ecom-app.herokuapp.com",
+        githubLink: "https://github.com/ujjavaldesai07/spring-boot-react-ecommerce-app"
+    },
+    {
+        title: "ExpenseTracker App",
+        description: "Application to track living expenses using Spring boot, JPA, AOP, MySQL with containerization using Docker.",
+        websiteLink: "http://Expense-tracker-3.herokuapp.com",
+        githubLink: "https://github.com/ujjavaldesai07/springboot-JPA-AOP-expense-tracker-app"
+    },
+    {
+        title: "Uflix App",
+        description: "YouTube video search application built using YouTube REST API, JavaScript, jQuery, Nodejs.",
+        websiteLink: "https://uflix-app.herokuapp.com",
+        githubLink: "https://github.com/ujjavaldesai07/uflix-app"
+    },
+    {
+        title: "Weather App",
+        description: "Application to get weather information built using Open Weather API, React JS & Node JS.",
+        websiteLink: "http://getweather-app.herokuapp.com",
+        githubLink: "https://github.com/ujjavaldesai07/react-weather-app"
+    },
+    {
+        title: "UnitConversion App",
+        description: "Application to convert metric units built using Spring boot and Spring MVC.",
+        websiteLink: "https://unit-conversion-application.herokuapp.com",
+        githubLink: "https://github.com/ujjavaldesai07/springboot-mvc-docker-unitconversion-app"
+    }
 ];
-
 
 class Projects extends React.Component {
     componentDidMount() {
-        var elem = document.querySelectorAll(".tooltipped");
+        var elem = document.querySelectorAll(".project-tooltip");
         M.Tooltip.init(elem, {
-            margin: 30,
             enterDelay: 400,
             exitDelay: 200,
         });
     }
 
     render() {
-        function  renderCards(data) {
+        const renderCard = (data) => {
             return (
-                <div className="col-10 col-md-6">
+                <div key={data.title} className="col-md-6">
                     <div className="card darken-1">
                         <div className="card-content">
-                            <span className="card-title teal-text">{data[0]}</span>
+                            <span className="card-title teal-text">{data.title}</span>
                             <div className="card-data">
-                                <p className="brown-text">{data[1]}</p>
+                                <p className="brown-text">{data.description}</p>
                             </div>
                             <div className="card-action">
-                                <a href={data[2]} target="_blank" rel="noopener noreferrer"
-                                   className="tooltipped btn-floating btn-large waves-effect waves-light brown"
-                                   data-position="top" data-tooltip="View Demo">
-                                    <FontAwesomeIcon icon={faExternalLinkAlt} size="lg"/>
+                                <a href={data.websiteLink} target="_blank" rel="noopener noreferrer"
+                                   className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
+                                   data-position="top" data-tooltip="View Demo" style={{textAlign: "center"}}>
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} size="sm"/>
                                 </a>
-                                <a href={data[3]} target="_blank" rel="noopener noreferrer"
-                                   className="tooltipped btn-floating btn-large waves-effect waves-light brown"
-                                   data-position="top" data-tooltip="View Source">
-                                    <FontAwesomeIcon icon={['fab', "github"]} size="lg"/>
+                                <a href={data.githubLink} target="_blank" rel="noopener noreferrer"
+                                   className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
+                                   data-position="top" data-tooltip="View Source" style={{textAlign: "center"}}>
+                                    <FontAwesomeIcon icon={['fab', "github"]} size="sm"/>
                                 </a>
                             </div>
                         </div>
@@ -70,19 +74,22 @@ class Projects extends React.Component {
                 </div>
             )
         }
+
+        const renderCards = () => {
+            let renderCardList = []
+            ProjectData.forEach(data => {
+                renderCardList.push(renderCard(data))
+
+            })
+            return renderCardList
+        }
+
         return (
             <div>
                 <ComponentHeader heading={"Projects"}/>
                 <div className="container flow-text project-container">
-                    <div className="row justify-content-center">
-                        {renderCards(ProjectData[0])}
-                        {renderCards(ProjectData[1])}
-                    </div>
-                </div>
-                <div className="container flow-text project-container">
-                    <div className="row justify-content-center">
-                        {renderCards(ProjectData[2])}
-                        {renderCards(ProjectData[3])}
+                    <div className="row justify-content-center justify-content-md-between justify-content-lg-between">
+                        {renderCards()}
                     </div>
                 </div>
             </div>

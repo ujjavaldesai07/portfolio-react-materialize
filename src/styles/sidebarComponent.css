@@ -7,7 +7,7 @@
 }
 
 .full-height {
-    height: 100vh;
+    height: fit-content;
 }
 
 .common-attributes {
@@ -30,7 +30,7 @@
     font-family: sans-serif;
 }
 
-.btn-large:hover {
+.btn-small:hover, .btn-large:hover {
     color: white!important;
 }
 
@@ -81,7 +81,8 @@
 /******* About Component Style *******/
 
 .about-container {
-    height: 100vh;
+    height: fit-content;
+    padding-bottom: 25vh;
 }
 
 .about-container p {
@@ -174,7 +175,7 @@ blockquote {
 }
 
 .project-container .card-data {
-    height: 150px;
+    height: fit-content;
 }
 
 /*******************************************/

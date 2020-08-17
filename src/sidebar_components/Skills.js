@@ -6,6 +6,8 @@ import htmlImg from '../images/skills/frontend/html5.png'
 import jsImg from '../images/skills/frontend/javascript.png'
 import bootstrapImg from '../images/skills/frontend/bootstrap.png'
 import materializeImg from '../images/skills/frontend/materialize.png'
+import materialUIImg from '../images/skills/frontend/material-ui.png'
+import semanticUIImg from '../images/skills/frontend/semantic-ui.png'
 
 import javaImg from '../images/skills/languages/java.png'
 import cImg from '../images/skills/languages/c.png'
@@ -18,6 +20,7 @@ import springbootImg from '../images/skills/backend/springboot.png'
 import reactImg from '../images/skills/frontend/react.png'
 import nodeImg from '../images/skills/backend/nodejs.png'
 import mysqlImg from '../images/skills/backend/mysql.png'
+import redisImg from '../images/skills/backend/redis.png'
 
 import dockerImg from '../images/skills/buildtools/docker.png'
 import herokuImg from '../images/skills/buildtools/heroku.png'
@@ -41,11 +44,12 @@ const FRONTEND_MAP = new Map([
     ['HTML', htmlImg], ['JavaScript', jsImg],
     ['React', reactImg], ['CSS', cssImg],
     ['Bootstrap', bootstrapImg], ['Materialize', materializeImg],
+    ['Material UI', materialUIImg], ['Semantic UI', semanticUIImg]
 ]);
 
 const BACKEND_MAP = new Map([
     ['Spring', springImg], ['Spring Boot', springbootImg],
-    ['Node', nodeImg], ['MySQL', mysqlImg]
+    ['Node', nodeImg], ['MySQL', mysqlImg], ['Redis', redisImg]
 ]);
 
 const BUILDTOOLS_MAP = new Map([
@@ -74,12 +78,12 @@ class Skills extends React.Component {
     }
 
     getCardList() {
-        if(this.state.activeNavId === 'all') {
+        if (this.state.activeNavId === 'all') {
             return CARD_LIST;
         }
 
         for (const [key, value] of CARD_LIST.entries()) {
-            if(this.state.activeNavId === value) {
+            if (this.state.activeNavId === value) {
                 return new Map([
                     [key, value]]);
             }
@@ -96,7 +100,7 @@ class Skills extends React.Component {
                 activeNavId: id,
                 fullHeight: ''
             });
-            if(id !== 'all') {
+            if (id !== 'all') {
                 this.setState({
                     fullHeight: 'full-height'
                 });
@@ -116,8 +120,9 @@ class Skills extends React.Component {
         function renderSkills(skills_map) {
             const skills = [];
             for (const [key, value] of skills_map.entries()) {
-                skills.push(<div key={key} className="col col-sm-4 col-md-2">
-                    <img src={value} className="responsive-img" alt=""/>{key}
+                skills.push(<div key={key} className="col col-sm-4 col-md-2" style={{padding: "1rem 0"}}>
+                    <img src={value} className="responsive-img" alt="" style={{width: "100", height: 100}}/>
+                    {key}
                 </div>)
             }
             return skills;
