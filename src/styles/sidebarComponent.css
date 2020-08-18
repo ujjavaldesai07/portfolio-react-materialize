@@ -142,16 +142,16 @@ blockquote {
 
 /******* Projects Component Style *******/
 
-.project-container .card-action {
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-top: 20px;
+.project-container .card {
+    height: 420px;
+}
+
+.project-container .card-image {
+    height: 200px;
 }
 
 .project-container .card-content {
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
+    padding: 10px 20px 10px 20px;
 }
 
 .project-container .btn-floating {
@@ -160,22 +160,35 @@ blockquote {
 
 .project-container .card-title {
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
 .project-container p {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #333333;
+    padding: 5px 0;
     text-align: justify;
 }
 
 .project-container .card-data {
-    height: fit-content;
+    height: 70px;
+}
+
+.project-container .card-reveal div {
+    font-size: 0.9rem;
+}
+
+.project-container .card-reveal p {
+    font-size: 0.9rem;
+    margin-bottom: 0 !important;
+}
+
+.project-container.card-action {
+    padding-top: 20px;
 }
 
 /*******************************************/
@@ -307,17 +320,8 @@ blockquote {
         font-size: 27px!important;
     }
 
-    .project-container .card-title {
-        font-size: 24px;
-    }
-
-    .project-container p {
-        font-size: 18px;
-    }
-
-    .project-container .card {
-        display: flex;
-        flex-wrap: wrap;
+    .project-container .card-action {
+        padding-top: 24px!important;
     }
 }
 
@@ -336,6 +340,30 @@ blockquote {
         font-size: 25px!important;
     }
 
+    .project-container .card-title {
+        font-size: 20px!important;
+    }
+
+    .project-container .card-data p {
+        font-size: 14px!important;
+        padding-top: 0!important;
+    }
+
+    .project-container .card-reveal div {
+        font-size: 0.8rem;
+    }
+
+    .project-container .card-reveal p {
+        font-size: 0.8rem;
+    }
+
+    .project-container .card-content .card-title .row {
+        margin-bottom: 0 !important;
+    }
+
+    .project-container .card {
+        height: 445px!important;
+    }
 }
 
 @media all and (max-width: 600px) {
@@ -368,12 +396,9 @@ blockquote {
         margin-left: 13px!important;
     }
 
-    .project-container .card-title {
-        font-size: 20px!important;
-    }
-
-    .project-container .card-data p {
-        font-size: 14px!important;
+    .project-container .card, .project-container .card-image,
+    .project-container .card-data, .project-container .card-image{
+        height: fit-content!important;
     }
 
     .skills-card {

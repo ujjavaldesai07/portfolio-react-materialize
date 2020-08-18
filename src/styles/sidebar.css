@@ -68,9 +68,8 @@ ul.sidenav-fixed li.logo {
 }
 
 .sidenav-fixed a.active,
-.menu-item a:hover {
-     background-color: #fafafa;
-     border-left: 3px solid;
+.sidenav-fixed a:hover {
+     border-left: 5px solid;
      font-weight: 500!important;
 }
 
