@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+const SCROLL_UP = 1
+const SCROLL_DOWN = 2
+
 class ScrollSpyNav extends Component {
 
     constructor(props) {
@@ -81,30 +84,36 @@ class ScrollSpyNav extends Component {
      */
     updateNavLinkActiveStyle(newSectionID, newSectionIDIndex) {
         this.getNavLinkElement(newSectionID).classList.add(this.activeNavClass);
-        if (this.state.prevSectionID !== null) {
-            this.getNavLinkElement(this.state.prevSectionID).classList.remove(this.activeNavClass);
-        }
+        this.getNavLinkElement(this.state.prevSectionID).classList.remove(this.activeNavClass);
+
         this.setState({
             prevSectionID: newSectionID,
             prevSectionIDIndex: newSectionIDIndex,
         });
     }
 
-    onScrollUpEvent(sectionID, sectionIDIndex) {
-        if (this.state.prevSectionID !== sectionID) {
-            let newSectionIDOffsetTop = document.getElementById(sectionID).offsetTop;
-            if (window.pageYOffset <= newSectionIDOffsetTop) {
-                this.updateNavLinkActiveStyle(sectionID, sectionIDIndex);
-            }
-        }
-    }
+    /**
+     * Update the link active style based on scroll position.
+     * @param sectionID
+     * @param sectionIDIndex
+     * @param direction
+     */
+    onScrollTriggered(sectionID, sectionIDIndex, direction) {
+        let newSectionIDOffsetTop = document.getElementById(sectionID).offsetTop;
 
-    onScrollDownEvent(sectionID, sectionIDIndex) {
-        if (this.state.prevSectionID !== sectionID) {
-            let newSectionIDOffsetTop = document.getElementById(sectionID).offsetTop;
-            if (window.pageYOffset >= newSectionIDOffsetTop) {
-                this.updateNavLinkActiveStyle(sectionID, sectionIDIndex);
-            }
+        switch (direction) {
+            case SCROLL_UP:
+                if (window.pageYOffset <= newSectionIDOffsetTop) {
+                    this.updateNavLinkActiveStyle(sectionID, sectionIDIndex);
+                }
+                break;
+            case SCROLL_DOWN:
+                if (window.pageYOffset >= newSectionIDOffsetTop) {
+                    this.updateNavLinkActiveStyle(sectionID, sectionIDIndex);
+                }
+                break;
+            default:
+                console.error(`Invalid scroll direction = ${direction}`)
         }
     }
 
@@ -125,9 +134,7 @@ class ScrollSpyNav extends Component {
                     let sectionID = this.getNavToSectionID(navLink.getAttribute("href"));
 
                     if (sectionID) {
-                        let scrollTargetPosition = document.getElementById(sectionID).offsetTop
-                            - (this.headerBackground ?
-                                document.querySelector("div[data-nav='list']").scrollHeight : 0);
+                        let scrollTargetPosition = document.getElementById(sectionID).offsetTop;
                         this.scrollTo(window.pageYOffset, scrollTargetPosition + this.offset, this.scrollDuration);
                     } else {
                         this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
@@ -136,18 +143,20 @@ class ScrollSpyNav extends Component {
             });
 
         window.addEventListener("scroll", () => {
-            let newSectionIDIndex;
+                let newSectionIDIndex;
                 if ((document.body.getBoundingClientRect()).top > this.state.scrollPos) {
                     //scroll up
                     newSectionIDIndex = this.state.prevSectionIDIndex - 1;
                     if (newSectionIDIndex >= 0) {
-                        this.onScrollUpEvent(this.scrollTargetIds[newSectionIDIndex], newSectionIDIndex)
+                        this.onScrollTriggered(this.scrollTargetIds[newSectionIDIndex], newSectionIDIndex,
+                            SCROLL_UP)
                     }
                 } else {
                     //scroll down
                     newSectionIDIndex = this.state.prevSectionIDIndex + 1;
                     if (newSectionIDIndex < this.scrollTargetIds.length) {
-                        this.onScrollDownEvent(this.scrollTargetIds[newSectionIDIndex], newSectionIDIndex)
+                        this.onScrollTriggered(this.scrollTargetIds[newSectionIDIndex], newSectionIDIndex,
+                            SCROLL_DOWN)
                     }
                 }
 

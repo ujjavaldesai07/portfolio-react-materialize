@@ -124,8 +124,7 @@ class Skills extends React.Component {
                     <div key={key} className="col-6 col-sm-5 col-md-3 col-xl-2 py-4" style={{textAlignLast: "center",
                         textAlign: "-webkit-center"}}>
                         <div>
-                            <img src={value} className="responsive-img" alt=""
-                                 style={{maxWidth: 100, height: 100}}/>
+                            <img src={value} className="responsive-img" alt=""/>
                         </div>
                         <div className="pt-3" style={{fontSize: "1rem"}}>
                             {key}

@@ -200,6 +200,11 @@ blockquote {
     text-align: left;
 }
 
+.skills-card img {
+    max-width: 100px;
+    height: 100px
+}
+
 .skills-navbar nav {
     margin-bottom: 50px!important;
 }
@@ -224,10 +229,10 @@ blockquote {
 }
 
 .education-container .card-title {
-    font-size: 2rem!important;
+    font-size: 1.8rem!important;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px!important;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .education-container .card-content .container {
@@ -243,11 +248,11 @@ blockquote {
 }
 
 .certificate-container .card-title {
-    font-size: 2rem!important;
+    font-size: 1.8rem!important;
     border-bottom: 1px solid #ddd;
     line-height: 25px!important;
     padding-bottom: 20px!important;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .certificate-container p {
@@ -260,7 +265,7 @@ blockquote {
 
 /******* Contact Component Style *******/
 .contact-info {
-    padding-bottom: 180px;
+    padding-bottom: 300px;
     text-align: -webkit-center;
 }
 
@@ -303,6 +308,11 @@ blockquote {
     .contact-info {
         padding-bottom: 430px!important;
     }
+
+    .skills-card img {
+        max-width: 95px!important;
+        height: 95px!important;
+    }
 }
 
 @media all and (max-width: 993px) {
@@ -312,6 +322,11 @@ blockquote {
 
     #Introduction h2 {
         font-size: 38px!important;
+    }
+
+    .skills-card img {
+        max-width: 85px!important;
+        height: 85px!important;
     }
 }
 
@@ -344,6 +359,7 @@ blockquote {
     .project-container .card {
         height: 445px!important;
     }
+
 }
 
 @media all and (max-width: 600px) {
@@ -381,6 +397,11 @@ blockquote {
     .project-container .card, .project-container .card-image,
     .project-container .card-data, .project-container .card-image{
         height: fit-content!important;
+    }
+
+    .skills-card img {
+        max-width: 75px!important;
+        height: 75px!important;
     }
 
     .certificate-container .card-title, .education-container .card-title {
