@@ -1,11 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-image: url("images/background/dot-grid.png");
+  background: linear-gradient( rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04) ), url("images/background/dot-grid.png");
   max-width: 100%;
 }
 
 html {
   max-width: 100%;
+}
+
+html * {
+  font-family: 'Roboto', sans-serif;
 }

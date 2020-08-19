@@ -32,14 +32,18 @@ class Contact extends React.Component {
             const contacts = [];
             for(let contact of CONTACT_LIST) {
                 contacts.push(
-                <div key={contact[0]}>
+                <div key={contact[0]} className="row align-items-center">
+                    <div className="pr-4">
                     <a href={contact[0]} target="_blank" rel="noopener noreferrer"
                        className="contact-tooltip btn-floating btn-large waves-effect waves-light brown"
                        data-position="top" data-tooltip={contact[1]}>
                         <FontAwesomeIcon icon={contact[2]} size="2x"/>
                     </a>
+                    </div>
+                    <div>
                     <a href={contact[0]} target="_blank" rel="noopener noreferrer"
                        className="teal-text">{contact[3]}</a>
+                    </div>
                 </div>
                 )
             }
@@ -48,12 +52,14 @@ class Contact extends React.Component {
 
 
         return (
-            <div className="full-height">
+            <>
                 <ComponentHeader heading={"Contact"}/>
                 <div className="container contact-info">
+                    <div className="col-sm-11">
                     {renderContactInfo()}
+                    </div>
                 </div>
-            </div>
+            </>
         )
     }
 

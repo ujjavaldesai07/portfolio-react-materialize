@@ -63,7 +63,6 @@
 }
 
 #Introduction h2 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 45px;
     display: inline-block;
@@ -81,13 +80,11 @@
 /******* About Component Style *******/
 
 .about-container {
-    height: fit-content;
-    padding-bottom: 25vh;
+    margin-bottom: 80px;
 }
 
 .about-container p {
     text-align: justify;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     padding-top: 20px;
@@ -105,37 +102,34 @@ blockquote {
 
 /******* Experience Component Style *******/
 
+.experience-container {
+    padding-bottom: 50px;
+}
+
 .experience-container li {
     font-size: 17px;
-    font-family: 'Roboto', sans-serif;
     list-style-type: disc!important;
     margin-left: 30px;
     padding-bottom: 8px;
     text-align: justify;
 }
 
-.experience-container ul {
-    padding-top: 20px;
-}
-
 .experience-header {
     padding-bottom: 10px;
     border-bottom: 1px solid #ddd;
 }
-.experience-header span {
-    display: inline-block!important;
-    font-weight: normal!important;
-    font-size: 20px!important;
-    font-family: 'Roboto', sans-serif;
+
+.experience-header img {
+    height: 60px;
 }
 
 .experience-header .card-title {
-    float: right!important;
-    line-height: 60px!important;
+    font-weight: 500;
+    font-size: 20px;
 }
 
-.experience-header .align-header {
-    line-height: 45px!important;
+.experience-container .card-action {
+    font-size: 1rem;
 }
 
 /*******************************************/
@@ -159,14 +153,12 @@ blockquote {
 }
 
 .project-container .card-title {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 1px;
 }
 
 .project-container p {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
     font-weight: 400;
     color: #333333;
@@ -202,38 +194,19 @@ blockquote {
 .skills-card h4 {
     text-transform: uppercase;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 30px!important;
-    padding-bottom: 20px;
-    margin-top: 18px;
-    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px!important;
     font-size: 34px!important;
     font-weight: 300;
     text-align: left;
 }
 
-.navbar-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-
-}
-
-.skills-card .col img {
-    margin: 0 auto;
-    max-height: 100px;
-    padding-bottom: 10px;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
+.skills-navbar nav {
+    margin-bottom: 50px!important;
 }
 
 .skills-navbar ul a {
     font-size: 1.5rem;
     text-decoration: none!important;
-    text-align: center;
-    display: table-cell;
     text-transform: uppercase;
 }
 
@@ -250,15 +223,15 @@ blockquote {
     padding-bottom: 85px;
 }
 
-.education-container li {
-    font-size: 1.4rem;
-    list-style-type: disc!important;
-    padding: 20px 0 40px 10px;
-    font-weight: 400;
+.education-container .card-title {
+    font-size: 2rem!important;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px!important;
 }
 
-.education-container li span {
-    float: right;
+.education-container .card-content .container {
+    font-size: 1.4rem;
+    list-style-type: disc!important;
     font-weight: 400;
 }
 
@@ -269,12 +242,16 @@ blockquote {
     padding-bottom: 85px!important;
 }
 
+.certificate-container .card-title {
+    font-size: 2rem!important;
+    border-bottom: 1px solid #ddd;
+    line-height: 25px!important;
+    padding-bottom: 20px!important;
+}
+
 .certificate-container p {
-    padding-top: 10px;
     text-align: justify;
     font-size: 1.4rem;
-    padding-bottom: 40px;
-    font-family: 'Roboto', sans-serif;
     font-weight: normal;
 }
 
@@ -282,27 +259,17 @@ blockquote {
 
 /******* Contact Component Style *******/
 .contact-info {
-    padding-bottom: 230px;
-    padding-left: 40px!important;
-}
-
-.contact-info div {
-    width:70%;
-    display: inline-block;
-    padding-bottom: 20px;
+    padding-bottom: 180px;
+    text-align: -webkit-center;
 }
 
 .contact-info .teal-text {
-    padding-left: 20px!important;
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    vertical-align:middle;
-    text-align:center;
 }
 
-.contact-info .btn-floating.btn-large {
-    padding-top: 7px!important;
+.contact-info svg {
+    vertical-align: middle;
 }
 
 /*******************************************/
@@ -320,8 +287,20 @@ blockquote {
         font-size: 27px!important;
     }
 
+    .education-container .card-title, .certificate-container .card-title {
+        font-size: 1.5rem!important;
+    }
+
+    .education-container .card-content .container. .certificate-container p {
+        font-size: 1.2rem;
+    }
+
     .project-container .card-action {
         padding-top: 24px!important;
+    }
+
+    .contact-info {
+        padding-bottom: 430px!important;
     }
 }
 
@@ -381,19 +360,17 @@ blockquote {
         padding-left: 0!important;
     }
 
-    .experience-header {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .experience-header .card-title {
+        font-size: 0.9rem!important;
     }
 
-    .experience-header .card-title {
-        font-size: 18px!important;
+    .experience-header img {
+        height: 30px;
     }
 
     .experience-container li {
-        font-size: 15px!important;
-        margin-left: 13px!important;
+        font-size: 1rem!important;
+        margin-left: 8px!important;
     }
 
     .project-container .card, .project-container .card-image,
@@ -401,81 +378,22 @@ blockquote {
         height: fit-content!important;
     }
 
-    .skills-card {
-        display: flex;
-        flex-wrap: wrap;
+    .certificate-container .card-title, .education-container .card-title  {
+        font-size: 1rem!important;
     }
 
-    .skills-card div {
-        flex-basis: 100px;
-        flex-shrink: 0;
+    .certificate-container p, .education-container .card-content .container {
+        font-size: 0.9rem!important;
     }
 
-    .skills-card div img {
-        padding-top: 20px;
-    }
-
-    .education-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .education-container .card-title, .certificate-container .card-title {
-        font-size: 20px!important;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .education-container li, .education-container span  {
-        font-size: 16px!important;
-        padding-left: 0!important;
-        padding-top: 0!important;
-        padding-bottom: 0!important;
-        font-family: 'Roboto', sans-serif;
-        list-style-type: none!important;
-        flex-basis: 60%;
-        height: 100px!important;
-        width: 270px!important;
-        font-weight: 400;
-    }
-
-    .education-container span {
-        padding-top: 10px!important;
-        font-size: 14px!important;
-    }
-
-    .education-container .card-action {
-        font-size: 12px!important;
-    }
-
-    .certificate-container p {
-        font-size: 16px!important;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .education-container .card-action {
-        padding-right: 0!important;
-        font-size: 14px!important;
+    .certificate-container .card-action,
+    .education-container .card-action,
+    .experience-container .card-action {
+        font-size: 0.8rem!important;
     }
 
     .contact-info {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        padding-left: 15px!important;
-    }
-
-    .contact-info div {
-        flex-basis: 60%;
-        height: 100px!important;
-        width: 246px!important;
-    }
-
-    .contact-info .teal-text {
-        padding-left: 0!important;
-        font-size: 16px;
+        padding-bottom: 210px!important;
     }
 }
 

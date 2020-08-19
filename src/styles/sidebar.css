@@ -1,6 +1,6 @@
 /************ Fixed Sidenav Bar Style ****************/
 .sidenav {
-     width: 200px!important;
+     width: 230px!important;
 }
 
 ul.sidenav li {
@@ -37,7 +37,6 @@ ul.sidenav-fixed li.logo {
 
 .logo-name h1 {
      font-weight: lighter!important;
-     font-family: 'Roboto', sans-serif;
      margin-bottom: 0;
 }
 
@@ -47,14 +46,12 @@ ul.sidenav-fixed li.logo {
      border: 0!important;
      text-align: center!important;
      font-weight: normal!important;
-     font-family: 'Roboto', sans-serif;
 }
 
 .menu-item {
      text-decoration: none!important;
      font-size: 1.0rem!important;
      font-weight: 300!important;
-     font-family: 'Roboto', sans-serif;
 }
 
 .menu-item img, .toggle-menu-item img {
@@ -67,8 +64,8 @@ ul.sidenav-fixed li.logo {
      color: black!important;
 }
 
-.sidenav-fixed a.active,
-.sidenav-fixed a:hover {
+.sidenav-fixed .menu-item.active,
+.sidenav-fixed .menu-item:hover {
      border-left: 5px solid;
      font-weight: 500!important;
 }
@@ -131,7 +128,6 @@ nav.hide-on-small-only, nav.disable-navbar {
           position: absolute;
           line-height: 20px;
           text-align: center;
-          font-family: 'Roboto', sans-serif;
      }
 
      .name-title a {
@@ -151,7 +147,6 @@ nav.hide-on-small-only, nav.disable-navbar {
      .toggle-menu-item {
           text-decoration: none !important;
           text-align: left;
-          font-family: 'Roboto', sans-serif;
           word-spacing: 10px;
           font-size: 14px !important;
      }

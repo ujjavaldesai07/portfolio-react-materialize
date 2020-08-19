@@ -120,10 +120,17 @@ class Skills extends React.Component {
         function renderSkills(skills_map) {
             const skills = [];
             for (const [key, value] of skills_map.entries()) {
-                skills.push(<div key={key} className="col col-sm-4 col-md-2" style={{padding: "1rem 0"}}>
-                    <img src={value} className="responsive-img" alt="" style={{width: "100", height: 100}}/>
-                    {key}
-                </div>)
+                skills.push(
+                    <div key={key} className="col-6 col-sm-5 col-md-3 col-xl-2 py-4" style={{textAlignLast: "center"}}>
+                        <div>
+                            <img src={value} className="responsive-img" alt=""
+                                 style={{maxWidth: "100%", height: 100}}/>
+                        </div>
+                        <div className="pt-3" style={{fontSize: "1rem"}}>
+                            {key}
+                        </div>
+                    </div>
+                )
             }
             return skills;
         }
@@ -134,8 +141,10 @@ class Skills extends React.Component {
                 cards.push(
                     <div key={`${key}-${value}`} id={value} className="card skills-card">
                         <div className="card-content">
-                            <h4 className="card-title brown-text">{value}</h4>
-                            <div className="row text-center">
+                            <div className="container">
+                                <h4 className="card-title brown-text pb-4">{value}</h4>
+                            </div>
+                            <div className="row">
                                 {renderSkills(key)}
                             </div>
                         </div>
