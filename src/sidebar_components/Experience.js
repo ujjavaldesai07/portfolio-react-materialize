@@ -59,7 +59,7 @@ class Experience extends React.Component {
     renderCard(data) {
         return (
             <div key={data.professionTitle} className="row justify-content-center">
-                <div className="col-12 col-sm-12 col-lg-11 col-xl-10">
+                <div className="col-12 col-lg-11 col-xl-10">
                     <div className="card darken-1">
                         <div className="card-content common-attributes">
                             <div className="row align-items-center experience-header justify-content-center">

@@ -54,21 +54,14 @@
     width: 100%;
 }
 
-#Introduction .container {
-    color: white;
-    font-weight: 200;
-    left: 0;
-    position: absolute;
-    top: 0;
-}
-
 #Introduction h2 {
     font-weight: 300;
     font-size: 45px;
     display: inline-block;
-    padding-left: 50px;
+    padding-left: 0!important;
     padding-top: 40px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    line-height: 60px!important;
 }
 
 #Introduction .underline {
@@ -141,7 +134,7 @@ blockquote {
 }
 
 .project-container .card-image {
-    height: 200px;
+    height: 210px;
 }
 
 .project-container .card-content {
@@ -221,6 +214,10 @@ blockquote {
     color: white!important;
 }
 
+.skills-card .card-content {
+    padding-bottom: 0!important;
+}
+
 /*******************************************/
 
 /******* Education Component Style *******/
@@ -232,7 +229,6 @@ blockquote {
     font-size: 1.8rem!important;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px!important;
-    font-weight: 300;
 }
 
 .education-container .card-content .container {
@@ -252,7 +248,6 @@ blockquote {
     border-bottom: 1px solid #ddd;
     line-height: 25px!important;
     padding-bottom: 20px!important;
-    font-weight: 300;
 }
 
 .certificate-container p {
@@ -283,6 +278,7 @@ blockquote {
 @media all and (max-width: 1024px) {
     #Introduction h2 {
         font-size: 42px!important;
+        line-height: 55px!important;
     }
 
     .skills-navbar {
@@ -306,7 +302,7 @@ blockquote {
     }
 
     .contact-info {
-        padding-bottom: 430px!important;
+        padding-bottom: 840px!important;
     }
 
     .skills-card img {
@@ -322,11 +318,16 @@ blockquote {
 
     #Introduction h2 {
         font-size: 38px!important;
+        line-height: 50px!important;
     }
 
     .skills-card img {
         max-width: 85px!important;
         height: 85px!important;
+    }
+
+    .contact-info {
+        padding-bottom: 430px!important;
     }
 }
 
@@ -367,14 +368,18 @@ blockquote {
         background-position-x: 53%!important;
     }
 
-    .about-container {
-        padding: 0 30px 100px 30px!important;
-
+    #Introduction .underline {
+        border-bottom: 2px solid teal;
     }
 
     #Introduction h2 {
         font-size: 20px!important;
         padding-left: 0!important;
+        line-height: 30px!important;
+    }
+
+    .about-container {
+        padding: 0 30px 100px 30px!important;
     }
 
     .experience-header .card-title {
@@ -421,10 +426,20 @@ blockquote {
     .contact-info {
         padding-bottom: 210px!important;
     }
+
+    .contact-info .teal-text {
+        font-size: 16px;
+        font-weight: 400;
+    }
 }
 
 @media all and (max-width: 360px) {
     #Introduction h2 {
         font-size: 18px!important;
+        line-height: 25px!important;
+    }
+
+    #Introduction .container {
+        padding-left: 10px!important;
     }
 }

@@ -7,11 +7,11 @@ class About extends React.Component {
         return (
             <>
                 <ComponentHeader heading={"About"}/>
-                <div className="container flow-text about-container justify-content-center px-5 pb-5">
+                <div className="container flow-text about-container justify-content-center px-4 pb-5 px-sm-1 px-md-5">
                     <div className="pb-3">
                         <blockquote className="brown-text">
                             <h2>
-                                Passionate Software Developer wants to make things that make a difference.
+                                Goal-oriented software developer with a passion to build applications that make a difference.
                             </h2>
                         </blockquote>
                     </div>
@@ -24,7 +24,7 @@ class About extends React.Component {
                         </p>
                         <p>
                             As a Software Developer, I am always obsessed with minor details, learning new technologies,
-                            and make innovative features in an application. At present, I am looking for an opportunity to
+                            and building innovative features in an application. At present, I am looking for an opportunity to
                             contribute my professional knowledge at the right place and enhance my skills for further
                             growth and betterment.
                         </p>

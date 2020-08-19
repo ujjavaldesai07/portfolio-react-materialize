@@ -147,12 +147,12 @@ class Projects extends React.Component {
             return (
                 <div key={data.title} className="col-md-6 col-lg-6 col-xl-4" style={{paddingBottom: 30}}>
                     <div className="card darken-1 sticky-action">
-                        <div className="card-image waves-effect waves-block waves-light">
+                        <div className="card-image waves-effect waves-block waves-light mb-2">
                             <img className="activator" src={data.image} alt="project-img"/>
                         </div>
-                        <div className="card-content">
+                        <div className="card-content" style={{borderTop: "1px solid rgba(160, 160, 160, 0.2)"}}>
                             <div className="card-title activator teal-text">
-                                <div className="row align-items-center">
+                                <div className="row align-items-center" style={{marginBottom: 0}}>
                                     <div className="col-10 justify-content-start">
                                         {data.title}
                                     </div>

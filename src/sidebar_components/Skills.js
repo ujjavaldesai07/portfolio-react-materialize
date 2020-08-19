@@ -121,7 +121,7 @@ class Skills extends React.Component {
             const skills = [];
             for (const [key, value] of skills_map.entries()) {
                 skills.push(
-                    <div key={key} className="col-6 col-sm-5 col-md-3 col-xl-2 py-4" style={{textAlignLast: "center",
+                    <div key={key} className="col-6 col-sm-4 col-md-3 col-xl-2 pb-3" style={{textAlignLast: "center",
                         textAlign: "-webkit-center"}}>
                         <div>
                             <img src={value} className="responsive-img" alt=""/>
