@@ -227,12 +227,12 @@ blockquote {
     font-size: 2rem!important;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px!important;
+    font-weight: 400;
 }
 
 .education-container .card-content .container {
     font-size: 1.4rem;
     list-style-type: disc!important;
-    font-weight: 400;
 }
 
 /*******************************************/
@@ -247,6 +247,7 @@ blockquote {
     border-bottom: 1px solid #ddd;
     line-height: 25px!important;
     padding-bottom: 20px!important;
+    font-weight: 400;
 }
 
 .certificate-container p {
@@ -373,13 +374,17 @@ blockquote {
         margin-left: 8px!important;
     }
 
+    .education-container li {
+        list-style-type: none!important;
+    }
+
     .project-container .card, .project-container .card-image,
     .project-container .card-data, .project-container .card-image{
         height: fit-content!important;
     }
 
-    .certificate-container .card-title, .education-container .card-title  {
-        font-size: 1rem!important;
+    .certificate-container .card-title, .education-container .card-title {
+        font-size: 1.1rem!important;
     }
 
     .certificate-container p, .education-container .card-content .container {

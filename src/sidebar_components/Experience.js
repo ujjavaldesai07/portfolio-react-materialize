@@ -62,8 +62,8 @@ class Experience extends React.Component {
                 <div className="col-12 col-sm-12 col-lg-11 col-xl-10">
                     <div className="card darken-1">
                         <div className="card-content common-attributes">
-                            <div className="row align-items-center experience-header">
-                                <div className="col-5 mr-auto">
+                            <div className="row align-items-center experience-header justify-content-center">
+                                <div className="col-10 pb-2 col-sm-4 mr-sm-auto">
                                     <a href={data.websiteLink}
                                        className="experience-tooltip" data-position="top" data-tooltip={data.tooltip}>
                                         <img src={data.image} className="responsive-img" style={{height: "auto", maxWidth: "100%"}}
