@@ -4,7 +4,7 @@ import M from "materialize-css/dist/js/materialize.min";
 
 class NavbarCollapseButton extends React.Component {
     componentDidMount() {
-        var elem = document.querySelector(".sidenav-activate");
+        const elem = document.querySelector(".sidenav-activate");
         M.Sidenav.init(elem, {
             edge: "left",
             inDuration: 250,

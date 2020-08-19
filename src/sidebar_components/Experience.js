@@ -48,15 +48,17 @@ class Experience extends React.Component {
     renderHtmlList(descriptionPoints) {
         let descriptionPointList = []
 
+        let count = 0
         descriptionPoints.forEach(point => {
-            descriptionPointList.push(<li> {point}</li>)
+            descriptionPointList.push(<li key={count}> {point}</li>)
+            ++count
         })
         return descriptionPointList
     }
 
     renderCard(data) {
         return (
-            <div className="row justify-content-center">
+            <div key={data.professionTitle} className="row justify-content-center">
                 <div className="col-12 col-sm-12 col-lg-11 col-xl-10">
                     <div className="card darken-1">
                         <div className="card-content common-attributes">

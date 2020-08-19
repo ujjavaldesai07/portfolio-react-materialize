@@ -53,7 +53,7 @@ class Sidebar extends React.Component {
                     scrollTargetIds={this.getMenuItems()}
                     offset={0}
                     activeNavClass="active"
-                    scrollDuration={500}
+                    scrollDuration={2000}
                     headerBackground="true">
 
                     <NavbarCollapseButton/>

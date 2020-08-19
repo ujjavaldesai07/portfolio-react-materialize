@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 class ScrollSpyNav extends Component {
+
     constructor(props) {
         super(props);
 
@@ -20,7 +21,9 @@ class ScrollSpyNav extends Component {
         }
 
         this.state = {
-            prevSectionID: null
+            prevSectionID: this.scrollTargetIds[0],
+            prevSectionIDIndex: 0,
+            scrollPos: 0
         }
     }
 
@@ -74,15 +77,35 @@ class ScrollSpyNav extends Component {
     /**
      * Disable the active style of current section ID with old section ID.
      * @param {String} newSectionID
+     * @param newSectionIDIndex
      */
-    updateNavLinkActiveStyle(newSectionID) {
+    updateNavLinkActiveStyle(newSectionID, newSectionIDIndex) {
         this.getNavLinkElement(newSectionID).classList.add(this.activeNavClass);
         if (this.state.prevSectionID !== null) {
             this.getNavLinkElement(this.state.prevSectionID).classList.remove(this.activeNavClass);
         }
         this.setState({
-            prevSectionID: newSectionID
+            prevSectionID: newSectionID,
+            prevSectionIDIndex: newSectionIDIndex,
         });
+    }
+
+    onScrollUpEvent(sectionID, sectionIDIndex) {
+        if (this.state.prevSectionID !== sectionID) {
+            let newSectionIDOffsetTop = document.getElementById(sectionID).offsetTop;
+            if (window.pageYOffset <= newSectionIDOffsetTop) {
+                this.updateNavLinkActiveStyle(sectionID, sectionIDIndex);
+            }
+        }
+    }
+
+    onScrollDownEvent(sectionID, sectionIDIndex) {
+        if (this.state.prevSectionID !== sectionID) {
+            let newSectionIDOffsetTop = document.getElementById(sectionID).offsetTop;
+            if (window.pageYOffset >= newSectionIDOffsetTop) {
+                this.updateNavLinkActiveStyle(sectionID, sectionIDIndex);
+            }
+        }
     }
 
     componentDidMount() {
@@ -113,19 +136,26 @@ class ScrollSpyNav extends Component {
             });
 
         window.addEventListener("scroll", () => {
-            let scrollSectionOffsetTop;
-
-            // eslint-disable-next-line array-callback-return
-            this.scrollTargetIds.map((sectionID) => {
-                scrollSectionOffsetTop = document.getElementById(sectionID).offsetTop
-                    - (this.headerBackground ?
-                        document.querySelector("div[data-nav='list']").scrollHeight : 0);
-                if (this.state.prevSectionID !== sectionID &&
-                    (window.pageYOffset + 2 * document.getElementById(sectionID).scrollHeight > scrollSectionOffsetTop)) {
-                    this.updateNavLinkActiveStyle(sectionID);
+            let newSectionIDIndex;
+                if ((document.body.getBoundingClientRect()).top > this.state.scrollPos) {
+                    //scroll up
+                    newSectionIDIndex = this.state.prevSectionIDIndex - 1;
+                    if (newSectionIDIndex >= 0) {
+                        this.onScrollUpEvent(this.scrollTargetIds[newSectionIDIndex], newSectionIDIndex)
+                    }
+                } else {
+                    //scroll down
+                    newSectionIDIndex = this.state.prevSectionIDIndex + 1;
+                    if (newSectionIDIndex < this.scrollTargetIds.length) {
+                        this.onScrollDownEvent(this.scrollTargetIds[newSectionIDIndex], newSectionIDIndex)
+                    }
                 }
-            });
-        });
+
+                // saves the new scroll position for iteration.
+                this.setState({scrollPos: (document.body.getBoundingClientRect()).top})
+            }
+        )
+        ;
     }
 
     render() {
