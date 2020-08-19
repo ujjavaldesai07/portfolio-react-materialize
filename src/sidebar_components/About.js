@@ -7,28 +7,26 @@ class About extends React.Component {
         return (
             <>
                 <ComponentHeader heading={"About"}/>
-                <div className="container flow-text about-container justify-content-center p-5">
+                <div className="container flow-text about-container justify-content-center px-5 pb-5">
                     <div className="pb-3">
                         <blockquote className="brown-text">
                             <h2>
-                                Passionate software developer wants to work
-                                in a team and solve the real world customer problems.
+                                Passionate Software Developer wants to make things that make a difference.
                             </h2>
                         </blockquote>
                     </div>
                     <div>
                         <p>
-                            I have over 4 years of experience as a software engineer working in Deep Packet
-                            Inspection
-                            technologies of the networking domain. Currently, I am pursuing my master's in computer
-                            science
-                            and I will be graduating in December 2020. I like to build scalable and user-friendly
-                            applications using the latest tools and technologies. Apart from building applications,
-                            I am always curious and fascinated about problems faced by the application and debugging
-                            them
-                            in different ways. I am seeking the opportunity to solve challenging tasks and be a
-                            part of the team which will improve my knowledge and that will help me in personal
-                            and professional growth.
+                            I've 4+ years of experience as a Senior Software Engineer working in Deep Packet Inspection
+                            technologies of the networking domain. Experienced in software development with C/C++ in Unix environment.
+                            Equipped with diverse and promising skillset. Currently, I am pursuing my Master's degree in
+                            Computer Science and I will be graduating in December 2020.
+                        </p>
+                        <p>
+                            As a Software Developer, I am always obsessed with minor details, learning new technologies,
+                            and make innovative features in an application. At present, I am looking for an opportunity to
+                            contribute my professional knowledge at the right place and enhance my skills for further
+                            growth and betterment.
                         </p>
                     </div>
                 </div>

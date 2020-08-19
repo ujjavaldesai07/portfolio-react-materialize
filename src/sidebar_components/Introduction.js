@@ -8,8 +8,8 @@ class Introduction extends React.Component {
             <div id="Introduction" className="section">
                 <div className="main-container">
                     <div className="container">
-                        <h2 className="white-text">I love <span className="teal">coding, designing and tackling</span>
-                            <br/><span className="underline">complex problems</span> in the application.</h2>
+                        <h2 className="white-text">I <span className="teal">love coding</span>&nbsp;and
+                            &nbsp;<span className="underline">learning new technologies</span><br/> in the software world.</h2>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import Certification from "./sidebar_components/Certification";
 import Contact from "./sidebar_components/Contact";
 
 function App() {
+    console.log(`${process.env.REACT_APP_RESUME_URL}`)
     return (
         <div className="App">
             <Sidebar/>
