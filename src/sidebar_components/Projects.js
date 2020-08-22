@@ -11,10 +11,9 @@ import weatherImg from "../images/project/weather.png"
 import unitconversionImg from "../images/project/unitconversion.png"
 import portfolioImg from "../images/project/portfolio.png"
 
-export const ProjectData = [
+const PROJECT_DATA = [
     {
         title: "eCommerce App",
-        // description: "eCommerce application based on the microservices architecture built using Spring Boot and ReactJS.",
         description: "Shoppers application is an eCommerce website that allows user to shop clothing and other essentials.",
         websiteLink: "https://shoppers-ecom-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/spring-boot-react-ecommerce-app",
@@ -37,7 +36,6 @@ export const ProjectData = [
     },
     {
         title: "ExpenseTracker App",
-        // description: "Application to track living expenses using Spring Boot, JPA, AOP, MySQL with containerization using Docker.",
         description: "Expense tracker allows user to keep track of living expenses based on daily, monthly and yearly records.",
         websiteLink: "http://Expense-tracker-3.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/springboot-JPA-AOP-expense-tracker-app",
@@ -55,7 +53,6 @@ export const ProjectData = [
     },
     {
         title: "Uflix App",
-        // description: "YouTube video search application built using YouTube REST API, JavaScript, jQuery, Nodejs.",
         description: "Stream multiple YouTube videos to track news, stock and many more at the same time.",
         websiteLink: "https://uflix-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/uflix-app",
@@ -72,7 +69,6 @@ export const ProjectData = [
     },
     {
         title: "Weather App",
-        // description: "Application to get weather information built using Open Weather API, React JS & Node JS.",
         description: "Weather application to get latest information of current temperature in different cities.",
         websiteLink: "http://getweather-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/react-weather-app",
@@ -88,7 +84,6 @@ export const ProjectData = [
     },
     {
         title: "UnitConversion App",
-        // description: "Application to convert metric units built using Spring boot and Spring MVC.",
         description: "Application to convert various metric units such as temperature, length," +
             " time and area conversion.",
         websiteLink: "https://unit-conversion-application.herokuapp.com",
@@ -132,77 +127,72 @@ class Projects extends React.Component {
             if (!accomplishments) {
                 return null
             }
-            let accomplishmentList = []
+
             let count = 0
-            accomplishments.forEach(accomplishment => {
-                accomplishmentList.push(<li key={count} style={{listStyleType: "disc", display: "list-item"}}>
-                    {accomplishment}
-                </li>)
+            accomplishments.map(accomplishment => {
                 ++count
+                return (
+                    <li key={count} style={{listStyleType: "disc", display: "list-item"}}>
+                        {accomplishment}
+                    </li>
+                )
             })
-            return accomplishmentList
-        }
-
-        const renderCard = (data) => {
-            return (
-                <div key={data.title} className="col-md-6 col-lg-6 col-xl-4" style={{paddingBottom: 30}}>
-                    <div className="card darken-1 sticky-action">
-                        <div className="card-image waves-effect waves-block waves-light mb-2">
-                            <img className="activator" src={data.image} alt="project-img"/>
-                        </div>
-                        <div className="card-content" style={{borderTop: "1px solid rgba(160, 160, 160, 0.2)"}}>
-                            <div className="card-title activator teal-text">
-                                <div className="row align-items-center" style={{marginBottom: 0}}>
-                                    <div className="col-10 justify-content-start">
-                                        {data.title}
-                                    </div>
-                                    <div>
-                                        <i className="material-icons right">more_vert</i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="card-data">
-                                <p>{data.description}</p>
-                            </div>
-                        </div>
-
-                        <div className="card-action" style={{backgroundColor: "white"}}>
-                            {data.websiteLink ? <a href={data.websiteLink} target="_blank" rel="noopener noreferrer"
-                                                   className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
-                                                   data-position="top" data-tooltip="View Demo"
-                                                   style={{textAlign: "center"}}>
-                                <FontAwesomeIcon icon={faExternalLinkAlt} size="sm"/>
-                            </a> : null}
-                            <a href={data.githubLink} target="_blank" rel="noopener noreferrer"
-                               className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
-                               data-position="top" data-tooltip="View Source" style={{textAlign: "center"}}>
-                                <FontAwesomeIcon icon={['fab', "github"]} size="sm"/>
-                            </a>
-                        </div>
-
-                        <div className="card-reveal">
-                            <span className="card-title brown-text font-weight-light">Accomplishments
-                                <i className="material-icons right brown-text">close</i>
-                            </span>
-                            <div style={{paddingLeft: 12}}>
-                                <ul>
-                                    {renderAccomplishments(data.accomplishments)}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )
         }
 
         const renderCards = () => {
-            let renderCardList = []
-            ProjectData.forEach(data => {
-                renderCardList.push(renderCard(data))
+            return PROJECT_DATA.map(data => {
+                return (
+                    <div key={data.title} className="col-md-6 col-lg-6 col-xl-4" style={{paddingBottom: 30}}>
+                        <div className="card darken-1 sticky-action">
+                            <div className="card-image waves-effect waves-block waves-light mb-2">
+                                <img className="activator" src={data.image} alt="project-img"/>
+                            </div>
+                            <div className="card-content" style={{borderTop: "1px solid rgba(160, 160, 160, 0.2)"}}>
+                                <div className="card-title activator teal-text">
+                                    <div className="row align-items-center" style={{marginBottom: 0}}>
+                                        <div className="col-10 justify-content-start">
+                                            {data.title}
+                                        </div>
+                                        <div>
+                                            <i className="material-icons right">more_vert</i>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div className="card-data">
+                                    <p>{data.description}</p>
+                                </div>
+                            </div>
+
+                            <div className="card-action" style={{backgroundColor: "white"}}>
+                                {data.websiteLink ? <a href={data.websiteLink} target="_blank" rel="noopener noreferrer"
+                                                       className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
+                                                       data-position="top" data-tooltip="View Demo"
+                                                       style={{textAlign: "center"}}>
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} size="sm"/>
+                                </a> : null}
+                                <a href={data.githubLink} target="_blank" rel="noopener noreferrer"
+                                   className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
+                                   data-position="top" data-tooltip="View Source" style={{textAlign: "center"}}>
+                                    <FontAwesomeIcon icon={['fab', "github"]} size="sm"/>
+                                </a>
+                            </div>
+
+                            <div className="card-reveal">
+                            <span className="card-title brown-text font-weight-light">Accomplishments
+                                <i className="material-icons right brown-text">close</i>
+                            </span>
+                                <div style={{paddingLeft: 12}}>
+                                    <ul>
+                                        {renderAccomplishments(data.accomplishments)}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
             })
-            return renderCardList
+
         }
 
         return (

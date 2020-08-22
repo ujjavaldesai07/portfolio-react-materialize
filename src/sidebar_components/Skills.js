@@ -118,11 +118,13 @@ class Skills extends React.Component {
 
     render() {
         function renderSkills(skills_map) {
-            const skills = [];
+            let skills = [];
             for (const [key, value] of skills_map.entries()) {
                 skills.push(
-                    <div key={key} className="col-6 col-sm-4 col-md-3 col-xl-2 pb-3" style={{textAlignLast: "center",
-                        textAlign: "-webkit-center"}}>
+                    <div key={key} className="col-6 col-sm-4 col-md-3 col-xl-2 pb-3" style={{
+                        textAlignLast: "center",
+                        textAlign: "-webkit-center"
+                    }}>
                         <div>
                             <img src={value} className="responsive-img" alt=""/>
                         </div>
@@ -136,7 +138,7 @@ class Skills extends React.Component {
         }
 
         function renderCardSkeletons(card_list) {
-            var cards = [];
+            let cards = [];
             for (const [key, value] of card_list.entries()) {
                 cards.push(
                     <div key={`${key}-${value}`} id={value} className="card skills-card">
@@ -157,10 +159,12 @@ class Skills extends React.Component {
         const NAVBAR_ITEMS = ['all', 'languages', 'front-end', 'back-end', 'build-tools', 'other-tools'];
 
         for (const item of NAVBAR_ITEMS) {
-            navbarItems.push(<li key={item} className="nav-item">
-                <a href={'#' + item} onMouseEnter={this.handleMouseEnter} className="waves-green black-text">{item}
-                </a>
-            </li>)
+            navbarItems.push(
+                <li key={item} className="nav-item">
+                    <a href={'#' + item} onMouseEnter={this.handleMouseEnter} className="waves-green black-text">{item}
+                    </a>
+                </li>
+            )
         }
 
         return (

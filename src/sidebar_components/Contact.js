@@ -3,19 +3,44 @@ import ComponentHeader from "../components/ComponentHeader";
 import M from "materialize-css/dist/js/materialize.min";
 import '../styles/sidebarComponent.css'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
+import {library} from '@fortawesome/fontawesome-svg-core'
 import {fab} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab);
 
-const CONTACT_LIST = [
-    ["mailto:ujjavaldesai1@gmail.com", "Email Ujjaval", faEnvelope, "ujjavaldesai1@gmail.com"],
-    ["https://www.linkedin.com/in/ujjavaldesai", "View Ujjaval on LinkedIn", ['fab', "linkedin"], "linkedin.com/in/ujjavaldesai"],
-    ["https://github.com/ujjavaldesai07", "View Ujjaval on GitHub", ['fab', "github"], "github.com/ujjavaldesai07"],
-    ["https://www.facebook.com/ujjavaldesai", "View Ujjaval on Facebook", ['fab', "facebook"], "facebook.com/ujjavaldesai"],
-    ["https://www.instagram.com/im_ujjval", "View Ujjaval on Instagram", ['fab', "instagram"], "instagram.com/im_ujjval"],
+const CONTACT_DATA = [
+    {
+        link: "mailto:ujjavaldesai1@gmail.com",
+        tooltip: "Email Ujjaval",
+        icon: faEnvelope,
+        title: "ujjavaldesai1@gmail.com"
+    },
+    {
+        link: "https://www.linkedin.com/in/ujjavaldesai",
+        tooltip: "View Ujjaval on LinkedIn",
+        icon: ['fab', "linkedin"],
+        title: "linkedin.com/in/ujjavaldesai"
+    },
+    {
+        link: "https://github.com/ujjavaldesai07",
+        tooltip: "View Ujjaval on GitHub",
+        icon: ['fab', "github"],
+        title: "github.com/ujjavaldesai07"
+    },
+    {
+        link: "https://www.facebook.com/ujjavaldesai",
+        tooltip: "View Ujjaval on Facebook",
+        icon: ['fab', "facebook"],
+        title: "facebook.com/ujjavaldesai"
+    },
+    {
+        link: "https://www.instagram.com/im_ujjval",
+        tooltip: "View Ujjaval on Instagram",
+        icon: ['fab', "instagram"],
+        title: "instagram.com/im_ujjval"
+    },
 ];
 
 class Contact extends React.Component {
@@ -27,36 +52,33 @@ class Contact extends React.Component {
         });
     }
 
-    render() {
-        let renderContactInfo = () => {
-            const contacts = [];
-            for(let contact of CONTACT_LIST) {
-                contacts.push(
-                <div key={contact[0]} className="row align-items-center">
+    renderContactInfo = () => {
+        return CONTACT_DATA.map(data => {
+            return (
+                <div key={data.link} className="row align-items-center">
                     <div className="pr-4">
-                    <a href={contact[0]} target="_blank" rel="noopener noreferrer"
-                       className="contact-tooltip btn-floating btn-large waves-effect waves-light brown"
-                       data-position="top" data-tooltip={contact[1]}>
-                        <FontAwesomeIcon icon={contact[2]} size="2x"/>
-                    </a>
+                        <a href={data.link} target="_blank" rel="noopener noreferrer"
+                           className="contact-tooltip btn-floating btn-large waves-effect waves-light brown"
+                           data-position="top" data-tooltip={data.tooltip}>
+                            <FontAwesomeIcon icon={data.icon} size="2x"/>
+                        </a>
                     </div>
                     <div>
-                    <a href={contact[0]} target="_blank" rel="noopener noreferrer"
-                       className="teal-text">{contact[3]}</a>
+                        <a href={data.link} target="_blank" rel="noopener noreferrer"
+                           className="teal-text">{data.title}</a>
                     </div>
                 </div>
-                )
-            }
-            return contacts;
-        };
+            )
+        })
+    }
 
-
+    render() {
         return (
             <>
                 <ComponentHeader heading={"Contact"}/>
                 <div className="container contact-info">
                     <div className="col-sm-11">
-                    {renderContactInfo()}
+                        {this.renderContactInfo()}
                     </div>
                 </div>
             </>

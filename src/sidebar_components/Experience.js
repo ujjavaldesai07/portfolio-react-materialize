@@ -5,7 +5,7 @@ import M from "materialize-css/dist/js/materialize.min";
 import sandvineImg from '../images/experience/sandvine.jpg';
 import uhclImg from '../images/experience/uhcl.png';
 
-const Experience_Data = [
+const EXPERIENCE_DATA = [
     {
         image: uhclImg,
         websiteLink: "https://uhcl.edu",
@@ -46,56 +46,47 @@ class Experience extends React.Component {
     }
 
     renderHtmlList(descriptionPoints) {
-        let descriptionPointList = []
-
         let count = 0
-        descriptionPoints.forEach(point => {
-            descriptionPointList.push(<li key={count}> {point}</li>)
+        return descriptionPoints.map(point => {
             ++count
+            return <li key={count}> {point}</li>
         })
-        return descriptionPointList
     }
 
-    renderCard(data) {
-        return (
-            <div key={data.professionTitle} className="row justify-content-center">
-                <div className="col-12 col-lg-11 col-xl-10">
-                    <div className="card darken-1">
-                        <div className="card-content common-attributes">
-                            <div className="row align-items-center experience-header justify-content-center">
-                                <div className="col-10 pb-2 col-sm-4 mr-sm-auto">
-                                    <a href={data.websiteLink}
-                                       className="experience-tooltip" data-position="top" data-tooltip={data.tooltip}>
-                                        <img src={data.image} className="responsive-img" style={{height: "auto", maxWidth: "100%"}}
-                                             alt={data.professionTitle}/>
-                                    </a>
+    renderCards() {
+        return EXPERIENCE_DATA.map(data => {
+            return (
+                <div key={data.professionTitle} className="row justify-content-center">
+                    <div className="col-12 col-lg-11 col-xl-10">
+                        <div className="card darken-1">
+                            <div className="card-content common-attributes">
+                                <div className="row align-items-center experience-header justify-content-center">
+                                    <div className="col-10 pb-2 col-sm-4 mr-sm-auto">
+                                        <a href={data.websiteLink}
+                                           className="experience-tooltip" data-position="top"
+                                           data-tooltip={data.tooltip}>
+                                            <img src={data.image} className="responsive-img"
+                                                 style={{height: "auto", maxWidth: "100%"}}
+                                                 alt={data.professionTitle}/>
+                                        </a>
+                                    </div>
+                                    <div className="card-title brown-text align-header pr-1 pr-sm-4">
+                                        {data.professionTitle}
+                                    </div>
                                 </div>
-                                <div className="card-title brown-text align-header pr-1 pr-sm-4">
-                                    {data.professionTitle}
-                                </div>
-                            </div>
 
-                            <ul>
-                                {this.renderHtmlList(data.descriptionPoints)}
-                            </ul>
-                            <div className="card-action brown-text">
-                                <span>{data.date}</span>
+                                <ul>
+                                    {this.renderHtmlList(data.descriptionPoints)}
+                                </ul>
+                                <div className="card-action brown-text">
+                                    <span>{data.date}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        )
-    }
-
-    renderCards() {
-        let renderCardList = []
-
-        Experience_Data.forEach(data => {
-            renderCardList.push(this.renderCard(data))
+            )
         })
-
-        return renderCardList
     }
 
     render() {

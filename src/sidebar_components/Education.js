@@ -3,7 +3,7 @@ import 'materialize-css/dist/js/materialize.min.js';
 import ComponentHeader from "../components/ComponentHeader";
 import M from "materialize-css/dist/js/materialize.min";
 
-const Education_Data = [
+const EDUCATION_DATA = [
     {
         title: "University of Houston - Clear Lake",
         titleLink: "https://www.uhcl.edu",
@@ -30,21 +30,22 @@ class Education extends React.Component {
         });
     }
 
-    renderCard(data) {
-        return (
-            <div key={data.title} className="row justify-content-center">
-                <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
-                    <div className="card darken-1">
-                        <div className="card-content common-attributes">
-                            <a href={data.titleLink}
-                               className="education-tooltip" data-position="top"
-                               data-tooltip="Look at the university website">
-                                <span className="card-title teal-text">{data.title}</span></a>
+    renderCards() {
+        return EDUCATION_DATA.map(data => {
+            return (
+                <div key={data.title} className="row justify-content-center">
+                    <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
+                        <div className="card darken-1">
+                            <div className="card-content common-attributes">
+                                <a href={data.titleLink}
+                                   className="education-tooltip" data-position="top"
+                                   data-tooltip="Look at the university website">
+                                    <span className="card-title teal-text">{data.title}</span></a>
                                 <div className="container pt-4">
                                     <div className="row">
                                         <div className="mr-auto">
                                             <li>
-                                            {data.degree}
+                                                {data.degree}
                                             </li>
                                         </div>
                                         <div className="justify-content-end">
@@ -52,24 +53,15 @@ class Education extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                            <div className="card-action brown-text">
-                                <span>{data.date}</span>
+                                <div className="card-action brown-text">
+                                    <span>{data.date}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        )
-    }
-
-    renderCards() {
-        let renderCardList = []
-
-        Education_Data.forEach(data => {
-            renderCardList.push(this.renderCard(data))
+            )
         })
-
-        return renderCardList
     }
 
     render() {

@@ -3,7 +3,7 @@ import 'materialize-css/dist/js/materialize.min.js';
 import ComponentHeader from "../components/ComponentHeader";
 import M from "materialize-css/dist/js/materialize.min";
 
-const Certificate_Data = [
+const CERTIFICATE_DATA = [
     {
         title: "Online Machine Learning Course",
         titleLink: "https://www.coursera.org/account/accomplishments/certificate/ZL8C2MUN7NWC",
@@ -32,35 +32,27 @@ class Certification extends React.Component {
         });
     }
 
-    renderCard(data) {
-        return (
-            <div key={data.title} className="row justify-content-center">
-                <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
-                    <div className="card darken-1">
-                        <div className="card-content common-attributes">
-                            <a href={data.titleLink}
-                               className="certificate-tooltip" data-position="top"
-                               data-tooltip={data.tooltip}>
-                                <span className="card-title teal-text">{data.title}</span></a>
-                            <p className="py-4">{data.description}</p>
-                            <div className="card-action brown-text">
-                                <span>{data.date}</span>
+    renderCards() {
+        return CERTIFICATE_DATA.map(data => {
+         return (
+                <div key={data.title} className="row justify-content-center">
+                    <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
+                        <div className="card darken-1">
+                            <div className="card-content common-attributes">
+                                <a href={data.titleLink}
+                                   className="certificate-tooltip" data-position="top"
+                                   data-tooltip={data.tooltip}>
+                                    <span className="card-title teal-text">{data.title}</span></a>
+                                <p className="py-4">{data.description}</p>
+                                <div className="card-action brown-text">
+                                    <span>{data.date}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        )
-    }
-
-    renderCards() {
-        let renderCardList = []
-
-        Certificate_Data.forEach(data => {
-            renderCardList.push(this.renderCard(data))
+            )
         })
-
-        return renderCardList
     }
 
     render() {
