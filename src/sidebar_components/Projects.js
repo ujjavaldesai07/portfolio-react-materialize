@@ -23,10 +23,9 @@ const PROJECT_DATA = [
             <p>Built with <b>NodeJS</b> and <b>ReactJS</b>.</p>,
             <p>Stored data in <b>MongoDB</b>.</p>,
             <p>Fetch data from server using <b>GraphQL</b>.</p>,
-            <p>Established communication using websocket technology based <b>GraphQL Subscription</b>.</p>,
+            <p>Established communication using <b>GraphQL Subscription</b> which is based on <b>WebSocket</b> technology.</p>,
             <p><b>React-Redux</b> to maintain react states.</p>,
             <p>Designed in <b>Material UI</b>.</p>,
-            <p>Stored authentication details in <b>JS-Cookies</b>.</p>,
             <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
         ]
     },

@@ -27,7 +27,7 @@ import mongodbImg from "../images/skills/backend/mongodb.png"
 import dockerImg from '../images/skills/buildtools/docker.png'
 import herokuImg from '../images/skills/buildtools/heroku.png'
 import webpackImg from '../images/skills/buildtools/webpack.png'
-import githubImg from '../images/skills/buildtools/github.png'
+import gitImg from '../images/skills/buildtools/git.png'
 
 import wiresharkImg from '../images/skills/othertools/wireshark.png'
 import jenkinsImg from '../images/skills/othertools/jenkins.png'
@@ -38,13 +38,11 @@ import jiraImg from '../images/skills/othertools/jira.png'
 
 const LANGUAGES_MAP = new Map([
     ['Java', javaImg], ['C', cImg],
-    ['C++', c_plusImg], ['Python', pythonImg],
-    ['Swift', swiftImg]
+    ['C++', c_plusImg], ['Python', pythonImg]
 ]);
 
 const FRONTEND_MAP = new Map([
-    ['HTML', htmlImg], ['JavaScript', jsImg],
-    ['React', reactImg], ['CSS', cssImg],
+    ['JavaScript', jsImg], ['HTML', htmlImg], ['CSS', cssImg], ['React', reactImg],
     ['Bootstrap', bootstrapImg], ['Materialize', materializeImg],
     ['Material UI', materialUIImg], ['Semantic UI', semanticUIImg]
 ]);
@@ -55,21 +53,21 @@ const BACKEND_MAP = new Map([
     ['MongoDB', mongodbImg], ['Redis', redisImg]
 ]);
 
-const BUILDTOOLS_MAP = new Map([
+const BUILD_TOOLS_MAP = new Map([
     ['Docker', dockerImg], ['Heroku', herokuImg],
-    ['Webpack', webpackImg], ['GitHub', githubImg]
+    ['Git', gitImg], ['Webpack', webpackImg]
 ]);
 
-const OTHERTOOLS_MAP = new Map([
-    ['Wireshark', wiresharkImg], ['Jenkins', jenkinsImg],
-    ['GDB', gdbImg], ['Valgrind', valgrindImg],
-    ['Bullseye Coverage', bullseyeImg], ['Jira', jiraImg]
+const OTHER_TOOLS_MAP = new Map([
+    ['Wireshark', wiresharkImg], ['Jenkins', jenkinsImg], ['GDB', gdbImg],
+    ['Valgrind', valgrindImg], ['Bullseye Coverage', bullseyeImg],
+    ['Jira', jiraImg]
 ]);
 
 const CARD_LIST = new Map([
     [LANGUAGES_MAP, "languages"], [FRONTEND_MAP, "front-end"],
-    [BACKEND_MAP, "back-end"], [BUILDTOOLS_MAP, "build-tools"],
-    [OTHERTOOLS_MAP, "other-tools"]]);
+    [BACKEND_MAP, "back-end"], [BUILD_TOOLS_MAP, "build-tools"],
+    [OTHER_TOOLS_MAP, "other-tools"]]);
 
 class Skills extends React.Component {
     constructor(props) {
