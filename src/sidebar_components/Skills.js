@@ -21,6 +21,8 @@ import reactImg from '../images/skills/frontend/react.png'
 import nodeImg from '../images/skills/backend/nodejs.png'
 import mysqlImg from '../images/skills/backend/mysql.png'
 import redisImg from '../images/skills/backend/redis.png'
+import graphqlImg from "../images/skills/backend/graphql.png"
+import mongodbImg from "../images/skills/backend/mongodb.png"
 
 import dockerImg from '../images/skills/buildtools/docker.png'
 import herokuImg from '../images/skills/buildtools/heroku.png'
@@ -49,7 +51,8 @@ const FRONTEND_MAP = new Map([
 
 const BACKEND_MAP = new Map([
     ['Spring', springImg], ['Spring Boot', springbootImg],
-    ['Node', nodeImg], ['MySQL', mysqlImg], ['Redis', redisImg]
+    ['Node', nodeImg], ['GraphQL', graphqlImg], ['MySQL', mysqlImg],
+    ['MongoDB', mongodbImg], ['Redis', redisImg]
 ]);
 
 const BUILDTOOLS_MAP = new Map([

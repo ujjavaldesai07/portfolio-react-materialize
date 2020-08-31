@@ -168,8 +168,9 @@ blockquote {
 }
 
 .project-container .card-reveal p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0 !important;
+    text-align: initial;
 }
 
 .project-container.card-action {

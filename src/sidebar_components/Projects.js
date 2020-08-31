@@ -26,7 +26,7 @@ const PROJECT_DATA = [
             <p>Established communication using websocket technology based <b>GraphQL Subscription</b>.</p>,
             <p><b>React-Redux</b> to maintain react states.</p>,
             <p>Designed in <b>Material UI</b>.</p>,
-            <p>Stored authentication information in <b>JS-Cookies</b>.</p>,
+            <p>Stored authentication details in <b>JS-Cookies</b>.</p>,
             <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
         ]
     },
@@ -102,8 +102,8 @@ const PROJECT_DATA = [
     },
     {
         title: "Unit Conversion",
-        description: "Unit Conversion is an application to convert various metric units such as temperature, length," +
-            " time and area conversion.",
+        description: "Unit Conversion is an application to convert metric units such as temperature, length," +
+            " time, and area.",
         websiteLink: "https://unit-conversion-application.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/springboot-mvc-docker-unitconversion-app",
         image: unitconversionImg,
@@ -150,7 +150,7 @@ class Projects extends React.Component {
             return accomplishments.map(accomplishment => {
                 ++count
                 return (
-                    <li key={count} style={{listStyleType: "disc", display: "list-item"}}>
+                    <li key={count} id="project-accomplishments" style={{listStyleType: "disc", display: "list-item"}}>
                         {accomplishment}
                     </li>
                 )
