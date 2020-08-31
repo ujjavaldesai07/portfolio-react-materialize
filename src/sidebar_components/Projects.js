@@ -4,6 +4,7 @@ import ComponentHeader from "../components/ComponentHeader";
 import M from "materialize-css/dist/js/materialize.min";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+import messengerImg from "../images/project/messenger.png"
 import shoppersImg from "../images/project/shoppers.png"
 import expenseTrackerImg from "../images/project/expensetracker.png"
 import uflixImg from "../images/project/uflix.png"
@@ -13,8 +14,25 @@ import portfolioImg from "../images/project/portfolio.png"
 
 const PROJECT_DATA = [
     {
-        title: "eCommerce App",
-        description: "Shoppers application is an eCommerce website that allows user to shop clothing and other essentials.",
+        title: "Messenger",
+        description: "Messenger is a chat application which allows user to communicate in dark theme.",
+        websiteLink: "https://messenger-2.herokuapp.com",
+        githubLink: "https://github.com/ujjavaldesai07/messenger-reactjs-graphql-nodejs-mongodb",
+        image: messengerImg,
+        accomplishments: [
+            <p>Built with <b>NodeJS</b> and <b>ReactJS</b>.</p>,
+            <p>Stored data in <b>MongoDB</b>.</p>,
+            <p>Fetch data from server using <b>GraphQL</b>.</p>,
+            <p>Established communication using websocket technology based <b>GraphQL Subscription</b>.</p>,
+            <p><b>React-Redux</b> to maintain react states.</p>,
+            <p>Designed in <b>Material UI</b>.</p>,
+            <p>Stored authentication information in <b>JS-Cookies</b>.</p>,
+            <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
+        ]
+    },
+    {
+        title: "Shoppers",
+        description: "Shoppers is an eCommerce website that allows user to shop clothing and other essentials.",
         websiteLink: "https://shoppers-ecom-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/spring-boot-react-ecommerce-app",
         image: shoppersImg,
@@ -35,8 +53,8 @@ const PROJECT_DATA = [
         ]
     },
     {
-        title: "ExpenseTracker App",
-        description: "Expense tracker allows user to keep track of living expenses based on daily, monthly and yearly records.",
+        title: "Expense Tracker",
+        description: "ExpenseTracker allows user to keep track of living expenses based on daily, monthly and yearly records.",
         websiteLink: "http://Expense-tracker-3.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/springboot-JPA-AOP-expense-tracker-app",
         image: expenseTrackerImg,
@@ -52,8 +70,8 @@ const PROJECT_DATA = [
         ]
     },
     {
-        title: "Uflix App",
-        description: "Stream multiple YouTube videos to track news, stock and many more at the same time.",
+        title: "Uflix",
+        description: "Stream Uflix with multiple YouTube videos to track news, stock and many more at the same time.",
         websiteLink: "https://uflix-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/uflix-app",
         image: uflixImg,
@@ -83,8 +101,8 @@ const PROJECT_DATA = [
         ]
     },
     {
-        title: "UnitConversion App",
-        description: "Application to convert various metric units such as temperature, length," +
+        title: "Unit Conversion",
+        description: "Unit Conversion is an application to convert various metric units such as temperature, length," +
             " time and area conversion.",
         websiteLink: "https://unit-conversion-application.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/springboot-mvc-docker-unitconversion-app",
@@ -129,7 +147,7 @@ class Projects extends React.Component {
             }
 
             let count = 0
-            accomplishments.map(accomplishment => {
+            return accomplishments.map(accomplishment => {
                 ++count
                 return (
                     <li key={count} style={{listStyleType: "disc", display: "list-item"}}>
