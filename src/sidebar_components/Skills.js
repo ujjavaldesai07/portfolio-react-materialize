@@ -38,7 +38,7 @@ import jiraImg from '../images/skills/othertools/jira.png'
 
 const LANGUAGES_MAP = new Map([
     ['Java', javaImg], ['C', cImg],
-    ['C++', c_plusImg], ['Python', pythonImg]
+    ['C++', c_plusImg], ['Python', pythonImg], ['Swift', swiftImg]
 ]);
 
 const FRONTEND_MAP = new Map([
@@ -55,11 +55,11 @@ const BACKEND_MAP = new Map([
 
 const BUILD_TOOLS_MAP = new Map([
     ['Docker', dockerImg], ['Heroku', herokuImg],
-    ['Git', gitImg], ['Webpack', webpackImg]
+    ['Git', gitImg], ['Webpack', webpackImg], ['Jenkins', jenkinsImg]
 ]);
 
 const OTHER_TOOLS_MAP = new Map([
-    ['Wireshark', wiresharkImg], ['Jenkins', jenkinsImg], ['GDB', gdbImg],
+    ['Wireshark', wiresharkImg], ['GDB', gdbImg],
     ['Valgrind', valgrindImg], ['Bullseye Coverage', bullseyeImg],
     ['Jira', jiraImg]
 ]);
