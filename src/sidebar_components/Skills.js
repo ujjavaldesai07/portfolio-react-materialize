@@ -25,6 +25,7 @@ import graphqlImg from "../images/skills/backend/graphql.png"
 import mongodbImg from "../images/skills/backend/mongodb.png"
 
 import dockerImg from '../images/skills/buildtools/docker.png'
+import awsImg from '../images/skills/buildtools/aws.png'
 import herokuImg from '../images/skills/buildtools/heroku.png'
 import webpackImg from '../images/skills/buildtools/webpack.png'
 import gitImg from '../images/skills/buildtools/git.png'
@@ -54,7 +55,7 @@ const BACKEND_MAP = new Map([
 ]);
 
 const BUILD_TOOLS_MAP = new Map([
-    ['Docker', dockerImg], ['Heroku', herokuImg],
+    ['Docker', dockerImg], ['Heroku', herokuImg], ['AWS', awsImg],
     ['Git', gitImg], ['Webpack', webpackImg], ['Jenkins', jenkinsImg]
 ]);
 
