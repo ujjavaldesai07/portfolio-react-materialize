@@ -19,9 +19,9 @@ class About extends React.Component {
                         <p>
                             I've 4+ years of experience as a Senior Software Engineer working in Deep Packet Inspection
                             technologies of the networking domain. Experienced in software development with C/C++
-                            in Unix environment. Equipped with diverse and promising skillset. Good interpersonal
+                            in Unix environment. Equipped with diverse and promising skill-set. Good interpersonal
                             and communication skills. Built personal projects using trending languages like Java and
-                            JavaScript using frameworks, databases, and build tools like Spring Boot, ReactJS,
+                            JavaScript using frameworks, databases, and build tools like Spring Boot, React,
                             Material UI, MySQL, MongoDB, Redis, Webpack, Docker, etc. Currently, I am pursuing my
                             Master's degree in Computer Science and I will be graduating in December 2020.
                         </p>
