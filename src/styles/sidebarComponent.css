@@ -125,6 +125,10 @@ blockquote {
     font-size: 1rem;
 }
 
+.experience-container .card-content {
+    height: 100%;
+}
+
 /*******************************************/
 
 /******* Projects Component Style *******/
