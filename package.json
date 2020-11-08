@@ -7,9 +7,10 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
-    "materialize-css": "^1.0.0-rc.2",
     "bootstrap": "^4.4.1",
+    "materialize-css": "^1.0.0-rc.2",
     "react": "latest",
+    "react-app-polyfill": "^2.0.0",
     "react-dom": "latest",
     "react-router-dom": "^5.1.2",
     "react-scripts": "latest"
@@ -32,7 +33,8 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie 11"
     ]
   }
 }
