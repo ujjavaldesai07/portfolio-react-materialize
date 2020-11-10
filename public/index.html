@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="google-site-verification" content="3_pd5x8I83DernhgTR5IXus3AkxDYNDBUdqz4VFAKzs" />
-  <meta name="google-site-verification" content="7zNi_7Oyk-VUxS2H3ohACHozBSCSxKjXF6jIyLq1mqM" />
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="google-site-verification" content="3_pd5x8I83DernhgTR5IXus3AkxDYNDBUdqz4VFAKzs"/>
+    <meta name="google-site-verification" content="7zNi_7Oyk-VUxS2H3ohACHozBSCSxKjXF6jIyLq1mqM"/>
 
-  <title>Ujjaval Desai | Software Developer</title>
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="I love coding and learning new things in the software world."/>
-  <meta name="keywords" content="Ujjaval,Desai,Ujjaval Desai,Ujjaval Desai Software Developer,Ujjaval Desai Portfolio, Ujjaval Desai Developer">
+    <title>Ujjaval Desai | Software Developer</title>
+    <meta name="robots" content="index, follow"/>
+    <meta name="description" content="I love coding and learning new things in the software world."/>
+    <meta name="keywords"
+          content="Ujjaval,Desai,Ujjaval Desai,Ujjaval Desai Software Developer,Ujjaval Desai Portfolio, Ujjaval Desai Developer">
 
-  <!-- Open Graph-->
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ujjaval Desai | Software Developer"/>
-  <meta property="og:description" content="I love coding and learning new things in the software world."/>
-  <meta property="og:url" content="https://ujjavaldesai.netlify.com" />
-  <meta property="og:site_name" content="Ujjaval Desai | Software Developer"/>
-  <meta property="article:publisher" content="ujjavaldesai.netlify.com" />
-  <meta property="og:image:secure_url" content="https://media1.thehungryjpeg.com/thumbs2/ori_3630284_f3tkxby6vcx40uaksnfydnbvo6fbsahf5jxh8oba_ud-monogram-logo-design.jpg" />
+    <!-- Open Graph-->
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Ujjaval Desai | Software Developer"/>
+    <meta property="og:description" content="I love coding and learning new things in the software world."/>
+    <meta property="og:url" content="https://ujjavaldesai.netlify.com"/>
+    <meta property="og:site_name" content="Ujjaval Desai | Software Developer"/>
+    <meta property="article:publisher" content="ujjavaldesai.netlify.com"/>
+    <meta property="og:image:secure_url"
+          content="https://media1.thehungryjpeg.com/thumbs2/ori_3630284_f3tkxby6vcx40uaksnfydnbvo6fbsahf5jxh8oba_ud-monogram-logo-design.jpg"/>
 
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.jpg" />
-  <!--
-    manifest.json provides metadata used when your web app is installed on a
-    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-  -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.jpg"/>
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100|Quicksand:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
     <!--
@@ -45,73 +48,54 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  </head>
-  <body>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+</head>
+<body>
+<div id="root"></div>
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <script>
-      let analyticsId;
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
 
-      // If analytics id has been manually defined
-      if (analyticsId) {
-        // Initialize GA with local var
-        initGoogleAnalytics(analyticsId)
-      } else {
-        // Initialize GA with Netlify env var available via lamba function
-        fetch("/.netlify/functions/env_vars")
-                .then(getEnvVar)
-                .then(initGoogleAnalytics)
-                .catch(handleError)
-      }
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TFJMNC"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-      // -------------------------------------------------
-      // Helper Functions
-      // --------------------------------------------------
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158179574-1"></script>
+<script>
 
-      function handleError(error) {
-        console.log("error", error)
-      }
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5TFJMNC');
+    <!-- End Google Tag Manager -->
 
-      function getEnvVar(response) {
-        // If the request was successful
-        if (response.ok) {
-          // Return the response text
-          return response.text()
-        } else {
-          // Return a rejected Promise object, triggering the .catch()
-          return Promise.reject(response)
-        }
-      }
 
-      // Set Up Google Analytics
-      function initGoogleAnalytics(analyticsId) {
-        if (analyticsId) {
-          // Inject the Google Analytics Tag Manager script into the DOM
-          analyticsUrl =
-                  "https://www.googletagmanager.com/gtag/js?id=UA-" + analyticsId;
-          var ref = document.getElementsByTagName("script")[0];
-          var script = document.createElement("script");
-          script.src = analyticsUrl;
-          ref.parentNode.insertBefore(script, ref);
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-158179574-1');
 
-          // Initialize Google Analytics
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments)
-          }
-          gtag("js", new Date());
-          gtag("config", "UA-" + analyticsId)
-        }
-      }
-    </script>
-  </body>
+</script>
+</body>
 </html>
