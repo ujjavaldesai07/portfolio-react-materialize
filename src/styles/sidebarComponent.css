@@ -73,14 +73,15 @@
 /******* About Component Style *******/
 
 .about-container {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
 .about-container p {
     text-align: justify;
-    font-weight: 300;
+    font-weight: 400;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     padding-top: 20px;
+    font-size: 1.4rem;
 }
 
 blockquote {
