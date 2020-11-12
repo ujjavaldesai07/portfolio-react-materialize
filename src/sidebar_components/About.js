@@ -7,17 +7,19 @@ class About extends React.Component {
         return (
             <>
                 <ComponentHeader heading={"About"}/>
-                <div className="container flow-text about-container justify-content-center px-4 pb-5 px-sm-1 px-md-5">
-                    <div className="pb-3">
-                        <blockquote className="brown-text">
-                            <h2>
-                                Goal-oriented software developer with a passion to build applications that make a
-                                difference.
-                            </h2>
-                        </blockquote>
+                <div className="container flow-text about-container justify-content-center px-4 pb-5 px-sm-1">
+                    <div className="row justify-content-center">
+                        <div className="col-sm-11 col-lg-10">
+                            <blockquote className="brown-text">
+                                <h2>
+                                    Goal-oriented software developer with a passion to build applications that make a
+                                    difference.
+                                </h2>
+                            </blockquote>
+                        </div>
                     </div>
-                    <div className="row mt-3">
-                        <div className="col s12 m5">
+                    <div className="row justify-content-center">
+                        <div className="col-sm-11 col-lg-10">
                             <div className="card-panel">
                                 <p>
                                     I've 4+ years of experience as a Senior Software Engineer working in Deep Packet

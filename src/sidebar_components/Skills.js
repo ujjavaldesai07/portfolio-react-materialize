@@ -130,7 +130,7 @@ class Skills extends React.Component {
                         <div>
                             <img src={value} className="responsive-img" alt=""/>
                         </div>
-                        <div className="pt-3" style={{fontSize: "1rem"}}>
+                        <div className="pt-3" style={{fontSize: "1.1rem"}}>
                             {key}
                         </div>
                     </div>
@@ -143,14 +143,18 @@ class Skills extends React.Component {
             let cards = [];
             for (const [key, value] of card_list.entries()) {
                 cards.push(
-                    <div key={`${key}-${value}`} id={value} className="card skills-card">
-                        <div className="card-content">
-                            <div className="container">
-                                <h4 className="card-title brown-text pb-4">{value}</h4>
+                    <div key={`${key}-${value}`} id={value} className="row justify-content-center">
+                        <div className="col-sm-12 col-lg-10">
+                        <div className="card skills-card">
+                            <div className="card-content">
+                                <div className="container">
+                                    <h4 className="card-title brown-text pb-3">{value}</h4>
+                                </div>
+                                <div className="row">
+                                    {renderSkills(key)}
+                                </div>
                             </div>
-                            <div className="row">
-                                {renderSkills(key)}
-                            </div>
+                        </div>
                         </div>
                     </div>)
             }

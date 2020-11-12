@@ -77,7 +77,7 @@ class Contact extends React.Component {
             <>
                 <ComponentHeader heading={"Contact"}/>
                 <div className="container contact-info">
-                    <div className="col-sm-11">
+                    <div className="col-sm-10">
                         {this.renderContactInfo()}
                     </div>
                 </div>

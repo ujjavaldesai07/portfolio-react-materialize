@@ -14,22 +14,6 @@ import portfolioImg from "../images/project/portfolio.png"
 
 const PROJECT_DATA = [
     {
-        title: "Messenger",
-        description: "Messenger is a chat application which allows user to communicate in dark theme.",
-        websiteLink: "https://messenger-2.herokuapp.com",
-        githubLink: "https://github.com/ujjavaldesai07/messenger-reactjs-graphql-nodejs-mongodb",
-        image: messengerImg,
-        accomplishments: [
-            <p>Built with <b>NodeJS</b> and <b>ReactJS</b>.</p>,
-            <p>Stored data in <b>MongoDB</b>.</p>,
-            <p>Fetch data from server using <b>GraphQL</b>.</p>,
-            <p>Established communication using <b>GraphQL Subscription</b> which is based on <b>WebSocket</b> technology.</p>,
-            <p><b>React-Redux</b> to maintain react states.</p>,
-            <p>Designed in <b>Material UI</b>.</p>,
-            <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
-        ]
-    },
-    {
         title: "Shoppers",
         description: "Shoppers is an eCommerce website that allows user to shop clothing and other essentials.",
         websiteLink: "https://shoppers-ecom-app.herokuapp.com",
@@ -48,6 +32,22 @@ const PROJECT_DATA = [
             <p>Used <b>Redux-Form</b> for quick form validation.</p>,
             <p>Stored product buying information and authentication token in <b>JS-Cookies</b>.</p>,
             <p>Used <b>Docker Compose</b> to test for quick application deployment.</p>,
+            <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
+        ]
+    },
+    {
+        title: "Messenger",
+        description: "Messenger is a chat application which allows user to communicate in dark theme.",
+        websiteLink: "https://messenger-2.herokuapp.com",
+        githubLink: "https://github.com/ujjavaldesai07/messenger-reactjs-graphql-nodejs-mongodb",
+        image: messengerImg,
+        accomplishments: [
+            <p>Built with <b>NodeJS</b> and <b>ReactJS</b>.</p>,
+            <p>Stored data in <b>MongoDB</b>.</p>,
+            <p>Fetch data from server using <b>GraphQL</b>.</p>,
+            <p>Established communication using <b>GraphQL Subscription</b> which is based on <b>WebSocket</b> technology.</p>,
+            <p><b>React-Redux</b> to maintain react states.</p>,
+            <p>Designed in <b>Material UI</b>.</p>,
             <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
         ]
     },
@@ -161,7 +161,8 @@ class Projects extends React.Component {
                 return (
                     <div key={data.title} className="col-md-6 col-lg-6 col-xl-4" style={{paddingBottom: 30}}>
                         <div className="card darken-1 sticky-action">
-                            <div className="card-image waves-effect waves-block waves-light mb-2">
+                            <div className="project-tooltip card-image waves-effect waves-block waves-light mb-2"
+                                 data-position="top" data-tooltip="View Accomplishments">
                                 <img className="activator" src={data.image} alt="project-img"/>
                             </div>
                             <div className="card-content" style={{borderTop: "1px solid rgba(160, 160, 160, 0.2)"}}>

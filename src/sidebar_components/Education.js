@@ -34,10 +34,10 @@ class Education extends React.Component {
         return EDUCATION_DATA.map(data => {
             return (
                 <div key={data.title} className="row justify-content-center">
-                    <div className="col-12 col-md-12 col-sm-12 col-lg-10 col-xl-10">
+                    <div className="col-sm-12 col-lg-10">
                         <div className="card darken-1">
                             <div className="card-content common-attributes">
-                                <a href={data.titleLink}
+                                <a href={data.titleLink} target="_blank" rel="noopener noreferrer"
                                    className="education-tooltip" data-position="top"
                                    data-tooltip="Look at the university website">
                                     <span className="card-title teal-text">{data.title}</span></a>

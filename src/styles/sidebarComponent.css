@@ -186,26 +186,25 @@ blockquote {
 
 /******* Skills Component Style *******/
 
-.skills-card {
-    margin-bottom: 50px;
-}
-
 .skills-card h4 {
     text-transform: uppercase;
     border-bottom: 1px solid #ddd;
     margin-bottom: 20px!important;
-    font-size: 34px!important;
+    font-size: 1.6rem!important;
     font-weight: 300;
     text-align: left;
 }
 
 .skills-card img {
-    max-width: 100px;
-    height: 100px
+    height: 50px
+}
+
+.skills-card .card-content .row {
+    margin-bottom: 10px!important;
 }
 
 .skills-navbar nav {
-    margin-bottom: 50px!important;
+    margin-bottom: 20px!important;
 }
 
 .skills-navbar ul a {
@@ -388,12 +387,24 @@ blockquote {
         padding: 0 30px 100px 30px!important;
     }
 
+    .about-container p {
+        font-size: 1.1rem;
+    }
+
+    .about-container h2 {
+        font-size: 1.4rem;
+    }
+
     .experience-header .card-title {
         font-size: 0.9rem!important;
     }
 
     .experience-header img {
         height: 30px;
+    }
+
+    .experience-header .brown-text {
+        font-size: 1.1rem!important;
     }
 
     .experience-container li {
