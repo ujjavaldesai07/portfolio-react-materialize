@@ -12,3 +12,7 @@ html {
 html * {
   font-family: 'Roboto', sans-serif;
 }
+
+video {
+  outline: none!important;
+}

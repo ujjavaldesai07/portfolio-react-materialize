@@ -3,7 +3,7 @@ import 'materialize-css/dist/js/materialize.min.js';
 import ComponentHeader from "../components/ComponentHeader";
 import M from "materialize-css/dist/js/materialize.min";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+import {faExternalLinkAlt, faPlay} from "@fortawesome/free-solid-svg-icons";
 import messengerImg from "../images/project/messenger.png"
 import shoppersImg from "../images/project/shoppers.png"
 import expenseTrackerImg from "../images/project/expensetracker.png"
@@ -11,6 +11,8 @@ import uflixImg from "../images/project/uflix.png"
 import weatherImg from "../images/project/weather.png"
 import unitconversionImg from "../images/project/unitconversion.png"
 import portfolioImg from "../images/project/portfolio.png"
+import ReactPlayer from 'react-player'
+
 
 const PROJECT_DATA = [
     {
@@ -19,6 +21,7 @@ const PROJECT_DATA = [
         websiteLink: "https://shoppers-ecom-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/spring-boot-react-ecommerce-app",
         image: shoppersImg,
+        video: null,
         accomplishments: [
             <p>Developed using <b>Microservices Architecture</b>.</p>,
             <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
@@ -41,11 +44,13 @@ const PROJECT_DATA = [
         websiteLink: "https://messenger-2.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/messenger-reactjs-graphql-nodejs-mongodb",
         image: messengerImg,
+        video: null,
         accomplishments: [
             <p>Built with <b>NodeJS</b> and <b>ReactJS</b>.</p>,
             <p>Stored data in <b>MongoDB</b>.</p>,
             <p>Fetch data from server using <b>GraphQL</b>.</p>,
-            <p>Established communication using <b>GraphQL Subscription</b> which is based on <b>WebSocket</b> technology.</p>,
+            <p>Established communication using <b>GraphQL Subscription</b> which is based
+                on <b>WebSocket</b> technology.</p>,
             <p><b>React-Redux</b> to maintain react states.</p>,
             <p>Designed in <b>Material UI</b>.</p>,
             <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
@@ -57,6 +62,7 @@ const PROJECT_DATA = [
         websiteLink: "http://Expense-tracker-3.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/springboot-JPA-AOP-expense-tracker-app",
         image: expenseTrackerImg,
+        video: null,
         accomplishments: [
             <p>Used <b>Spring Boot</b> to maintain back-end services.</p>,
             <p>Front-end built using <b>HTML</b> and <b>JavaScript</b>.</p>,
@@ -74,6 +80,7 @@ const PROJECT_DATA = [
         websiteLink: "https://uflix-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/uflix-app",
         image: uflixImg,
+        video: null,
         accomplishments: [
             <p>Used <b>NodeJS</b> to maintain back-end services.</p>,
             <p>Front-end built using <b>HTML</b> and <b>JavaScript</b>.</p>,
@@ -90,6 +97,7 @@ const PROJECT_DATA = [
         websiteLink: "http://getweather-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/react-weather-app",
         image: weatherImg,
+        video: null,
         accomplishments: [
             <p>Used <b>NodeJS</b> and <b>Express</b> for fetching requests.</p>,
             <p>Front-end built using <b>ReactJS</b>.</p>,
@@ -106,6 +114,7 @@ const PROJECT_DATA = [
         websiteLink: "https://unit-conversion-application.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/springboot-mvc-docker-unitconversion-app",
         image: unitconversionImg,
+        video: null,
         accomplishments: [
             <p>Built using <b>Spring Boot and Spring MVC</b>.</p>,
             <p>Front-end built using <b>HTML</b> and <b>JavaScript</b>.</p>,
@@ -121,6 +130,7 @@ const PROJECT_DATA = [
         websiteLink: null,
         githubLink: "https://github.com/ujjavaldesai07/portfolio-react-materialize",
         image: portfolioImg,
+        video: null,
         accomplishments: [
             <p>Front-end built using <b>ReactJS</b>.</p>,
             <p>Used <b>ScrollSpy</b> library for the side navigation bar animation.</p>,
@@ -131,12 +141,24 @@ const PROJECT_DATA = [
 ];
 
 class Projects extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            selectVideo: null
+        }
+    }
+
     componentDidMount() {
-        const elem = document.querySelectorAll(".project-tooltip");
-        M.Tooltip.init(elem, {
+        const tooltipElem = document.querySelectorAll(".project-tooltip");
+        M.Tooltip.init(tooltipElem, {
             enterDelay: 400,
             exitDelay: 200,
         });
+
+        const modalElem = document.querySelectorAll('.modal');
+        M.Modal.init(modalElem);
     }
 
     render() {
@@ -154,6 +176,35 @@ class Projects extends React.Component {
                     </li>
                 )
             })
+        }
+
+        const playVideoHandler = (video) => {
+            this.setState({selectVideo: video})
+        }
+
+        const renderSelectedVideo = () => {
+            return (
+                <div id="modal1" className="modal" style={{
+                    maxWidth: "80%",
+                    height: "fit-content",
+                    maxHeight: "fit-content",
+                    backgroundColor: "black"
+                }}>
+                    <ReactPlayer url={this.state.selectVideo}
+                                 config={{
+                                     file: {
+                                         attributes: {
+                                             controlsList: 'nodownload',
+                                             disablePictureInPicture: true
+                                         }
+                                     }
+                                 }}
+                                 pip={false}
+                                 height="fit-content"
+                                 width="inherit"
+                                 controls={true} playing={true}/>
+                </div>
+            )
         }
 
         const renderCards = () => {
@@ -189,11 +240,23 @@ class Projects extends React.Component {
                                                        style={{textAlign: "center"}}>
                                     <FontAwesomeIcon icon={faExternalLinkAlt} size="sm"/>
                                 </a> : null}
+
+
+                                {data.video ?
+                                    // eslint-disable-next-line
+                                    <a data-target="modal1" onClick={() => playVideoHandler(data.video)}
+                                                 className="modal-trigger project-tooltip btn-floating btn-small waves-effect waves-light brown"
+                                                 data-position="top" data-tooltip="Play Demo Clip"
+                                                 style={{textAlign: "center"}}>
+                                    <FontAwesomeIcon icon={faPlay} size="sm"/>
+                                </a> : null}
+
                                 <a href={data.githubLink} target="_blank" rel="noopener noreferrer"
                                    className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
                                    data-position="top" data-tooltip="View Source" style={{textAlign: "center"}}>
                                     <FontAwesomeIcon icon={['fab', "github"]} size="sm"/>
                                 </a>
+
                             </div>
 
                             <div className="card-reveal">
@@ -221,6 +284,7 @@ class Projects extends React.Component {
                         {renderCards()}
                     </div>
                 </div>
+                {renderSelectedVideo()}
             </div>
         )
     }

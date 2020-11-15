@@ -12,6 +12,7 @@
     "react": "latest",
     "react-app-polyfill": "^2.0.0",
     "react-dom": "latest",
+    "react-player": "^2.6.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "latest"
   },
