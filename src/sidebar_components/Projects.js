@@ -21,7 +21,7 @@ const PROJECT_DATA = [
         websiteLink: "https://shoppers-ecom-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/spring-boot-react-ecommerce-app",
         image: shoppersImg,
-        video: null,
+        video: "https://res.cloudinary.com/drzudfgzl/video/upload/v1605596321/Shoppers_mpka0v.mp4",
         accomplishments: [
             <p>Developed using <b>Microservices Architecture</b>.</p>,
             <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
@@ -158,7 +158,9 @@ class Projects extends React.Component {
         });
 
         const modalElem = document.querySelectorAll('.modal');
-        M.Modal.init(modalElem);
+        M.Modal.init(modalElem, {
+            onCloseEnd: () => this.setState({selectVideo: null})
+        });
     }
 
     render() {
@@ -200,9 +202,10 @@ class Projects extends React.Component {
                                      }
                                  }}
                                  pip={false}
+                                 volume={0.05}
                                  height="fit-content"
                                  width="inherit"
-                                 controls={true} playing={true}/>
+                                 controls={true} playing={this.state.selectVideo !== null}/>
                 </div>
             )
         }
