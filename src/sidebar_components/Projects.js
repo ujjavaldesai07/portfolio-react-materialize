@@ -11,9 +11,9 @@ import uflixImg from "../images/project/uflix.png"
 import weatherImg from "../images/project/weather.png"
 import unitconversionImg from "../images/project/unitconversion.png"
 import portfolioImg from "../images/project/portfolio.png"
-import saWebsiteImg from  "../images/project/saWebsiteImg.png"
-import saAdminImg from  "../images/project/saAdminImg.png"
-import capstoneImg from  "../images/project/capstoneImg.png"
+import saWebsiteImg from "../images/project/saWebsiteImg.png"
+import saAdminImg from "../images/project/saAdminImg.png"
+import capstoneImg from "../images/project/capstoneImg.png"
 import ReactPlayer from 'react-player'
 
 
@@ -25,7 +25,7 @@ const PROJECT_DATA = [
         githubLink: "https://github.com/ujjavaldesai07/spring-boot-react-ecommerce-app",
         image: shoppersImg,
         video: "https://youtu.be/PQ1c0Ag0DcA",
-        accomplishments: [
+        technologyUsed: [
             <p>Developed using <b>Microservices Architecture</b>.</p>,
             <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
             <p><b>React-Redux</b> to maintain react states.</p>,
@@ -48,7 +48,7 @@ const PROJECT_DATA = [
         githubLink: "https://github.com/ujjavaldesai07/messenger-reactjs-graphql-nodejs-mongodb",
         image: messengerImg,
         video: "https://youtu.be/vfZMLAbNMGI",
-        accomplishments: [
+        technologyUsed: [
             <p>Built with <b>NodeJS</b> and <b>ReactJS</b>.</p>,
             <p>Stored data in <b>MongoDB</b>.</p>,
             <p>Fetch data from server using <b>GraphQL</b>.</p>,
@@ -64,7 +64,7 @@ const PROJECT_DATA = [
         description: "Self-Assessment is an application to assess whether the user needs the cloud connectivity support or not.",
         image: saWebsiteImg,
         video: "https://youtu.be/bBZvGnXbe0w",
-        accomplishments: [
+        technologyUsed: [
             <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
             <p>Used <b>RESTful</b> architecture to serve the client requests.</p>,
             <p>Used <b>Swagger UI</b> to for REST Api documentation.</p>,
@@ -81,7 +81,7 @@ const PROJECT_DATA = [
         description: "Self-Assessment admin is an application to manage the data of Self-Assessment website.",
         image: saAdminImg,
         video: "https://youtu.be/QuNnCsbhDPg",
-        accomplishments: [
+        technologyUsed: [
             <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
             <p>Used <b>RESTful</b> architecture to serve the client requests.</p>,
             <p>Used <b>Swagger UI</b> to for REST Api documentation.</p>,
@@ -100,7 +100,7 @@ const PROJECT_DATA = [
         githubLink: "https://github.com/ujjavaldesai07/capstone-project-website",
         image: capstoneImg,
         video: null,
-        accomplishments: [
+        technologyUsed: [
             <p>Built with <b>HTML</b> and <b>CSS</b>.</p>,
             <p>Designed in <b>Materialize CSS</b>.</p>,
             <p>Deployed on <b>GitHub pages</b>.</p>,
@@ -113,7 +113,7 @@ const PROJECT_DATA = [
         githubLink: "https://github.com/ujjavaldesai07/springboot-JPA-AOP-expense-tracker-app",
         image: expenseTrackerImg,
         video: null,
-        accomplishments: [
+        technologyUsed: [
             <p>Used <b>Spring Boot</b> to maintain back-end services.</p>,
             <p>Front-end built using <b>HTML</b> and <b>JavaScript</b>.</p>,
             <p>Used <b>Thymeleaf</b> as server side Java template engine.</p>,
@@ -131,7 +131,7 @@ const PROJECT_DATA = [
         githubLink: "https://github.com/ujjavaldesai07/uflix-app",
         image: uflixImg,
         video: null,
-        accomplishments: [
+        technologyUsed: [
             <p>Used <b>NodeJS</b> to maintain back-end services.</p>,
             <p>Front-end built using <b>HTML</b> and <b>JavaScript</b>.</p>,
             <p>Fetched data from <b>YouTube's REST API</b>.</p>,
@@ -148,7 +148,7 @@ const PROJECT_DATA = [
         githubLink: "https://github.com/ujjavaldesai07/react-weather-app",
         image: weatherImg,
         video: null,
-        accomplishments: [
+        technologyUsed: [
             <p>Used <b>NodeJS</b> and <b>Express</b> for fetching requests.</p>,
             <p>Front-end built using <b>ReactJS</b>.</p>,
             <p>Used <b>WebPack</b> to bundle and deploy application.</p>,
@@ -165,7 +165,7 @@ const PROJECT_DATA = [
         githubLink: "https://github.com/ujjavaldesai07/springboot-mvc-docker-unitconversion-app",
         image: unitconversionImg,
         video: null,
-        accomplishments: [
+        technologyUsed: [
             <p>Built using <b>Spring Boot and Spring MVC</b>.</p>,
             <p>Front-end built using <b>HTML</b> and <b>JavaScript</b>.</p>,
             <p>Used <b>Thymeleaf</b> as server side Java template engine.</p>,
@@ -181,7 +181,7 @@ const PROJECT_DATA = [
         githubLink: "https://github.com/ujjavaldesai07/portfolio-react-materialize",
         image: portfolioImg,
         video: null,
-        accomplishments: [
+        technologyUsed: [
             <p>Front-end built using <b>ReactJS</b>.</p>,
             <p>Used <b>ScrollSpy</b> library for the side navigation bar animation.</p>,
             <p>Designed in <b>MaterialCSS</b> and <b>Bootstrap</b>.</p>,
@@ -214,17 +214,15 @@ class Projects extends React.Component {
     }
 
     render() {
-        const renderAccomplishments = (accomplishments) => {
-            if (!accomplishments) {
+        const renderTechnologyUsed = (sentences) => {
+            if (!sentences) {
                 return null
             }
 
-            let count = 0
-            return accomplishments.map(accomplishment => {
-                ++count
+            return sentences.map((sentence, index) => {
                 return (
-                    <li key={count} id="project-accomplishments" style={{listStyleType: "disc", display: "list-item"}}>
-                        {accomplishment}
+                    <li key={index} style={{listStyleType: "disc", display: "list-item"}}>
+                        {sentence}
                     </li>
                 )
             })
@@ -243,8 +241,8 @@ class Projects extends React.Component {
                     backgroundColor: "black"
                 }}>
                     <ReactPlayer url={this.state.selectVideo}
-                                 volume={0.05}
-                                 height="80vh"
+                                 muted={true}
+                                 className='react-player'
                                  width="inherit"
                                  controls={true} playing={this.state.selectVideo !== null}/>
                 </div>
@@ -257,7 +255,7 @@ class Projects extends React.Component {
                     <div key={data.title} className="col-md-6 col-lg-6 col-xl-4" style={{paddingBottom: 30}}>
                         <div className="card darken-1 sticky-action">
                             <div className="project-tooltip card-image waves-effect waves-block waves-light mb-2"
-                                 data-position="top" data-tooltip="View Accomplishments">
+                                 data-position="top" data-tooltip="View Technology Used">
                                 <img className="activator" src={data.image} alt="project-img"/>
                             </div>
                             <div className="card-content" style={{borderTop: "1px solid rgba(160, 160, 160, 0.2)"}}>
@@ -266,7 +264,7 @@ class Projects extends React.Component {
                                         <div className="col-10 justify-content-start">
                                             {data.title}
                                         </div>
-                                        <div>
+                                        <div className="project-tooltip" data-tooltip="View Technology Used" data-position="left">
                                             <i className="material-icons right">more_vert</i>
                                         </div>
                                     </div>
@@ -305,12 +303,12 @@ class Projects extends React.Component {
                             </div>
 
                             <div className="card-reveal">
-                            <span className="card-title brown-text font-weight-light">Accomplishments
+                            <span className="card-title brown-text font-weight-light">Technology Used
                                 <i className="material-icons right brown-text">close</i>
                             </span>
                                 <div style={{paddingLeft: 12}}>
                                     <ul>
-                                        {renderAccomplishments(data.accomplishments)}
+                                        {renderTechnologyUsed(data.technologyUsed)}
                                     </ul>
                                 </div>
                             </div>

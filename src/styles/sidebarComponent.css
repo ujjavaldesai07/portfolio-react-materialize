@@ -182,6 +182,10 @@ blockquote {
     padding-top: 20px;
 }
 
+.react-player {
+    height: 85vh!important;
+}
+
 /*******************************************/
 
 /******* Skills Component Style *******/
@@ -306,6 +310,10 @@ blockquote {
         padding-top: 24px!important;
     }
 
+    .react-player {
+        height: 40vh!important;
+    }
+
     .contact-info {
         padding-bottom: 840px!important;
     }
@@ -419,6 +427,10 @@ blockquote {
     .project-container .card, .project-container .card-image,
     .project-container .card-data, .project-container .card-image{
         height: fit-content!important;
+    }
+
+    .react-player {
+        height: 30vh!important;
     }
 
     .skills-card img {
