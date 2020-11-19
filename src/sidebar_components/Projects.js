@@ -11,6 +11,9 @@ import uflixImg from "../images/project/uflix.png"
 import weatherImg from "../images/project/weather.png"
 import unitconversionImg from "../images/project/unitconversion.png"
 import portfolioImg from "../images/project/portfolio.png"
+import saWebsiteImg from  "../images/project/saWebsiteImg.png"
+import saAdminImg from  "../images/project/saAdminImg.png"
+import capstoneImg from  "../images/project/capstoneImg.png"
 import ReactPlayer from 'react-player'
 
 
@@ -21,7 +24,7 @@ const PROJECT_DATA = [
         websiteLink: "https://shoppers-ecom-app.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/spring-boot-react-ecommerce-app",
         image: shoppersImg,
-        video: "https://res.cloudinary.com/drzudfgzl/video/upload/v1605596321/Shoppers_mpka0v.mp4",
+        video: "https://youtu.be/PQ1c0Ag0DcA",
         accomplishments: [
             <p>Developed using <b>Microservices Architecture</b>.</p>,
             <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
@@ -44,7 +47,7 @@ const PROJECT_DATA = [
         websiteLink: "https://messenger-2.herokuapp.com",
         githubLink: "https://github.com/ujjavaldesai07/messenger-reactjs-graphql-nodejs-mongodb",
         image: messengerImg,
-        video: null,
+        video: "https://youtu.be/vfZMLAbNMGI",
         accomplishments: [
             <p>Built with <b>NodeJS</b> and <b>ReactJS</b>.</p>,
             <p>Stored data in <b>MongoDB</b>.</p>,
@@ -54,6 +57,53 @@ const PROJECT_DATA = [
             <p><b>React-Redux</b> to maintain react states.</p>,
             <p>Designed in <b>Material UI</b>.</p>,
             <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
+        ]
+    },
+    {
+        title: "Self-Assessment",
+        description: "Self-Assessment is an application to assess whether the user needs the cloud connectivity support or not.",
+        image: saWebsiteImg,
+        video: "https://youtu.be/bBZvGnXbe0w",
+        accomplishments: [
+            <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
+            <p>Used <b>RESTful</b> architecture to serve the client requests.</p>,
+            <p>Used <b>Swagger UI</b> to for REST Api documentation.</p>,
+            <p>Added <b>logback-spring</b> support to manage logs.</p>,
+            <p><b>React-Redux</b> to maintain react states.</p>,
+            <p>Designed in <b>Material UI</b> and <b>Bootstrap</b>.</p>,
+            <p>Stored user and product information in <b>MySQL</b> database.</p>,
+            <p>Stored authentication token in <b>JS-Cookies</b>.</p>,
+            <p>Deployed on <b>AWS</b>.</p>,
+        ]
+    },
+    {
+        title: "Self-Assessment Admin",
+        description: "Self-Assessment admin is an application to manage the data of Self-Assessment website.",
+        image: saAdminImg,
+        video: "https://youtu.be/QuNnCsbhDPg",
+        accomplishments: [
+            <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
+            <p>Used <b>RESTful</b> architecture to serve the client requests.</p>,
+            <p>Used <b>Swagger UI</b> to for REST Api documentation.</p>,
+            <p>Added <b>logback-spring</b> support to manage logs.</p>,
+            <p><b>React-Redux</b> to maintain react states.</p>,
+            <p>Designed in <b>Material UI</b> and <b>Bootstrap</b>.</p>,
+            <p>Stored user and product information in <b>MySQL</b> database.</p>,
+            <p>Stored authentication token in <b>JS-Cookies</b>.</p>,
+            <p>Deployed on <b>AWS</b>.</p>,
+        ]
+    },
+    {
+        title: "Capstone Project Website",
+        description: "This is capstone project website for Self-Assessment application.",
+        websiteLink: "https://ujjavaldesai07.github.io/capstone-project-website",
+        githubLink: "https://github.com/ujjavaldesai07/capstone-project-website",
+        image: capstoneImg,
+        video: null,
+        accomplishments: [
+            <p>Built with <b>HTML</b> and <b>CSS</b>.</p>,
+            <p>Designed in <b>Materialize CSS</b>.</p>,
+            <p>Deployed on <b>GitHub pages</b>.</p>,
         ]
     },
     {
@@ -193,17 +243,8 @@ class Projects extends React.Component {
                     backgroundColor: "black"
                 }}>
                     <ReactPlayer url={this.state.selectVideo}
-                                 config={{
-                                     file: {
-                                         attributes: {
-                                             controlsList: 'nodownload',
-                                             disablePictureInPicture: true
-                                         }
-                                     }
-                                 }}
-                                 pip={false}
                                  volume={0.05}
-                                 height="fit-content"
+                                 height="80vh"
                                  width="inherit"
                                  controls={true} playing={this.state.selectVideo !== null}/>
                 </div>
@@ -248,17 +289,18 @@ class Projects extends React.Component {
                                 {data.video ?
                                     // eslint-disable-next-line
                                     <a data-target="modal1" onClick={() => playVideoHandler(data.video)}
-                                                 className="modal-trigger project-tooltip btn-floating btn-small waves-effect waves-light brown"
-                                                 data-position="top" data-tooltip="Play Demo Clip"
-                                                 style={{textAlign: "center"}}>
-                                    <FontAwesomeIcon icon={faPlay} size="sm"/>
-                                </a> : null}
+                                       className="modal-trigger project-tooltip btn-floating btn-small waves-effect waves-light brown"
+                                       data-position="top" data-tooltip="Play Demo Clip"
+                                       style={{textAlign: "center"}}>
+                                        <FontAwesomeIcon icon={faPlay} size="sm"/>
+                                    </a> : null}
 
-                                <a href={data.githubLink} target="_blank" rel="noopener noreferrer"
-                                   className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
-                                   data-position="top" data-tooltip="View Source" style={{textAlign: "center"}}>
+                                {data.githubLink ? <a href={data.githubLink} target="_blank" rel="noopener noreferrer"
+                                                      className="project-tooltip btn-floating btn-small waves-effect waves-light brown"
+                                                      data-position="top" data-tooltip="View Source"
+                                                      style={{textAlign: "center"}}>
                                     <FontAwesomeIcon icon={['fab', "github"]} size="sm"/>
-                                </a>
+                                </a> : null}
 
                             </div>
 
