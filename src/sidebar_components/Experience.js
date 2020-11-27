@@ -23,12 +23,15 @@ const EXPERIENCE_DATA = [
         professionTitle: "Senior Software Engineer",
         descriptionPoints: [
             "Knowledge of Internet traffic analysis with a good understanding of L4-L7 protocols (TCP/UDP, HTTP, SSL, QUIC).",
-            "Involved in the complete software development life cycle.",
+            "Solved issues related to functionality breakage, concurrency, performance, memory leak, and crashes in C++.",
+            "Strong experience in C++ and knowledge of multi-threading, IPC (TCP/IP socket programming) standard library, STL containers, and algorithms.",
+            "Experience working in Linux & Windows environment.",
+            "Involved in the complete software development life cycle and agile development practices.",
             "Performed code reviews to ensure the work delivered by the team is of high-quality standards.",
             "Collaborated with the DevOps team to improve the build infrastructure.",
-            "Written Python script to generate report by fetching data from web and sending to testing team.",
-            "Documented and trained other team members on the usage of API, features and utilities.",
-            "Analyzed, debugged and/or assisted in problem solving in both development and production environment.",
+            "Documented and trained other team members on the usage of API, features, and utilities.",
+            "Written Python script to generate a report by fetching data from the web and sending it to the testing team.",
+            "Analyzed, debugged, and/or assisted in problem-solving in both development and production environment."
         ],
         date: "Oct 2014 - Dec 2018 | Bangalore, India",
         tooltip: "Look at the company's website"
