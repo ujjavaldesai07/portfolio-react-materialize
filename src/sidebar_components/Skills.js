@@ -3,21 +3,23 @@ import 'materialize-css/dist/js/materialize.min.js';
 import ComponentHeader from "../components/ComponentHeader";
 import cssImg from '../images/skills/frontend/css3.png'
 import htmlImg from '../images/skills/frontend/html5.png'
-import jsImg from '../images/skills/frontend/javascript.png'
 import bootstrapImg from '../images/skills/frontend/bootstrap.png'
 import materializeImg from '../images/skills/frontend/materialize.png'
 import materialUIImg from '../images/skills/frontend/material-ui.png'
 import semanticUIImg from '../images/skills/frontend/semantic-ui.png'
+import angularMaterialImg from '../images/skills/frontend/angularMaterial.png'
 
 import javaImg from '../images/skills/languages/java.png'
-import cImg from '../images/skills/languages/c.png'
+import jsImg from '../images/skills/languages/javascript.png'
+import tsImg from '../images/skills/languages/typescript.png'
 import c_plusImg from '../images/skills/languages/c++.png'
 import pythonImg from '../images/skills/languages/python.png'
-import swiftImg from '../images/skills/languages/swift.png'
+import shellScriptImg from '../images/skills/languages/shellScript.png'
 
 import springImg from '../images/skills/backend/spring.png'
 import springbootImg from '../images/skills/backend/springboot.png'
 import reactImg from '../images/skills/frontend/react.png'
+import angularImg from '../images/skills/frontend/angular.png'
 import nodeImg from '../images/skills/backend/nodejs.png'
 import mysqlImg from '../images/skills/backend/mysql.png'
 import redisImg from '../images/skills/backend/redis.png'
@@ -38,14 +40,14 @@ import bullseyeImg from '../images/skills/othertools/bullseye.png'
 import jiraImg from '../images/skills/othertools/jira.png'
 
 const LANGUAGES_MAP = new Map([
-    ['Java', javaImg], ['C', cImg],
-    ['C++', c_plusImg], ['Python', pythonImg], ['Swift', swiftImg]
+    ['Java', javaImg], ['JavaScript', jsImg], ['TypeScript', tsImg],
+    ['C++', c_plusImg], ['Python', pythonImg], ['Shell Script', shellScriptImg]
 ]);
 
 const FRONTEND_MAP = new Map([
-    ['JavaScript', jsImg], ['HTML', htmlImg], ['CSS', cssImg], ['React', reactImg],
-    ['Bootstrap', bootstrapImg], ['Materialize', materializeImg],
-    ['Material UI', materialUIImg], ['Semantic UI', semanticUIImg]
+    ['HTML', htmlImg], ['CSS', cssImg], ['React', reactImg], ['Angular', angularImg],
+    ['Bootstrap', bootstrapImg], ['Material UI', materialUIImg], ['Angular Material', angularMaterialImg],
+    ['Materialize', materializeImg],
 ]);
 
 const BACKEND_MAP = new Map([

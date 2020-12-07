@@ -14,6 +14,7 @@ import portfolioImg from "../images/project/portfolio.png"
 import saWebsiteImg from "../images/project/saWebsiteImg.png"
 import saAdminImg from "../images/project/saAdminImg.png"
 import capstoneImg from "../images/project/capstoneImg.png"
+import techeventsImg from "../images/project/techevents.png"
 import ReactPlayer from 'react-player'
 
 
@@ -27,7 +28,7 @@ const PROJECT_DATA = [
         video: "https://youtu.be/PQ1c0Ag0DcA",
         technologyUsed: [
             <p>Developed using <b>Microservices Architecture</b>.</p>,
-            <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
+            <p>Built with <b>Spring Boot</b> and <b>React</b>.</p>,
             <p><b>React-Redux</b> to maintain react states.</p>,
             <p>Designed in <b>Material UI</b> and <b>Semantic UI</b>.</p>,
             <p>Fetch images from <b>Cloudinary CDN</b>.</p>,
@@ -45,11 +46,11 @@ const PROJECT_DATA = [
         title: "Messenger",
         description: "Messenger is a chat application which allows user to communicate in dark theme.",
         websiteLink: "https://messenger-2.herokuapp.com",
-        githubLink: "https://github.com/ujjavaldesai07/messenger-reactjs-graphql-nodejs-mongodb",
+        githubLink: "https://github.com/ujjavaldesai07/messenger-React-graphql-nodejs-mongodb",
         image: messengerImg,
         video: "https://youtu.be/vfZMLAbNMGI",
         technologyUsed: [
-            <p>Built with <b>NodeJS</b> and <b>ReactJS</b>.</p>,
+            <p>Built with <b>NodeJS</b> and <b>React</b>.</p>,
             <p>Stored data in <b>MongoDB</b>.</p>,
             <p>Fetch data from server using <b>GraphQL</b>.</p>,
             <p>Established communication using <b>GraphQL Subscription</b> which is based
@@ -65,7 +66,7 @@ const PROJECT_DATA = [
         image: saWebsiteImg,
         video: "https://youtu.be/bBZvGnXbe0w",
         technologyUsed: [
-            <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
+            <p>Built with <b>Spring Boot</b> and <b>React</b>.</p>,
             <p>Used <b>RESTful</b> architecture to serve the client requests.</p>,
             <p>Used <b>Swagger UI</b> to for REST Api documentation.</p>,
             <p>Added <b>logback-spring</b> support to manage logs.</p>,
@@ -82,7 +83,7 @@ const PROJECT_DATA = [
         image: saAdminImg,
         video: "https://youtu.be/QuNnCsbhDPg",
         technologyUsed: [
-            <p>Built with <b>Spring Boot</b> and <b>ReactJS</b>.</p>,
+            <p>Built with <b>Spring Boot</b> and <b>React</b>.</p>,
             <p>Used <b>RESTful</b> architecture to serve the client requests.</p>,
             <p>Used <b>Swagger UI</b> to for REST Api documentation.</p>,
             <p>Added <b>logback-spring</b> support to manage logs.</p>,
@@ -104,6 +105,24 @@ const PROJECT_DATA = [
             <p>Built with <b>HTML</b> and <b>CSS</b>.</p>,
             <p>Designed in <b>Materialize CSS</b>.</p>,
             <p>Deployed on <b>GitHub pages</b>.</p>,
+        ]
+    },
+    {
+        title: "Web Scraper",
+        description: "Web Scraper is tool which scrapes the tech events details periodically in the background and shows the list of events.",
+        websiteLink: "https://scraper-events.herokuapp.com",
+        githubLink: "https://github.com/ujjavaldesai07/scraper-springboot-angular-mongodb",
+        image: techeventsImg,
+        video: null,
+        technologyUsed: [
+            <p>Built with <b>Spring Boot</b>, <b>Angular</b>, and <b>MongoDB</b>.</p>,
+            <p>Used <b>TypeScript</b> for strong typing.</p>,
+            <p><b>NgRx</b> is used to maintain angular states.</p>,
+            <p>Designed in <b>Angular Material</b>.</p>,
+            <p>Data is scrape periodically/batch processing using <b>Multithreading</b> environment.</p>,
+            <p>Stored scraped data in <b>MongoDB</b> database.</p>,
+            <p>Used <b>JUnit</b> to write spring boot integration test.</p>,
+            <p>Deployed on <b>Heroku</b> using <b>Docker</b>.</p>,
         ]
     },
     {
@@ -150,7 +169,7 @@ const PROJECT_DATA = [
         video: null,
         technologyUsed: [
             <p>Used <b>NodeJS</b> and <b>Express</b> for fetching requests.</p>,
-            <p>Front-end built using <b>ReactJS</b>.</p>,
+            <p>Front-end built using <b>React</b>.</p>,
             <p>Used <b>WebPack</b> to bundle and deploy application.</p>,
             <p>Fetched data from <b>Open Weather Map REST API</b>.</p>,
             <p>Designed in <b>Foundation</b> CSS framework.</p>,
@@ -176,13 +195,13 @@ const PROJECT_DATA = [
     },
     {
         title: "Personal Portfolio",
-        description: "Personal portfolio built with responsive UI using ReactJS and MaterialCSS.",
+        description: "Personal portfolio built with responsive UI using React and MaterialCSS.",
         websiteLink: null,
         githubLink: "https://github.com/ujjavaldesai07/portfolio-react-materialize",
         image: portfolioImg,
         video: null,
         technologyUsed: [
-            <p>Front-end built using <b>ReactJS</b>.</p>,
+            <p>Front-end built using <b>React</b>.</p>,
             <p>Used <b>ScrollSpy</b> library for the side navigation bar animation.</p>,
             <p>Designed in <b>MaterialCSS</b> and <b>Bootstrap</b>.</p>,
             <p>Deployed on <b>Netlify</b>.</p>,
@@ -323,7 +342,7 @@ class Projects extends React.Component {
             <div>
                 <ComponentHeader heading={"Projects"}/>
                 <div className="container flow-text project-container">
-                    <div className="row justify-content-center justify-content-md-between justify-content-lg-between">
+                    <div className="row justify-content-start">
                         {renderCards()}
                     </div>
                 </div>
