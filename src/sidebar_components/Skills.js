@@ -6,7 +6,6 @@ import htmlImg from '../images/skills/frontend/html5.png'
 import bootstrapImg from '../images/skills/frontend/bootstrap.png'
 import materializeImg from '../images/skills/frontend/materialize.png'
 import materialUIImg from '../images/skills/frontend/material-ui.png'
-import semanticUIImg from '../images/skills/frontend/semantic-ui.png'
 import angularMaterialImg from '../images/skills/frontend/angularMaterial.png'
 
 import javaImg from '../images/skills/languages/java.png'

@@ -133,11 +133,15 @@ blockquote {
 
 /******* Projects Component Style *******/
 
-.project-container .card {
+.project-container .personal-card {
     height: 420px;
 }
 
-.project-container .card-image {
+.project-container .professional-card {
+    height: 350px;
+}
+
+.project-container .personal-card-image {
     height: 210px;
 }
 
@@ -305,6 +309,10 @@ blockquote {
         font-size: 1.2rem;
     }
 
+    .project-container .professional-card {
+        height: 420px;
+    }
+
     .project-container .card-action {
         padding-top: 24px!important;
     }
@@ -369,8 +377,12 @@ blockquote {
         margin-bottom: 0 !important;
     }
 
-    .project-container .card {
+    .project-container .personal-card {
         height: 445px!important;
+    }
+
+    .project-container .professional-card {
+        height: 390px!important;
     }
 
 }

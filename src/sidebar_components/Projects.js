@@ -15,10 +15,64 @@ import saWebsiteImg from "../images/project/saWebsiteImg.png"
 import saAdminImg from "../images/project/saAdminImg.png"
 import capstoneImg from "../images/project/capstoneImg.png"
 import techeventsImg from "../images/project/techevents.png"
+import sandvineImg from "../images/experience/sandvine.jpg"
 import ReactPlayer from 'react-player'
 
+const PROFESSIONAL_PROJECTS = [
+    {
+        title: "Protocols Recognition Engine",
+        description: "Protocol Recognition is a shared library developed in C++ for Deep Inspection of internet traffic. Internet traffic recognition is designed with innovative ideas such as flow correlation based on HTTP, SSL and other various RFC defined internet protocols traffic, finding regular expression patterns based on logical computations and tracking the internet traffic based on IP addresses and Ports logistics.",
+        image: sandvineImg,
+        technologyUsed: [
+            <p>Worked in <b>Unix</b> environment.</p>,
+            <p>Implemented solution in <b>C++</b> in <b>Multithreading</b> environment, using <b>STL
+                containers</b> and <b>Boost</b> libraries.</p>,
+            <p>Used <b>Valgrind</b> to catch memory leaks.</p>,
+            <p><b>GDB</b> was used for analyzing and debugging crashes.</p>,
+            <p><b>CxxTest</b> framework used to write the unit tests.</p>,
+            <p>Used <b>BullsEye</b> code coverage for checking the unit tests code coverage.</p>,
+            <p>Solved the build infrastructure issues in <b>Shell script</b> and <b>Python</b>.</p>,
+            <p>Used <b>Git</b> for maintain source code.</p>,
+            <p><b>JIRA</b> was used to update the status of the issues.</p>,
+        ]
+    },
+    {
+        title: "QUIC Analyzer",
+        description: "QUIC is a standard RFC protocol by designed Google. QUIC Analyzer feature was designed and implemented in Protocols Recognition Engine library to expose various fields for flow correlation in order to recognize certain applications in real time by evaluating headers from QUIC packet. The feature was multithreaded and used appropriate STL containers in order to gain code performance and memory optimization respectively.",
+        image: sandvineImg,
+        technologyUsed: [
+            <p>Worked in <b>Unix</b> environment.</p>,
+            <p>Implemented solution in <b>C++</b> in <b>Multithreading</b> environment, using <b>STL
+                containers</b> and <b>Boost</b> libraries.</p>,
+            <p><b>CxxTest</b> framework used to write the unit tests.</p>,
+        ]
+    },
+    {
+        title: "Build Infrastructure Optimization",
+        description: "Worked with DevOps team to optimize the build infrastructure. Implemented wrappers in the build infrastructure for non-recursive make support which can provide the flexibility to add packages and libraries without writing complex makerules. Parsing configuration YAML files using python scripts for setting the right dependencies in Makefile by generating makerules for build targets. Automating and setting up Jenkins in order to trigger the product targets for continuous integration using groovy scripts.",
+        image: sandvineImg,
+        technologyUsed: [
+            <p>Designed solution in <b>Python</b>, <b>YAML</b>.</p>,
+            <p>Used <b>Groovy</b> scripts to setup <b>Jenkins</b> pipelines for the builds.</p>
+        ]
+    },
+    {
+        title: "App Crawler",
+        description: "In order to stay on top of the internet change, App Crawler was developed, which can provide information of which and when Android/iOS application got updated and a number of user installs. This application was implemented in Java using Jsoup library for parsing HTML tags. The extracted information will be stored in the database i.e. MySQL and web application was developed in React to display all this stored information.",
+        image: sandvineImg,
+        technologyUsed: [
+            <p>Designed solution in <b>Python</b>, <b>YAML</b>.</p>,
+            <p>Used <b>Groovy</b> scripts to setup <b>Jenkins</b> pipelines for the builds.</p>,
+            <p>Designed solution in <b>Java</b>.</p>,
+            <p>Used <b>Jsoup</b> library for parsing <b>HTML</b> tags.</p>,
+            <p>Stored the data in <b>MySQL</b>.</p>,
+            <p>Client Side UI developed in <b>React</b>.</p>
+        ]
+    },
+]
 
-const PROJECT_DATA = [
+
+const PERSONAL_PROJECTS = [
     {
         title: "Shoppers",
         description: "Shoppers is an eCommerce website that allows user to shop clothing and other essentials.",
@@ -268,22 +322,24 @@ class Projects extends React.Component {
             )
         }
 
-        const renderCards = () => {
-            return PROJECT_DATA.map(data => {
+        const renderPersonalCards = () => {
+            return PERSONAL_PROJECTS.map(data => {
                 return (
                     <div key={data.title} className="col-md-6 col-lg-6 col-xl-4" style={{paddingBottom: 30}}>
-                        <div className="card darken-1 sticky-action">
-                            <div className="project-tooltip card-image waves-effect waves-block waves-light mb-2"
-                                 data-position="top" data-tooltip="View Technology Used">
+                        <div className="card darken-1 sticky-action personal-card">
+                            <div
+                                className="project-tooltip card-image personal-card-image waves-effect waves-block waves-light mb-2"
+                                data-position="top" data-tooltip="View Technology Used">
                                 <img className="activator" src={data.image} alt="project-img"/>
                             </div>
                             <div className="card-content" style={{borderTop: "1px solid rgba(160, 160, 160, 0.2)"}}>
                                 <div className="card-title activator teal-text">
                                     <div className="row align-items-center" style={{marginBottom: 0}}>
-                                        <div className="col-10 justify-content-start">
+                                        <div className="col-10 justify-content-start activator">
                                             {data.title}
                                         </div>
-                                        <div className="project-tooltip" data-tooltip="View Technology Used" data-position="left">
+                                        <div className="project-tooltip" data-tooltip="View Technology Used"
+                                             data-position="left">
                                             <i className="material-icons right">more_vert</i>
                                         </div>
                                     </div>
@@ -338,12 +394,73 @@ class Projects extends React.Component {
 
         }
 
+        const renderProfessionalCards = () => {
+            return PROFESSIONAL_PROJECTS.map(data => {
+                return (
+                    <div key={data.title} className="col-md-6" style={{paddingBottom: 30}}>
+                        <div className="card darken-1 sticky-action professional-card">
+                            <div className="project-tooltip card-image waves-effect waves-block waves-light mb-2"
+                                 data-position="top" data-tooltip="View Technology Used">
+                                <div className="row justify-content-center activator mb-0">
+                                    <div className="col-7 activator">
+                                        <img className="activator" src={data.image} alt="project-img"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="card-content" style={{borderTop: "1px solid rgba(160, 160, 160, 0.2)"}}>
+                                <div className="card-title activator teal-text">
+                                    <div className="row align-items-center" style={{marginBottom: 0}}>
+                                        <div className="col-10 justify-content-start activator">
+                                            {data.title}
+                                        </div>
+                                        <div className="project-tooltip" data-tooltip="View Technology Used"
+                                             data-position="left">
+                                            <i className="material-icons right ml-xl-5">more_vert</i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="card-data">
+                                    <p>{data.description}</p>
+                                </div>
+                            </div>
+
+                            <div className="card-reveal">
+                            <span className="card-title brown-text font-weight-light">Technology Used
+                                <i className="material-icons right brown-text">close</i>
+                            </span>
+                                <div style={{paddingLeft: 12}}>
+                                    <ul>
+                                        {renderTechnologyUsed(data.technologyUsed)}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })
+
+        }
+
+        const renderSubTitle = (subTitle) => {
+            return <div className="teal white-text p-2 mb-3 font-weight-light">
+                {subTitle}
+            </div>
+        }
+
         return (
             <div>
                 <ComponentHeader heading={"Projects"}/>
                 <div className="container flow-text project-container">
+                    {renderSubTitle("PROFESSIONAL PROJECTS")}
                     <div className="row justify-content-start">
-                        {renderCards()}
+                        {renderProfessionalCards()}
+                    </div>
+                </div>
+                <div className="container flow-text project-container">
+                    {renderSubTitle("PERSONAL PROJECTS")}
+                    <div className="row justify-content-start">
+                        {renderPersonalCards()}
                     </div>
                 </div>
                 {renderSelectedVideo()}
