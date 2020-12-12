@@ -61,8 +61,6 @@ const PROFESSIONAL_PROJECTS = [
         description: "In order to stay on top of the internet change, App Crawler was developed, which can provide information of which and when Android/iOS application got updated and a number of user installs. This application was implemented in Java using Jsoup library for parsing HTML tags. The extracted information will be stored in the database i.e. MySQL and web application was developed in React to display all this stored information.",
         image: sandvineImg,
         technologyUsed: [
-            <p>Designed solution in <b>Python</b>, <b>YAML</b>.</p>,
-            <p>Used <b>Groovy</b> scripts to setup <b>Jenkins</b> pipelines for the builds.</p>,
             <p>Designed solution in <b>Java</b>.</p>,
             <p>Used <b>Jsoup</b> library for parsing <b>HTML</b> tags.</p>,
             <p>Stored the data in <b>MySQL</b>.</p>,
