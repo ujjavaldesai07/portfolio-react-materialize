@@ -8,7 +8,7 @@ const EDUCATION_DATA = [
         title: "University of Houston - Clear Lake",
         titleLink: "https://www.uhcl.edu",
         degree: "M.S. in Computer Science",
-        gpa: "GPA: 3.94/4.0",
+        gpa: "GPA: 3.96/4.0",
         date: "Jan 2019 - Dec 2020 | Houston, TX"
     },
     {

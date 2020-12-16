@@ -23,7 +23,7 @@ class About extends React.Component {
                             <div className="card-panel">
                                 <p>
                                     Hello! I am a recent graduate (December 2020) with a Master’s degree in Computer
-                                    Science with strong academic performance (3.94 GPA). In past, I have gained 4+ years of
+                                    Science with strong academic performance (3.96 GPA). In past, I have gained 4+ years of
                                     experience in software development with C++ and Deep Packet Inspection
                                     technologies of the Networking domain. I had worked as a Senior Software Engineer
                                     at Sandvine in 2014 and I had a great experience working in such a professional
