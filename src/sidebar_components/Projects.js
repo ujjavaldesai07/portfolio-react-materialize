@@ -21,12 +21,16 @@ import ReactPlayer from 'react-player'
 const PROFESSIONAL_PROJECTS = [
     {
         title: "Protocols Recognition Engine",
-        description: "Protocol Recognition is a shared library developed in C++ for Deep Inspection of internet traffic. Internet traffic recognition is designed with innovative ideas such as flow correlation based on HTTP, SSL and other various RFC defined internet protocols traffic, finding regular expression patterns based on logical computations and tracking the internet traffic based on IP addresses and Ports logistics.",
+        description: "Protocol Recognition Engine is a shared library developed in C++ for Deep Packet Inspection of" +
+            " internet traffic. Internet traffic recognition is designed with innovative ideas such as flow correlation" +
+            " based on HTTP, SSL and other various RFC defined internet protocols traffic, finding regular expression" +
+            " patterns based on logical computations and tracking the internet traffic based on IP addresses and Ports" +
+            " logistics. This library is compatible with Linux distribution such as CentOS, RedHat, and FREEBSD." +
+            " This library processes the network packets concurrently in order to gain maximum performance.",
         image: sandvineImg,
         technologyUsed: [
             <p>Worked in <b>Unix</b> environment.</p>,
-            <p>Implemented solution in <b>C++</b> in <b>Multithreading</b> environment, using <b>STL
-                containers</b> and <b>Boost</b> libraries.</p>,
+            <p>Implemented solution in <b>C++</b> that includes Multithreading, STL containers..</p>,
             <p>Used <b>Valgrind</b> to catch memory leaks.</p>,
             <p><b>GDB</b> was used for analyzing and debugging crashes.</p>,
             <p><b>CxxTest</b> framework used to write the unit tests.</p>,
@@ -48,12 +52,11 @@ const PROFESSIONAL_PROJECTS = [
         ]
     },
     {
-        title: "Build Infrastructure Optimization",
-        description: "Worked with DevOps team to optimize the build infrastructure. Implemented wrappers in the build infrastructure for non-recursive make support which can provide the flexibility to add packages and libraries without writing complex makerules. Parsing configuration YAML files using python scripts for setting the right dependencies in Makefile by generating makerules for build targets. Automating and setting up Jenkins in order to trigger the product targets for continuous integration using groovy scripts.",
+        title: "Build Infrastructure",
+        description: "Worked with the DevOps team to implement the functionality in the Protocols Recognition Engine build infrastructure by adding non-recursive make support which provides the flexibility to add packages and libraries without writing complex Makerules. Parsing configuration YAML files using Python scripts for setting the right dependencies in Makefile by generating Makerules for the build targets.",
         image: sandvineImg,
         technologyUsed: [
             <p>Designed solution in <b>Python</b>, <b>YAML</b>.</p>,
-            <p>Used <b>Groovy</b> scripts to setup <b>Jenkins</b> pipelines for the builds.</p>
         ]
     },
     {

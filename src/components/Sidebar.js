@@ -65,14 +65,14 @@ class Sidebar extends React.Component {
                                 <a href="#Introduction" className="logo-name-desc brown-text">Software Developer</a>
                             </li>
                             {fixedSidebarItems}
-                        <Resume menu_class={"menu-item"}/>
+                        {/*<Resume menu_class={"menu-item"}/>*/}
                         </ul>
                     </nav>
 
                     <nav className="hide-on-large-only disable-navbar">
                         <ul id="slide-out" className="sidenav sidenav-activate">
                             {collapseSidebarItems}
-                            <Resume menu_class={"toggle-menu-item"}/>
+                            {/*<Resume menu_class={"toggle-menu-item"}/>*/}
                         </ul>
                     </nav>
                 </ScrollSpyNav>
