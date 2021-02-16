@@ -453,15 +453,15 @@ class Projects extends React.Component {
             <div>
                 <ComponentHeader heading={"Projects"}/>
                 <div className="container flow-text project-container">
-                    {renderSubTitle("PROFESSIONAL PROJECTS")}
-                    <div className="row justify-content-start">
-                        {renderProfessionalCards()}
-                    </div>
-                </div>
-                <div className="container flow-text project-container">
                     {renderSubTitle("PERSONAL PROJECTS")}
                     <div className="row justify-content-start">
                         {renderPersonalCards()}
+                    </div>
+                </div>
+                <div className="container flow-text project-container">
+                    {renderSubTitle("PROFESSIONAL PROJECTS")}
+                    <div className="row justify-content-start">
+                        {renderProfessionalCards()}
                     </div>
                 </div>
                 {renderSelectedVideo()}

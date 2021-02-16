@@ -77,7 +77,7 @@
 
 .about-container p {
     text-align: justify;
-    font-weight: 400;
+    font-weight: 300;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     padding-top: 20px;
     font-size: 1.4rem;
@@ -138,7 +138,7 @@ blockquote {
 }
 
 .project-container .professional-card {
-    height: 350px;
+    height: 370px;
 }
 
 .project-container .personal-card-image {

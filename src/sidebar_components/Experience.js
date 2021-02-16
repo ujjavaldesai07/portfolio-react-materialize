@@ -4,8 +4,23 @@ import ComponentHeader from "../components/ComponentHeader";
 import M from "materialize-css/dist/js/materialize.min";
 import sandvineImg from '../images/experience/sandvine.jpg';
 import uhclImg from '../images/experience/uhcl.png';
+import galendataImg from '../images/experience/galendata.png';
 
 const EXPERIENCE_DATA = [
+    {
+        image: galendataImg,
+        websiteLink: "https://www.galendata.com",
+        professionTitle: "Full Stack Engineer",
+        descriptionPoints: [
+            "Develop and maintain Backend REST APIs and services using Spring Framework.",
+            "Develop Angular interfaces based on UI/UX designs.",
+            "Optimize cloud application for maximum performance, responsiveness, and scalability.",
+            "Write and execute unit tests and end-to-end (e2e) tests using unit test frameworks like Karma, Jasmine, Mockito, JUnit.",
+            "Work with team members to design innovative software programs that improve and simplify experience for customers.",
+        ],
+        date: "Feb 2021 - Present | Houston, TX",
+        tooltip: "Look at the company's website"
+    },
     {
         image: uhclImg,
         websiteLink: "https://uhcl.edu",
@@ -14,7 +29,7 @@ const EXPERIENCE_DATA = [
             "Assisted, graded, and gave feedback on assignments for over 30 students.",
             "Tutored students individually and in small groups to reinforce learning concepts."
         ],
-        date: "June 2019 - Present | Houston, TX",
+        date: "Jun 2019 - Dec 2020 | Houston, TX",
         tooltip: "Look at the university's website"
     },
     {
