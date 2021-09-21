@@ -22,11 +22,11 @@ class About extends React.Component {
                         <div className="col-sm-11 col-lg-10">
                             <div className="card-panel">
                                 <p>
-                                    Hello! I'm a Full Stack Engineer at Galen Data. I have 4+ years of experience in
+                                    Hello! I'm a Full Stack Engineer at Galen Data. I have 5+ years of experience in
                                     software development and expertise in object-oriented programming.
                                     Strong debugging skills in large codebases. Experience working in Agile Software
                                     Development. Good team member with a strong belief that working together as a team
-                                    can achieve great success. Pro-active in taking responsibility for new initiatives.
+                                    can achieve great success. Proactive in taking responsibility for new initiatives.
                                     Open and flexible to learn new technologies. Worked across all functional areas of
                                     software development.
                                 </p>
