@@ -42,7 +42,7 @@ class Sidebar extends React.Component {
 
         for (const item of MENU_LIST) {
             collapseSidebarItems.push(<li key={item[0]}>
-                <a href={'#' + item[0]} className="waves-effect waves-green toggle-menu-item black-text">
+                <a href={'#' + item[0]} className="waves-effect waves-green toggle-menu-item black-text sidenav-close">
                     <img src={item[1]} width="30" height="30" alt="icon"/><span>{item[0]}</span></a>
             </li>)
         }
