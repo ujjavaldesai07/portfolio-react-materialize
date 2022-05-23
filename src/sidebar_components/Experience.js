@@ -5,8 +5,18 @@ import M from "materialize-css/dist/js/materialize.min";
 import sandvineImg from '../images/experience/sandvine.jpg';
 import uhclImg from '../images/experience/uhcl.png';
 import galendataImg from '../images/experience/galendata.png';
+import oracleImg from '../images/experience/oracle.png';
 
 const EXPERIENCE_DATA = [
+    {
+        image: oracleImg,
+        websiteLink: "https://www.oracle.com",
+        professionTitle: "Senior Software Engineer",
+        descriptionPoints: [
+        ],
+        date: "Feb 2022 - Present | Redwood City, CA",
+        tooltip: "Look at the company's website"
+    },
     {
         image: galendataImg,
         websiteLink: "https://www.galendata.com",
@@ -18,7 +28,7 @@ const EXPERIENCE_DATA = [
             "Write and execute unit tests and end-to-end (e2e) tests using unit test frameworks like Karma, Jasmine, Mockito, JUnit.",
             "Work with team members to design innovative software programs that improve and simplify experience for customers.",
         ],
-        date: "Feb 2021 - Present | Houston, TX",
+        date: "Feb 2021 - Feb 2022 | Houston, TX",
         tooltip: "Look at the company's website"
     },
     {
