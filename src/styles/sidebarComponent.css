@@ -39,7 +39,7 @@
 /******* Introduction Component Style *******/
 
 #Introduction {
-    background: url("../images/introduction/ujjaval_pro.jpg") no-repeat top center/cover;
+    background: lightblue;
     position: relative;
     height: 100vh
 }
