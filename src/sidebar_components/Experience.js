@@ -11,7 +11,7 @@ const EXPERIENCE_DATA = [
     {
         image: oracleImg,
         websiteLink: "https://www.oracle.com",
-        professionTitle: "Senior Software Engineer",
+        professionTitle: "Project Lead",
         descriptionPoints: [
         ],
         date: "Feb 2022 - Present | Redwood City, CA",

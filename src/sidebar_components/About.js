@@ -12,8 +12,7 @@ class About extends React.Component {
                         <div className="col-sm-11 col-lg-10">
                             <blockquote className="brown-text">
                                 <h2>
-                                    Goal-oriented full stack engineer with a passion to build applications that make a
-                                    difference.
+                                    Passionate software engineer focused on delivering solutions that matter.
                                 </h2>
                             </blockquote>
                         </div>
@@ -22,17 +21,14 @@ class About extends React.Component {
                         <div className="col-sm-11 col-lg-10">
                             <div className="card-panel">
                                 <p>
-                                    Hello! I'm a Senior Software Engineer at Oracle. I have 5+ years of experience in
-                                    software development and expertise in object-oriented programming.
-                                    Strong debugging skills in large codebases. Experience working in Agile Software
-                                    Development. Good team member with a strong belief that working together as a team
-                                    can achieve great success. Proactive in taking responsibility for new initiatives.
-                                    Open and flexible to learn new technologies. Worked across all functional areas of
-                                    software development.
+                                    Hello! I'm a software engineer with over 7 years of experience designing, developing, and 
+                                    maintaining software applications. Throughout my career, I have honed my skills in programming, 
+                                    problem-solving, and collaborating with diverse teams to deliver high-quality solutions.
                                 </p>
                                 <p>
-                                    As a Web Developer, I am always obsessed with minor details, learning new
-                                    technologies, and building innovative features in an application.
+                                    Experienced across the full software development lifecycle, I am adept at translating requirements
+                                    into efficient, scalable code. I stay committed to continuous learning and adapting to new technologies
+                                    to ensure the software I build is reliable and meets business objectives.
                                 </p>
                             </div>
                         </div>

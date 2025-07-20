@@ -48,7 +48,7 @@ class Education extends React.Component {
                                                 {data.degree}
                                             </li>
                                         </div>
-                                        <div className="justify-content-end">
+                                        <div className="data-gpa">
                                             {data.gpa}
                                         </div>
                                     </div>

@@ -9,7 +9,7 @@ import certificateImage from '../images/navbar/certificate.png';
 import contactImage from '../images/navbar/email.png';
 import ScrollSpyNav from "./ScrollSpyNav";
 import NavbarCollapseButton from "./NavbarCollapseButton";
-import Resume from "../sidebar_components/Resume";
+// import Resume from "../sidebar_components/Resume";
 
 const MENU_LIST = [
     ['About', userImage, "teal-text"], ['Experience', trendImage, "indigo-text"],
@@ -53,7 +53,7 @@ class Sidebar extends React.Component {
                     scrollTargetIds={this.getMenuItems()}
                     offset={0}
                     activeNavClass="active"
-                    scrollDuration={1000}
+                    scrollDuration={100}
                     headerBackground="true">
 
                     <NavbarCollapseButton/>

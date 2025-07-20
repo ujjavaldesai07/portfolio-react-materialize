@@ -39,9 +39,41 @@
 /******* Introduction Component Style *******/
 
 #Introduction {
-    background: lightblue;
     position: relative;
     height: 100vh
+}
+
+.intro-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/introduction/coding_image.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 0;
+    opacity: 0.6; /* Optional: fade effect */
+}
+
+.intro-blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/introduction/coding_image_2.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px);
+    z-index: 0;
+    opacity: 0.9; /* Optional: fade effect */
 }
 
 #Introduction .main-container {
@@ -246,6 +278,10 @@ blockquote {
 .education-container .card-content .container {
     font-size: 1.4rem;
     list-style-type: disc!important;
+}
+
+.education-container .data-gpa {
+    padding-left: 40px;
 }
 
 /*******************************************/
