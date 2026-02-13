@@ -12,7 +12,7 @@ class About extends React.Component {
                         <div className="col-sm-11 col-lg-10">
                             <blockquote className="brown-text">
                                 <h2>
-                                    Passionate software engineer focused on delivering solutions that matter.
+                                    Software engineer focused on building solutions that matter.
                                 </h2>
                             </blockquote>
                         </div>
@@ -21,14 +21,10 @@ class About extends React.Component {
                         <div className="col-sm-11 col-lg-10">
                             <div className="card-panel">
                                 <p>
-                                    Hello! I'm a software engineer with over 7 years of experience designing, developing, and 
-                                    maintaining software applications. Throughout my career, I have honed my skills in programming, 
-                                    problem-solving, and collaborating with diverse teams to deliver high-quality solutions.
+                                    Hello! I’m a Senior Full Stack Engineer with 9+ years of experience building scalable cloud native and distributed systems. I specialize in backend microservices and frontend development, working end to end from API design and data modeling to UI development cloud infrastructure and observability.
                                 </p>
                                 <p>
-                                    Experienced across the full software development lifecycle, I am adept at translating requirements
-                                    into efficient, scalable code. I stay committed to continuous learning and adapting to new technologies
-                                    to ensure the software I build is reliable and meets business objectives.
+                                    I enjoy solving challenging problems, writing clean and maintainable code, and building software that delivers real value at scale. I’m driven by continuous learning and enjoy adapting to new technologies to improve system performance and developer experience.
                                 </p>
                             </div>
                         </div>

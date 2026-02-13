@@ -62,7 +62,7 @@ class Sidebar extends React.Component {
                         <ul className="sidenav sidenav-fixed section table-of-contents">
                             <li className="logo user-view">
                                 <a href="#Introduction" className="logo-name teal-text"><h1>Ujjaval Desai</h1></a>
-                                <a href="#Introduction" className="logo-name-desc brown-text">Full Stack Engineer</a>
+                                <a href="#Introduction" className="logo-name-desc brown-text">Senior Full Stack Engineer</a>
                             </li>
                             {fixedSidebarItems}
                         {/*<Resume menu_class={"menu-item"}/>*/}

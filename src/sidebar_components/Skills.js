@@ -44,20 +44,19 @@ const LANGUAGES_MAP = new Map([
 ]);
 
 const FRONTEND_MAP = new Map([
-    ['HTML', htmlImg], ['CSS', cssImg], ['React', reactImg], ['Angular', angularImg],
+    ['Angular', angularImg], ['React', reactImg], ['HTML', htmlImg], ['CSS', cssImg], ['Angular', angularImg],
     ['Bootstrap', bootstrapImg], ['Material UI', materialUIImg], ['Angular Material', angularMaterialImg],
     ['Materialize', materializeImg],
 ]);
 
 const BACKEND_MAP = new Map([
-    ['Spring', springImg], ['Spring Boot', springbootImg],
-    ['Node', nodeImg], ['GraphQL', graphqlImg], ['MySQL', mysqlImg],
+    ['Spring Boot', springbootImg], ['GraphQL', graphqlImg], ['MySQL', mysqlImg],
     ['MongoDB', mongodbImg], ['Redis', redisImg]
 ]);
 
 const BUILD_TOOLS_MAP = new Map([
     ['Docker', dockerImg], ['Heroku', herokuImg], ['AWS', awsImg],
-    ['Git', gitImg], ['Webpack', webpackImg], ['Jenkins', jenkinsImg]
+    ['Git', gitImg], ['Jenkins', jenkinsImg]
 ]);
 
 const OTHER_TOOLS_MAP = new Map([

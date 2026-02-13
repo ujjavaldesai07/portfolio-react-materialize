@@ -11,8 +11,13 @@ const EXPERIENCE_DATA = [
     {
         image: oracleImg,
         websiteLink: "https://www.oracle.com",
-        professionTitle: "Project Lead",
+        professionTitle: "Senior Full Stack Engineer",
         descriptionPoints: [
+            "Designed and implemented containerized backend microservices to collect, process, and manage build-related data, ensuring scalability, high reliability, and real-time visibility.",
+            "Developed intuitive UI components to provide easy navigation and seamless access to build information, improving user efficiency and overall system usability.",
+            "Utilized an event-driven messaging workflow using JMS to track and communicate build status and system events across distributed services.",
+            "Integrated AI-powered search with vector-based LLM analysis, aggregating application logs and operational metadata to enhance issue resolution and knowledge retrieval across systems.",
+            "Led project initiatives, coordinating cross-functional teams to design, develop, and deliver complex software systems on time and at scale, while mentoring engineers and driving technical excellence.",
         ],
         date: "Feb 2022 - Present | Redwood City, CA",
         tooltip: "Look at the company's website"
@@ -22,40 +27,23 @@ const EXPERIENCE_DATA = [
         websiteLink: "https://www.galendata.com",
         professionTitle: "Full Stack Engineer",
         descriptionPoints: [
-            "Develop and maintain Backend REST APIs and services using Spring Framework.",
-            "Develop Angular interfaces based on UI/UX designs.",
-            "Optimize cloud application for maximum performance, responsiveness, and scalability.",
-            "Write and execute unit tests and end-to-end (e2e) tests using unit test frameworks like Karma, Jasmine, Mockito, JUnit.",
-            "Work with team members to design innovative software programs that improve and simplify experience for customers.",
+            "Enhanced backend services by versioning REST APIs and enforcing role-based authorization for controlled data access in a multi-tenant SaaS application.",
+            "Extended an existing hybrid database architecture to support additional patient information and medical records, maintaining data integrity and efficient querying.",
+            "Implemented secure authentication and authorization mechanisms, including OAuth 2.0 and multi-factor authentication (MFA), to protect application access and sensitive data.",
+            "Built a responsive, data-driven dashboard with aggregated metrics and a configurable drag-and-drop form builder for dynamic user input.",
         ],
         date: "Feb 2021 - Feb 2022 | Houston, TX",
         tooltip: "Look at the company's website"
-    },
-    {
-        image: uhclImg,
-        websiteLink: "https://uhcl.edu",
-        professionTitle: "Teaching Assistant",
-        descriptionPoints: [
-            "Assisted, graded, and gave feedback on assignments for over 30 students.",
-            "Tutored students individually and in small groups to reinforce learning concepts."
-        ],
-        date: "Jun 2019 - Dec 2020 | Houston, TX",
-        tooltip: "Look at the university's website"
     },
     {
         image: sandvineImg,
         websiteLink: "https://www.sandvine.com",
         professionTitle: "Senior Software Engineer",
         descriptionPoints: [
-            "Knowledge of Internet traffic analysis with a good understanding of L4-L7 protocols (TCP/UDP, HTTP, SSL, QUIC).",
-            "Expertise in C++, OOPS, Multi-threading, Exception-Handling & STL Containers.",
-            "Strong experience working in a Linux environment.",
-            "Involved in the complete software development life cycle and agile development practices.",
-            "Solved issues related to functionality breakage, concurrency, performance, memory leak, and crashes in C++.",
-            "Worked with the DevOps team to implement the build infrastructure functionality in Python.",
-            "Wrote Shell/AWK scripts to automate package building, unit-testing on different Linux distribution.",
-            "Performed code reviews to ensure the work delivered by the team is of high-quality standards.",
-            "Analyzed, debugged, and/or assisted in problem-solving in both development and production environment."
+            "Developed internet traffic classification solutions using pattern-matching and behavioral analysis techniques to identify and categorize internet traffic.",
+            "Diagnosed and fixed concurrency race conditions, memory leaks, and performance bottlenecks in multi-threaded C++ network applications, improving system stability and runtime efficiency.",
+            "Owned end-to-end delivery and maintenance of a standalone product, managing customer support interactions, bug fixes, build integration, and testing.",
+            "Designed and developed an application crawler to track Android and iOS app updates, release timelines, and install counts to support protocol validation workflows."
         ],
         date: "Oct 2014 - Dec 2018 | Bangalore, India",
         tooltip: "Look at the company's website"

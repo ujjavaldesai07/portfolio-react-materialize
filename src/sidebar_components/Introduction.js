@@ -10,7 +10,7 @@ class Introduction extends React.Component {
                     <div className="container">
                         <div>
                             <h2 className="white-text">
-                                I <span className="teal">love coding</span>&nbsp;and
+                                I <span className="teal">enjoy coding</span>&nbsp;and
                                 &nbsp;<span className="underline">learning</span>
                                 <br />new things in the software world.
                             </h2>

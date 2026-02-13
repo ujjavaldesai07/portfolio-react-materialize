@@ -29,18 +29,6 @@ const CONTACT_DATA = [
         icon: ['fab', "github"],
         title: "github.com/ujjavaldesai07"
     },
-    {
-        link: "https://www.facebook.com/ujjavaldesai",
-        tooltip: "View Ujjaval on Facebook",
-        icon: ['fab', "facebook"],
-        title: "facebook.com/ujjavaldesai"
-    },
-    {
-        link: "https://www.instagram.com/im_ujjval",
-        tooltip: "View Ujjaval on Instagram",
-        icon: ['fab', "instagram"],
-        title: "instagram.com/im_ujjval"
-    },
 ];
 
 class Contact extends React.Component {
