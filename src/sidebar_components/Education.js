@@ -11,13 +11,6 @@ const EDUCATION_DATA = [
         gpa: "GPA: 3.92/4.0",
         date: "Jan 2019 - Dec 2020 | Houston, TX"
     },
-    {
-        title: "Gujarat Technological University",
-        titleLink: "https://www.gtu.ac.in",
-        degree: "B.E. in Electronics & Communication",
-        gpa: "GPA: 7.9/10",
-        date: "Jun 2009 - Jun 2013 | Gujarat, India"
-    }
 ]
 
 class Education extends React.Component {
@@ -43,13 +36,11 @@ class Education extends React.Component {
                                     <span className="card-title teal-text">{data.title}</span></a>
                                 <div className="container pt-4">
                                     <div className="row">
-                                        <div className="mr-auto">
-                                            <li>
-                                                {data.degree}
-                                            </li>
+                                        <div className="col s8">
+                                            <li>{data.degree}</li>
                                         </div>
-                                        <div className="data-gpa">
-                                            {data.gpa}
+                                        <div className="col s4 right-align data-gpa">
+                                                {data.gpa}
                                         </div>
                                     </div>
                                 </div>

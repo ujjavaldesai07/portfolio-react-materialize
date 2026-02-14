@@ -15,27 +15,21 @@ import c_plusImg from '../images/skills/languages/c++.png'
 import pythonImg from '../images/skills/languages/python.png'
 import shellScriptImg from '../images/skills/languages/shellScript.png'
 
-import springImg from '../images/skills/backend/spring.png'
 import springbootImg from '../images/skills/backend/springboot.png'
 import reactImg from '../images/skills/frontend/react.png'
 import angularImg from '../images/skills/frontend/angular.png'
-import nodeImg from '../images/skills/backend/nodejs.png'
 import mysqlImg from '../images/skills/backend/mysql.png'
-import redisImg from '../images/skills/backend/redis.png'
-import graphqlImg from "../images/skills/backend/graphql.png"
 import mongodbImg from "../images/skills/backend/mongodb.png"
+import redisImg from "../images/skills/backend/redis.png"
+import graphqlImg from "../images/skills/backend/graphql.png"
 
 import dockerImg from '../images/skills/buildtools/docker.png'
-import awsImg from '../images/skills/buildtools/aws.png'
+import kubernetesImg from '../images/skills/buildtools/kubernetes.png'
+import ociImg from '../images/skills/buildtools/oci.png'
 import herokuImg from '../images/skills/buildtools/heroku.png'
-import webpackImg from '../images/skills/buildtools/webpack.png'
 import gitImg from '../images/skills/buildtools/git.png'
 
-import wiresharkImg from '../images/skills/othertools/wireshark.png'
 import jenkinsImg from '../images/skills/othertools/jenkins.png'
-import gdbImg from '../images/skills/othertools/gdb.png'
-import valgrindImg from '../images/skills/othertools/valgrind.png'
-import bullseyeImg from '../images/skills/othertools/bullseye.png'
 import jiraImg from '../images/skills/othertools/jira.png'
 
 const LANGUAGES_MAP = new Map([
@@ -45,29 +39,25 @@ const LANGUAGES_MAP = new Map([
 
 const FRONTEND_MAP = new Map([
     ['Angular', angularImg], ['React', reactImg], ['HTML', htmlImg], ['CSS', cssImg], ['Angular', angularImg],
-    ['Bootstrap', bootstrapImg], ['Material UI', materialUIImg], ['Angular Material', angularMaterialImg],
-    ['Materialize', materializeImg],
+    ['Bootstrap', bootstrapImg], ['Material UI', materialUIImg]
 ]);
 
 const BACKEND_MAP = new Map([
-    ['Spring Boot', springbootImg], ['GraphQL', graphqlImg], ['MySQL', mysqlImg],
-    ['MongoDB', mongodbImg], ['Redis', redisImg]
+    ['Spring Boot', springbootImg], ['MySQL', mysqlImg], ['MongoDB', mongodbImg], ['Redis', redisImg], ['GraphQL', graphqlImg]
 ]);
 
 const BUILD_TOOLS_MAP = new Map([
-    ['Docker', dockerImg], ['Heroku', herokuImg], ['AWS', awsImg],
-    ['Git', gitImg], ['Jenkins', jenkinsImg]
+    ['Docker', dockerImg], ['Kubernetes', kubernetesImg], ['OCI', ociImg], ['Heroku', herokuImg], ['Jenkins', jenkinsImg]
 ]);
 
 const OTHER_TOOLS_MAP = new Map([
-    ['Wireshark', wiresharkImg], ['GDB', gdbImg],
-    ['Valgrind', valgrindImg], ['Bullseye Coverage', bullseyeImg],
+    ['Git', gitImg],
     ['Jira', jiraImg]
 ]);
 
 const CARD_LIST = new Map([
     [LANGUAGES_MAP, "languages"], [FRONTEND_MAP, "front-end"],
-    [BACKEND_MAP, "back-end"], [BUILD_TOOLS_MAP, "build-tools"],
+    [BACKEND_MAP, "back-end"], [BUILD_TOOLS_MAP, "devops"],
     [OTHER_TOOLS_MAP, "other-tools"]]);
 
 class Skills extends React.Component {
@@ -162,7 +152,7 @@ class Skills extends React.Component {
         }
 
         const navbarItems = [];
-        const NAVBAR_ITEMS = ['all', 'languages', 'front-end', 'back-end', 'build-tools', 'other-tools'];
+        const NAVBAR_ITEMS = ['all', 'languages', 'front-end', 'back-end', 'devops', 'other-tools'];
 
         for (const item of NAVBAR_ITEMS) {
             navbarItems.push(
@@ -179,6 +169,8 @@ class Skills extends React.Component {
                 <div className="container skills-navbar">
                     <div className="row justify-content-center">
                         <div>
+                            <div className="row justify-content-center">
+                                <div className="col-sm-12 col-lg-10">¬
                             <nav>
                                 <div className="white navbar-nav nav-fill">
                                     <ul>
@@ -186,6 +178,8 @@ class Skills extends React.Component {
                                     </ul>
                                 </div>
                             </nav>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
